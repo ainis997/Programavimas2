@@ -5,6 +5,7 @@
 
 #include "klaidu_valdymas.h"
 #include "strukturos_konstantos.h"
+#include "studentas.h"
 
 // ===== Išvesties failo paruošimo funkcija =====
 std::ofstream ras_failo_paruosimas(std::string RAS_FAILO_NUORODA)
@@ -77,40 +78,40 @@ std::ofstream ras_failo_paruosimas(std::string RAS_FAILO_NUORODA)
 
 bool pagal_varda_did(Studentas &A, Studentas &B)
 {
-    return A.vardas < B.vardas;
+    return A.vardas() < B.vardas();
 }
 
 bool pagal_varda_maz(Studentas &A, Studentas &B)
 {
-    return A.vardas > B.vardas;
+    return A.vardas() > B.vardas();
 }
 
 bool pagal_pavarde_did(Studentas &A, Studentas &B)
 {
-    return A.pavarde < B.pavarde;
+    return A.pavarde() < B.pavarde();
 }
 
 bool pagal_pavarde_maz(Studentas &A, Studentas &B)
 {
-    return A.pavarde > B.pavarde;
+    return A.pavarde() > B.pavarde();
 }
 
 bool pagal_vidurki_did(Studentas &A, Studentas &B)
 {
-    return A.rezas_vid < B.rezas_vid;
+    return A.rezas_vid() < B.rezas_vid();
 }
 
 bool pagal_vidurki_maz(Studentas &A, Studentas &B)
 {
-    return A.rezas_vid > B.rezas_vid;
+    return A.rezas_vid() > B.rezas_vid();
 }
 
 bool pagal_mediana_did(Studentas &A, Studentas &B)
 {
-    return A.rezas_med < B.rezas_med;
+    return A.rezas_med() < B.rezas_med();
 }
 
 bool pagal_mediana_maz(Studentas &A, Studentas &B)
 {
-    return A.rezas_med > B.rezas_med;
+    return A.rezas_med() > B.rezas_med();
 }

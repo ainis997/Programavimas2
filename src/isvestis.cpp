@@ -152,28 +152,11 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
         ras_failas << "-";
     ras_failas << '\n';
 
-    if (galutinio_pasirinkimas == "v")
+    for (const auto &A : grupe)
     {
-        for (const auto &A : grupe)
-        {
-            ras_failas
-                << std::left << std::setw(20) << A.vardas
-                << std::left << std::setw(25) << A.pavarde
-                << std::setw(15) << std::fixed << std::setprecision(2) << A.rezas_vid
-                << '\n';
-        }
+        A.studento_spausd(ras_failas, galutinio_pasirinkimas[0]);
     }
-    else if (galutinio_pasirinkimas == "m")
-    {
-        for (const auto &A : grupe)
-        {
-            ras_failas
-                << std::left << std::setw(20) << A.vardas
-                << std::left << std::setw(25) << A.pavarde
-                << std::setw(15) << std::fixed << std::setprecision(2) << A.rezas_med
-                << '\n';
-        }
-    }
+
     ras_failas.close();
 
     auto pab = std::chrono::high_resolution_clock::now();
@@ -440,27 +423,9 @@ std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::s
         ras_failas << "-";
     ras_failas << '\n';
 
-    if (galutinio_pasirinkimas == "v")
+    for (const auto &A : grupe)
     {
-        for (const auto &A : grupe)
-        {
-            ras_failas
-                << std::left << std::setw(20) << A.vardas
-                << std::left << std::setw(25) << A.pavarde
-                << std::setw(15) << std::fixed << std::setprecision(2) << A.rezas_vid
-                << '\n';
-        }
-    }
-    else if (galutinio_pasirinkimas == "m")
-    {
-        for (const auto &A : grupe)
-        {
-            ras_failas
-                << std::left << std::setw(20) << A.vardas
-                << std::left << std::setw(25) << A.pavarde
-                << std::setw(15) << std::fixed << std::setprecision(2) << A.rezas_med
-                << '\n';
-        }
+        A.studento_spausd(ras_failas, galutinio_pasirinkimas[0]);
     }
 
     ras_failas.close();
@@ -481,7 +446,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
             while (!grupe.empty())
             {
                 Studentas &stud = grupe.back();
-                if (stud.rezas_vid >= 5.0)
+                if (stud.rezas_vid() >= 5.0)
                     geri.push_back(std::move(stud)); // std::move(stud) — perkelia, o ne kopijuoja!
                 else
                     blogi.push_back(std::move(stud));
@@ -496,7 +461,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
             while (!grupe.empty())
             {
                 Studentas &stud = grupe.back();
-                if (stud.rezas_med >= 5.0)
+                if (stud.rezas_med() >= 5.0)
                     geri.push_back(std::move(stud));
                 else
                     blogi.push_back(std::move(stud));
@@ -514,7 +479,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
         if (galutinio_pasirinkimas == "v")
         {
             stud_rikiavimas(grupe, pagal_vidurki_maz);
-            while (grupe.back().rezas_vid < 5.0)
+            while (grupe.back().rezas_vid() < 5.0)
             {
                 blogi.push_back(std::move(grupe.back()));
                 grupe.pop_back();
@@ -523,7 +488,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
         else if (galutinio_pasirinkimas == "m")
         {
             stud_rikiavimas(grupe, pagal_mediana_maz);
-            while (grupe.back().rezas_med < 5.0)
+            while (grupe.back().rezas_med() < 5.0)
             {
                 blogi.push_back(std::move(grupe.back()));
                 grupe.pop_back();
@@ -538,7 +503,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
             // apie 4.7 s / 48 s
             // blogi.reserve(grupe.size() / 2); // VECTOR; bsk dijwina
             auto pirmas_blogu_elementas = std::stable_partition(grupe.begin(), grupe.end(), [](const Studentas &stud)
-                                                                { return stud.rezas_vid >= 5.0; });
+                                                                { return stud.rezas_vid() >= 5.0; });
             std::move(pirmas_blogu_elementas, grupe.end(), std::back_inserter(blogi)); // perkelia bloguosna
             grupe.erase(pirmas_blogu_elementas, grupe.end());
         }
@@ -546,7 +511,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
         {
             // blogi.reserve(grupe.size() / 2); // VECTOR; bsk dijwina
             auto pirmas_blogu_elementas = std::stable_partition(grupe.begin(), grupe.end(), [](const Studentas &stud)
-                                                                { return stud.rezas_med >= 5.0; });
+                                                                { return stud.rezas_med() >= 5.0; });
             std::move(pirmas_blogu_elementas, grupe.end(), std::back_inserter(blogi)); // perkelia bloguosna
             grupe.erase(pirmas_blogu_elementas, grupe.end());
         }

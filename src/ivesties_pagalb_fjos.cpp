@@ -118,8 +118,8 @@ bool vardo_pavardes_ivestis(Studentas &A, bool ar_ivestis_atsaukiama)
                     {
                         throw std::invalid_argument("Pertekline ivestis.");
                     }
-                    A.vardas = vardo_ivestis;
-                    A.pavarde = pavardes_ivestis;
+                    A.nust_varda(vardo_ivestis);
+                    A.nust_pavarde(pavardes_ivestis);
                     break;
                 }
                 else

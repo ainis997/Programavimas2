@@ -1,6 +1,7 @@
 #pragma once
 
 #include "strukturos_konstantos.h"
+#include "studentas.h"
 
 // įvesties (skaitymo) failo pavadinimo gavimo funkcija
 std::ifstream skait_failo_paruosimas(std::string SK_FAILO_NUORODA);

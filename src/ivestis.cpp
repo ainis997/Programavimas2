@@ -16,6 +16,7 @@
 #include "ivesties_pagalb_fjos.h"
 #include "strukturos_konstantos.h"
 #include "klaidu_valdymas.h"
+#include "studentas.h"
 
 void failo_ivestis(std::ifstream &sk_failas, /*const std::string SK_FAILO_NUORODA,*/ Container(Studentas) & grupe, Programos_laikai &t)
 {
@@ -29,30 +30,16 @@ void failo_ivestis(std::ifstream &sk_failas, /*const std::string SK_FAILO_NUOROD
     std::istringstream srautas; // eilutės įvesties ("skaitymo") srautas
     while (std::getline(sk_failas, sk_failo_eil))
     {
-        srautas.clear();           // išvalo srautą (išvalo nuo praeitos iteracijos likusį statusą); be šito, skaitytų tik pirmą eilutę iš viso failo! (neveiktų)
-        srautas.str(sk_failo_eil); // įstato naują stringą (eilutę) srautan
-
         Studentas A;
-
-        if (!(srautas >> A.vardas >> A.pavarde))
-            continue;
-
-        int temp; // laikinas kintamasis pažymių perdavimui
-        while (srautas >> temp)
+        try
         {
-            A.pazymiai.push_back(std::move(temp));
+            A.skaityt_studenta(srautas, sk_failo_eil);
         }
-
-        if (A.pazymiai.empty()) // jeigu pažymių vektorius gautųsi tuščias, tai pereit (continue) prie kitos iteracijos
+        catch (...)
+        {
             continue;
-        A.egzo_rezas = A.pazymiai.back(); // paskutinis elementas — egzamino rezas
-        A.pazymiai.pop_back();            // ištrinam egzo rezą iš pažymių vektoriaus
-
-        A.apsk_vid();
-        A.apsk_med();
-
+        }
         grupe.push_back(std::move(A)); // std::move(A) — perkelia, o ne kopijuoja duomenį!
-        A.pazymiai.clear();
     }
 
     sk_failas.close();
@@ -99,9 +86,11 @@ void rank_ivestis(Container(Studentas) & grupe)
 
         Studentas A;
 
-        bool ar_ivestis_atsaukiama = false;
-        // vvv įves A.vardas ir A.pavarde
-        vardo_pavardes_ivestis(A, ar_ivestis_atsaukiama); // false reiškia, kad šioje įvestyje negalima atšaukti studentų duomenų pildymo apskritai
+        A.ivest_varda_pavarde();
+
+        // bool ar_ivestis_atsaukiama = false;
+        // // vvv įves A.vardas ir A.pavarde
+        // vardo_pavardes_ivestis(A, ar_ivestis_atsaukiama); // false reiškia, kad šioje įvestyje negalima atšaukti studentų duomenų pildymo apskritai
 
         std::cout << "Iveskite semestro ivercius: (kai suvesite visus semestro ivercius, iveskite 'x')" << '\n';
 
@@ -111,23 +100,28 @@ void rank_ivestis(Container(Studentas) & grupe)
             bool ar_ivestis_atsaukiama = true;
             if (!natur_skaiciaus_ivestis(pazymys, ar_sk_ne_tarp_0_ir_10, ar_ivestis_atsaukiama))
                 break;
-            A.pazymiai.push_back(pazymys);
+            A.pridet_pazymi(pazymys);
+            // A.pazymiai.push_back(pazymys);
         }
 
         std::cout << "Iveskite egzamino vertinima: ";
+        int egz_temp;
+        natur_skaiciaus_ivestis(egz_temp, ar_sk_ne_tarp_0_ir_10);
+        A.nust_egzo_reza(egz_temp);
 
-        natur_skaiciaus_ivestis(A.egzo_rezas, ar_sk_ne_tarp_0_ir_10);
+        A.uzpildyt_pazymius_iki_min(min_iverciu_sk);
 
-        if (A.pazymiai.size() < min_iverciu_sk)
-        {
-            A.pazymiai.resize(min_iverciu_sk, 0); // pridės reikiamą sk. nulių, jeigu pažymių yra mažiau nei jų privalomas minimalus sk.
-        }
+        // if (A.pazymiai.size() < min_iverciu_sk)
+        // {
+        //     A.pazymiai.resize(min_iverciu_sk, 0); // pridės reikiamą sk. nulių, jeigu pažymių yra mažiau nei jų privalomas minimalus sk.
+        // }
 
         A.apsk_vid();
         A.apsk_med();
 
+        // A.apsk_galutini();
+
         grupe.push_back(A);
-        A.pazymiai.clear(); // apsauga: isvalo pazymiu vektoriu, kad kitam kartojime vektorius butu tuscias
     }
 }
 
@@ -150,21 +144,22 @@ void misri_ivestis(Container(Studentas) & grupe)
     {
         Studentas A;
 
-        bool ar_ivestis_atsaukiama = true;                     // true reiškia, kad šioje įvestyje galima atšaukti studentų duomenų pildymo apskritai (jeigu vartotojas įves "x", )
-        if (!vardo_pavardes_ivestis(A, ar_ivestis_atsaukiama)) // jeigu f-ja grąžina false, tai reikia nutraukti visą šį loopą
+        bool ar_ivestis_atsaukiama = true;                 // true reiškia, kad šioje įvestyje galima atšaukti studentų duomenų pildymo apskritai (jeigu vartotojas įves "x", )
+        if (!A.ivest_varda_pavarde(ar_ivestis_atsaukiama)) // jeigu f-ja grąžina false, tai reikia nutraukti visą šį loopą
             break;
 
         for (int i = 0; i < min_iverciu_sk; i++)
         {
-            A.pazymiai.push_back(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
+            A.pridet_pazymi(pasiskirstymas_0_10(generatorius));
+            // A.pazymiai.push_back(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
         }
-        A.egzo_rezas = pasiskirstymas_0_10(generatorius);
+        A.nust_egzo_reza(pasiskirstymas_0_10(generatorius));
+        // A.egzo_rezas = pasiskirstymas_0_10(generatorius);
 
         A.apsk_vid();
         A.apsk_med();
 
         grupe.push_back(A);
-        A.pazymiai.clear(); // apsauga: isvalo pazymiu vektoriu, kad kitam kartojime vektorius butu tuscias
     }
 }
 
@@ -193,8 +188,11 @@ void generuota_ivestis(Container(Studentas) & grupe)
     {
         Studentas A;
 
-        A.vardas = "Vardas" + std::to_string(i + 1);
-        A.pavarde = "Pavarde" + std::to_string(i + 1);
+        A.nust_varda("Vardas" + std::to_string(i + 1));
+        A.nust_pavarde("Pavarde" + std::to_string(i + 1));
+
+        // A.vardas = "Vardas" + std::to_string(i + 1);
+        // A.pavarde = "Pavarde" + std::to_string(i + 1);
 
         // A.vardas = vardai[rand() % 20];
         // if (A.vardas.back() == 's')
@@ -204,15 +202,15 @@ void generuota_ivestis(Container(Studentas) & grupe)
 
         for (int i = 0; i < min_iverciu_sk; i++)
         {
-            A.pazymiai.push_back(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
+            A.pridet_pazymi(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
         }
-        A.egzo_rezas = pasiskirstymas_0_10(generatorius);
+        A.nust_egzo_reza(pasiskirstymas_0_10(generatorius));
+        // A.egzo_rezas = pasiskirstymas_0_10(generatorius);
 
         A.apsk_vid();
         A.apsk_med();
 
         grupe.push_back(A);
-        A.pazymiai.clear(); // apsauga: isvalo pazymiu vektoriu, kad kitam kartojime vektorius butu tuscias
     }
 }
 

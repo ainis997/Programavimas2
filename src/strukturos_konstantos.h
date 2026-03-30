@@ -13,17 +13,17 @@
 // kad būtų trumpiau
 const auto MAX_INT = std::numeric_limits<int>::max();
 
-struct Studentas
-{
-    Container(int) pazymiai;
-    std::string vardas = "Vardas";
-    std::string pavarde = "Pavarde";
-    float rezas_vid = 0;
-    float rezas_med = 0;
-    int egzo_rezas = 0;
-    void apsk_vid(); // void, nes vid. ir med. reik iš anksto apskaičiuot (o ne spausd metu), nes pagal tai reik leist rūšiuot
-    void apsk_med();
-};
+// struct Studentas
+// {
+//     Container(int) pazymiai;
+//     std::string vardas = "Vardas";
+//     std::string pavarde = "Pavarde";
+//     float rezas_vid = 0;
+//     float rezas_med = 0;
+//     int egzo_rezas = 0;
+//     void apsk_vid(); // void, nes vid. ir med. reik iš anksto apskaičiuot (o ne spausd metu), nes pagal tai reik leist rūšiuot
+//     void apsk_med();
+// };
 
 struct StudentasBeGalutiniu
 {
