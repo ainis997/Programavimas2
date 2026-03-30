@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -42,8 +44,11 @@ public:
     // inline float rezas() const { return rezas_; }
     inline std::string vardas() const { return vardas_; }
     inline std::string pavarde() const { return pavarde_; }
+    inline Container(int) pazymiai() const { return pazymiai_; }
+    inline int egzo_rezas() const { return egzo_rezas_; }
     inline float rezas_vid() const { return rezas_vid_; }
     inline float rezas_med() const { return rezas_med_; }
+    inline size_t pazymiu_sk() { return pazymiai_.size(); }
 
     // nustatytojai / setteriai
 

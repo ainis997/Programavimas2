@@ -169,7 +169,7 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
 
 // ==========================================
 
-void visu_stud_duomenu_generavimo_isvestis(std::string RAS_FAILO_NUORODA, Container(StudentasBeGalutiniu) & grupe, Programos_laikai &t)
+void visu_stud_duomenu_generavimo_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Programos_laikai &t)
 {
     if (grupe.empty())
         return;
@@ -189,18 +189,18 @@ void visu_stud_duomenu_generavimo_isvestis(std::string RAS_FAILO_NUORODA, Contai
         << std::left << std::setw(20) << "Vardas"
         << std::left << std::setw(25) << "Pavarde";
 
-    for (int i = 0; i < grupe.front().pazymiai.size(); i++) // kiek pažymių bus pirmame masyve, tai tiek turi būti ir visuose kituose! (pagal dab. įvesties funkcijos įgyvendinimą)
+    for (int i = 0; i < grupe.front().pazymiu_sk(); i++) // kiek pažymių bus pirmame masyve, tai tiek turi būti ir visuose kituose! (pagal dab. įvesties funkcijos įgyvendinimą)
         ras_failas << std::left << std::setw(15) << "ND" + std::to_string(i + 1);
     ras_failas << std::left << std::setw(20) << "Egz." << '\n';
 
     for (const auto &A : grupe)
     {
         ras_failas
-            << std::left << std::setw(20) << A.vardas
-            << std::left << std::setw(25) << A.pavarde;
-        for (const int &paz : A.pazymiai)
+            << std::left << std::setw(20) << A.vardas()
+            << std::left << std::setw(25) << A.pavarde();
+        for (const int &paz : A.pazymiai())
             ras_failas << std::left << std::setw(15) << paz;
-        ras_failas << std::left << std::setw(20) << A.egzo_rezas << '\n';
+        ras_failas << std::left << std::setw(20) << A.egzo_rezas() << '\n';
     }
 
     ras_failas.close();

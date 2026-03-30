@@ -11,6 +11,7 @@
 #include "ivestis.h"
 #include "isvestis.h"
 #include "ivesties_pagalb_fjos.h"
+#include "studentas.h"
 
 int main()
 {
@@ -74,7 +75,6 @@ int main()
         }
         case 5:
         {
-            Container(StudentasBeGalutiniu) grupe;
             visu_stud_duomenu_generavimo_ivestis(grupe);
             visu_stud_duomenu_generavimo_isvestis(RAS_FAILO_NUORODA, grupe, t); // stwi mattauimai dateīnas poteikūsnas kērdan (be enwesennins)
             // std::cout << "Failo kurimo ir jo uzdarymo trukme: " << t.failo_generavimo_trukme.count() << "s" << '\n';

@@ -1,7 +1,10 @@
+#pragma once
+
 #include <algorithm>
 #include <type_traits>
 
 #include "strukturos_konstantos.h"
+#include "studentas.h"
 
 std::ofstream ras_failo_paruosimas(std::string RAS_FAILO_NUORODA);
 
