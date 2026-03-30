@@ -8,10 +8,10 @@
 #include <typeinfo>
 
 #include "strukturos_konstantos.h"
+#include "studentas.h"
 #include "ivestis.h"
 #include "isvestis.h"
 #include "ivesties_pagalb_fjos.h"
-#include "studentas.h"
 
 int main()
 {

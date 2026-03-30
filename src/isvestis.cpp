@@ -1,3 +1,4 @@
+#include "studentas.h"
 #include "isvestis.h"
 #include "isvesties_pagalb_fjos.h"
 #include "strukturos_konstantos.h"

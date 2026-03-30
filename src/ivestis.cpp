@@ -214,7 +214,7 @@ void generuota_ivestis(Container(Studentas) & grupe)
     }
 }
 
-void visu_stud_duomenu_generavimo_ivestis(Container(StudentasBeGalutiniu) & grupe)
+void visu_stud_duomenu_generavimo_ivestis(Container(Studentas) & grupe)
 {
     std::random_device sekla;
     std::mt19937 generatorius(sekla());
@@ -232,18 +232,17 @@ void visu_stud_duomenu_generavimo_ivestis(Container(StudentasBeGalutiniu) & grup
 
     for (int i = 0; i < reikiamas_studentu_sk; i++)
     {
-        StudentasBeGalutiniu A;
+        Studentas A;
 
-        A.vardas = "Vardas" + std::to_string(i + 1);
-        A.pavarde = "Pavarde" + std::to_string(i + 1);
+        A.nust_varda("Vardas" + std::to_string(i + 1));
+        A.nust_pavarde("Pavarde" + std::to_string(i + 1));
 
         for (int i = 0; i < min_iverciu_sk; i++)
         {
-            A.pazymiai.push_back(pasiskirstymas_1_10(generatorius));
+            A.pridet_pazymi(pasiskirstymas_1_10(generatorius));
         }
-        A.egzo_rezas = pasiskirstymas_1_10(generatorius);
+        A.nust_egzo_reza(pasiskirstymas_1_10(generatorius));
 
         grupe.push_back(A);
-        A.pazymiai.clear(); // apsauga: isvalo pazymiu vektoriu, kad kitam kartojime vektorius butu tuscias
     }
 }

@@ -25,13 +25,13 @@ const auto MAX_INT = std::numeric_limits<int>::max();
 //     void apsk_med();
 // };
 
-struct StudentasBeGalutiniu
-{
-    Container(int) pazymiai;
-    std::string vardas = "Vardas";
-    std::string pavarde = "Pavarde";
-    int egzo_rezas = 0;
-};
+// struct StudentasBeGalutiniu
+// {
+//     Container(int) pazymiai;
+//     std::string vardas = "Vardas";
+//     std::string pavarde = "Pavarde";
+//     int egzo_rezas = 0;
+// };
 
 struct Programos_laikai
 {

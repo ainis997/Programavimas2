@@ -3,8 +3,10 @@
 #include <algorithm>
 #include <type_traits>
 
-#include "strukturos_konstantos.h"
 #include "studentas.h"
+#include "strukturos_konstantos.h"
+
+// class Studentas;    // forward declaration, vietoje #include "studentas.h", kad išvengt circular dependency
 
 std::ofstream ras_failo_paruosimas(std::string RAS_FAILO_NUORODA);
 

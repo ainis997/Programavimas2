@@ -1,6 +1,3 @@
-#include "ivesties_pagalb_fjos.h"
-#include "klaidu_valdymas.h"
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -9,6 +6,10 @@
 #include <sstream>
 #include <fstream>
 #include <cstdint>
+
+#include "ivesties_pagalb_fjos.h"
+#include "studentas.h"
+#include "klaidu_valdymas.h"
 
 // įvesties (skaitymo) failo pavadinimo gavimo funkcija
 std::ifstream skait_failo_paruosimas(std::string SK_FAILO_NUORODA)

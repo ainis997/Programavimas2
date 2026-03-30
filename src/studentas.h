@@ -6,10 +6,10 @@
 #include <iomanip>
 #include <fstream>
 
-#include "strukturos_konstantos.h"
-#include "klaidu_valdymas.h"
 #include "ivesties_pagalb_fjos.h"
 #include "isvesties_pagalb_fjos.h"
+#include "strukturos_konstantos.h"
+#include "klaidu_valdymas.h"
 
 class Studentas
 {
