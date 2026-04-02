@@ -126,7 +126,19 @@ Paleidžiamojo (.exe) failo dydis: 245 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-204.png)
+![alt text](images/image-203.png)
+![alt text](images/image-202.png)
+![alt text](images/image-201.png)
+![alt text](images/image-200.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-209.png)
+![alt text](images/image-208.png)
+![alt text](images/image-207.png)
+![alt text](images/image-206.png)
+![alt text](images/image-205.png)
 
 ### O2
 
@@ -134,7 +146,19 @@ Paleidžiamojo (.exe) failo dydis: 257 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-214.png)
+![alt text](images/image-213.png)
+![alt text](images/image-212.png)
+![alt text](images/image-211.png)
+![alt text](images/image-210.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-219.png)
+![alt text](images/image-218.png)
+![alt text](images/image-217.png)
+![alt text](images/image-216.png)
+![alt text](images/image-215.png)
 
 ### O3
 
@@ -142,7 +166,19 @@ Paleidžiamojo (.exe) failo dydis: 298 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-224.png)
+![alt text](images/image-223.png)
+![alt text](images/image-222.png)
+![alt text](images/image-221.png)
+![alt text](images/image-220.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-229.png)
+![alt text](images/image-228.png)
+![alt text](images/image-227.png)
+![alt text](images/image-226.png)
+![alt text](images/image-225.png)
 
 ## Struktūrų versija
 
