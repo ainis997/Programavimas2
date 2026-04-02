@@ -116,6 +116,66 @@ Pradinės versijos programa, kuri:
 
 # Programos trukmės testavimai
 
+Programos trukmė išmatuota dviem programos versijoms: struktūrų ir klasių versijoms. Testavimai atlikti kiekvienai versijai su 3 skirtingais kompiliatoriaus optimizavimo lygmenimis (O1, O2, O3), su 100 tūkst. ir 1 mln. studentų įrašų apdorojimu, kiekvieną bandymą kartojant 5 kartus. Visuose testavimuose naudojamas konteineris — std::vector, studentų skirstymo strategija — 3.
+
+## Klasių versija
+
+### O1
+
+Paleidžiamojo (.exe) failo dydis: 245 KB
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+### O2
+
+Paleidžiamojo (.exe) failo dydis: 257 KB
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+### O3
+
+Paleidžiamojo (.exe) failo dydis: 298 KB
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+## Struktūrų versija
+
+### O1
+
+Paleidžiamojo (.exe) failo dydis:
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+### O2
+
+Paleidžiamojo (.exe) failo dydis:
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+### O3
+
+Paleidžiamojo (.exe) failo dydis:
+
+##### 100 tūkst. įrašų:
+
+##### 1 mln. įrašų:
+
+## Išvados
+
+...
+
+==================
+
 Programos ir kai kurių jos etapų trukmė išmatuota trims programos versijoms, naudojančioms skirtingus duomenų konteinerius: std::vector, std::deque ir std::list. Testavimai atlikti kiekvienai versijai su 5 skirtingų dydžių failų apdorojimu (nuo 1 tūkst. iki 10 mln. įrašų), su 5 pakartojimais kiekvienu atveju.
 
 Testavimo sistemos parametrai:

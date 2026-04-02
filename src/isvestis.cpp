@@ -221,78 +221,81 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
     if (grupe.empty())
         return;
 
-    std::string galutinio_pasirinkimas;
-    std::cout << "Ar norite rasti galutini vidurki ar galutine mediana?" << '\n'
-              << "Jeigu vidurki, iveskite 'v'. Jeigu mediana, iveskite 'm'. " << '\n';
-    for (;;)
-    {
-        try
-        {
-            std::string ivestis;
-            std::getline(std::cin, ivestis);
-            if (ivestis == "v" || ivestis == "m")
-            {
-                galutinio_pasirinkimas = ivestis;
-                break;
-            }
-            throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: v, m).");
-        }
-        catch (...)
-        {
-            ivesties_klaidos_valdymas();
-        }
-    }
+    std::string galutinio_pasirinkimas = "v";
+    // std::string galutinio_pasirinkimas;
+    // std::cout << "Ar norite rasti galutini vidurki ar galutine mediana?" << '\n'
+    //           << "Jeigu vidurki, iveskite 'v'. Jeigu mediana, iveskite 'm'. " << '\n';
+    // for (;;)
+    // {
+    //     try
+    //     {
+    //         std::string ivestis;
+    //         std::getline(std::cin, ivestis);
+    //         if (ivestis == "v" || ivestis == "m")
+    //         {
+    //             galutinio_pasirinkimas = ivestis;
+    //             break;
+    //         }
+    //         throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: v, m).");
+    //     }
+    //     catch (...)
+    //     {
+    //         ivesties_klaidos_valdymas();
+    //     }
+    // }
 
-    std::string rus; // rus - rūšiavimo būdas
-    std::cout << "Pasirinkite studentu rusiavimo buda:" << '\n'
-              << "'vard' - pagal varda" << '\n'
-              << "'pav' - pagal pavarde" << '\n'
-              << "'vid' - pagal vidurki" << '\n'
-              << "'med' - pagal mediana" << '\n'
-              << "'ne' - nerusiuoti" << '\n';
-    for (;;)
-    {
-        try
-        {
-            std::string ivestis;
-            std::getline(std::cin, ivestis);
-            if (ivestis == "vard" || ivestis == "pav" || ivestis == "vid" || ivestis == "med" || ivestis == "ne")
-            {
-                rus = ivestis;
-                break;
-            }
-            throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: vard, pav, vid, med, ne).");
-        }
-        catch (...)
-        {
-            ivesties_klaidos_valdymas();
-        }
-    }
+    std::string rus = "vid";
+    // std::string rus; // rus - rūšiavimo būdas
+    // std::cout << "Pasirinkite studentu rusiavimo buda:" << '\n'
+    //           << "'vard' - pagal varda" << '\n'
+    //           << "'pav' - pagal pavarde" << '\n'
+    //           << "'vid' - pagal vidurki" << '\n'
+    //           << "'med' - pagal mediana" << '\n'
+    //           << "'ne' - nerusiuoti" << '\n';
+    // for (;;)
+    // {
+    //     try
+    //     {
+    //         std::string ivestis;
+    //         std::getline(std::cin, ivestis);
+    //         if (ivestis == "vard" || ivestis == "pav" || ivestis == "vid" || ivestis == "med" || ivestis == "ne")
+    //         {
+    //             rus = ivestis;
+    //             break;
+    //         }
+    //         throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: vard, pav, vid, med, ne).");
+    //     }
+    //     catch (...)
+    //     {
+    //         ivesties_klaidos_valdymas();
+    //     }
+    // }
 
     if (rus != "ne")
     {
-        std::string tvarka;
-        std::cout << "Pasirinkite studentu rusiavimo tvarka:" << '\n'
-                  << "'d' - didejimo tvarka" << '\n'
-                  << "'m' - mazejimo tvarka" << '\n';
-        for (;;)
-        {
-            try
-            {
-                std::string ivestis;
-                std::getline(std::cin, ivestis);
-                if (ivestis == "d" || ivestis == "m")
-                {
-                    tvarka = ivestis;
-                    break;
-                }
-                throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: d, m).");
-            }
-            catch (...)
-            {
-                ivesties_klaidos_valdymas();
-            }
-        }
+        std::string tvarka = "d";
+        // std::string tvarka;
+        // std::cout << "Pasirinkite studentu rusiavimo tvarka:" << '\n'
+        //           << "'d' - didejimo tvarka" << '\n'
+        //           << "'m' - mazejimo tvarka" << '\n';
+        // for (;;)
+        // {
+        //     try
+        //     {
+        //         std::string ivestis;
+        //         std::getline(std::cin, ivestis);
+        //         if (ivestis == "d" || ivestis == "m")
+        //         {
+        //             tvarka = ivestis;
+        //             break;
+        //         }
+        //         throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: d, m).");
+        //     }
+        //     catch (...)
+        //     {
+        //         ivesties_klaidos_valdymas();
+        //     }
+        // }
 
         // std::cout << "DUOMENU RIKIAVIMAS PRADETAS\n";
         auto pr = std::chrono::high_resolution_clock::now();
@@ -344,10 +347,11 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
 
     // STUDENTŲ SKIRSTYMAS
 
-    int strategija;
-    std::cout << "Iveskite studentu skirstymo strategija: ";
-    natur_skaiciaus_ivestis(strategija, [](int x)
-                            { return !(x == 1 || x == 2 || x == 3); });
+    int strategija = 3;
+    // int strategija;
+    // std::cout << "Iveskite studentu skirstymo strategija: ";
+    // natur_skaiciaus_ivestis(strategija, [](int x)
+    //                         { return !(x == 1 || x == 2 || x == 3); });
 
     // std::cout << "STUDENTU SKIRSTYMAS PRADETAS\n";
     auto pr = std::chrono::high_resolution_clock::now();
@@ -365,16 +369,16 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
     // std::cout << "STUDENTU SKIRSTYMAS BAIGTAS\n\n";
 
     // std::cout << "GERU SPAUSDINIMAS PRADETAS\n";
-    std::cout << "Geru studentu isvedimas:\n";
+    // std::cout << "Geru studentu isvedimas:\n";
     if (!geri.empty())
-        spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, geri); // išspausdina ir td grąžina mum spausdinimo trukmę (be vartotojo įvesčių)
+        spausdinimas("geri.txt", RAS_FAILO_NUORODA, galutinio_pasirinkimas, geri); // išspausdina ir td grąžina mum spausdinimo trukmę (be vartotojo įvesčių)
     else
-        spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, grupe);
+        spausdinimas("geri.txt", RAS_FAILO_NUORODA, galutinio_pasirinkimas, grupe);
     // std::cout << "GERU SPAUSDINIMAS BAIGTAS\n\n";
 
     // std::cout << "BLOGU SPAUSDINIMAS PRADETAS\n";
-    std::cout << "Blogu studentu isvedimas:\n";
-    spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, blogi);
+    // std::cout << "Blogu studentu isvedimas:\n";
+    spausdinimas("blogi.txt", RAS_FAILO_NUORODA, galutinio_pasirinkimas, blogi);
     // std::cout << "BLOGU SPAUSDINIMAS BAIGTAS\n\n";
 
     grupe.clear();
@@ -390,10 +394,10 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
               << '\n';
 }
 
-std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::string galutinio_pasirinkimas, Container(Studentas) & grupe)
+std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_PAV, std::string RAS_FAILO_NUORODA, std::string galutinio_pasirinkimas, Container(Studentas) & grupe)
 {
-    std::ofstream ras_failas = ras_failo_paruosimas(RAS_FAILO_NUORODA);
-    // std::ofstream ras_failas(RAS_FAILO_NUORODA + RAS_FAILO_PAV);
+    // std::ofstream ras_failas = ras_failo_paruosimas(RAS_FAILO_NUORODA);
+    std::ofstream ras_failas(RAS_FAILO_NUORODA + RAS_FAILO_PAV);
 
     if (!ras_failas.is_open())
     {
