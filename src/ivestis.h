@@ -5,7 +5,7 @@
 #include <deque>
 #include <list>
 
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 class Studentas;
 
 void failo_ivestis(std::ifstream &sk_failas, /*const std::string SK_FAILO_NUORODA,*/ Container(Studentas) & grupe, Programos_laikai &t);

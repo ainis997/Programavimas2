@@ -14,7 +14,7 @@
 
 #include "ivestis.h"
 #include "ivesties_pagalb_fjos.h"
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 #include "klaidu_valdymas.h"
 #include "studentas.h"
 
@@ -88,10 +88,6 @@ void rank_ivestis(Container(Studentas) & grupe)
 
         A.ivest_varda_pavarde();
 
-        // bool ar_ivestis_atsaukiama = false;
-        // // vvv įves A.vardas ir A.pavarde
-        // vardo_pavardes_ivestis(A, ar_ivestis_atsaukiama); // false reiškia, kad šioje įvestyje negalima atšaukti studentų duomenų pildymo apskritai
-
         std::cout << "Iveskite semestro ivercius: (kai suvesite visus semestro ivercius, iveskite 'x')" << '\n';
 
         for (;;) // for loopas be parametrų — begalinis loopas (iš jo išeis tik jeigu vartotojas įves "x" (tuo atveju ta fja grąžins false))
@@ -101,7 +97,6 @@ void rank_ivestis(Container(Studentas) & grupe)
             if (!natur_skaiciaus_ivestis(pazymys, ar_sk_ne_tarp_0_ir_10, ar_ivestis_atsaukiama))
                 break;
             A.pridet_pazymi(pazymys);
-            // A.pazymiai.push_back(pazymys);
         }
 
         std::cout << "Iveskite egzamino vertinima: ";
@@ -111,15 +106,8 @@ void rank_ivestis(Container(Studentas) & grupe)
 
         A.uzpildyt_pazymius_iki_min(min_iverciu_sk);
 
-        // if (A.pazymiai.size() < min_iverciu_sk)
-        // {
-        //     A.pazymiai.resize(min_iverciu_sk, 0); // pridės reikiamą sk. nulių, jeigu pažymių yra mažiau nei jų privalomas minimalus sk.
-        // }
-
         A.apsk_vid();
         A.apsk_med();
-
-        // A.apsk_galutini();
 
         grupe.push_back(A);
     }
@@ -151,10 +139,8 @@ void misri_ivestis(Container(Studentas) & grupe)
         for (int i = 0; i < min_iverciu_sk; i++)
         {
             A.pridet_pazymi(pasiskirstymas_0_10(generatorius));
-            // A.pazymiai.push_back(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
         }
         A.nust_egzo_reza(pasiskirstymas_0_10(generatorius));
-        // A.egzo_rezas = pasiskirstymas_0_10(generatorius);
 
         A.apsk_vid();
         A.apsk_med();
@@ -179,11 +165,6 @@ void generuota_ivestis(Container(Studentas) & grupe)
     std::cout << "Iveskite, kiek norite sugeneruoti studentu: ";
     natur_skaiciaus_ivestis(reikiamas_studentu_sk, ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil); // perduodam kintamojo *referencą*
 
-    // vardų generavimui
-    // Container<std::string> vardai = {"Jonas", "Lina", "Lukas", "Egle", "Marius", "Migle", "Azuolas", "Aiste", "Tomas", "Ieva", "Mindaugas", "Austeja", "Vytautas", "Saule", "Rimvydas", "Gabija", "Povilas", "Lukne", "Audrius", "Ugne"};
-    // Container<std::string> vyr_pavardes = {"Butkus", "Zemaitis", "Rimkus", "Simkus", "Mazeika", "Petraitis", "Braziunas", "Sukys", "Simonis", "Bareikis"};
-    // Container<std::string> mot_pavardes = {"Butkute", "Zemaityte", "Rimkute", "Simkute", "Mazeikaite", "Petraityte", "Braziunaite", "Sukyte", "Simonyte", "Bareikyte"};
-
     for (int i = 0; i < reikiamas_studentu_sk; i++)
     {
         Studentas A;
@@ -191,21 +172,11 @@ void generuota_ivestis(Container(Studentas) & grupe)
         A.nust_varda("Vardas" + std::to_string(i + 1));
         A.nust_pavarde("Pavarde" + std::to_string(i + 1));
 
-        // A.vardas = "Vardas" + std::to_string(i + 1);
-        // A.pavarde = "Pavarde" + std::to_string(i + 1);
-
-        // A.vardas = vardai[rand() % 20];
-        // if (A.vardas.back() == 's')
-        //     A.pavarde = vyr_pavardes[rand() % 10];
-        // else
-        //     A.pavarde = mot_pavardes[rand() % 10];
-
         for (int i = 0; i < min_iverciu_sk; i++)
         {
             A.pridet_pazymi(pasiskirstymas_0_10(generatorius)); // sugeneruoti sk. nuo 0 iki 10
         }
         A.nust_egzo_reza(pasiskirstymas_0_10(generatorius));
-        // A.egzo_rezas = pasiskirstymas_0_10(generatorius);
 
         A.apsk_vid();
         A.apsk_med();

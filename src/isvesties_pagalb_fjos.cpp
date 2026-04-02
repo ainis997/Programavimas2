@@ -4,7 +4,7 @@
 #include <type_traits> // tipui patikrint (kintamojo tipui gauti)
 
 #include "klaidu_valdymas.h"
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 #include "studentas.h"
 
 // ===== Išvesties failo paruošimo funkcija =====

@@ -14,11 +14,12 @@ PROGR_PAVADINIMAS ?= programa
 
 # .o failų sąrašas
 OBJS = $(OBJ_DIR)/pagr.o \
+	   $(OBJ_DIR)/studentas.o \
        $(OBJ_DIR)/ivestis.o \
        $(OBJ_DIR)/isvestis.o \
        $(OBJ_DIR)/ivesties_pagalb_fjos.o \
        $(OBJ_DIR)/isvesties_pagalb_fjos.o \
-       $(OBJ_DIR)/strukturu_metodai.o \
+       $(OBJ_DIR)/kt_klasiu_metodai.o \
        $(OBJ_DIR)/klaidu_valdymas.o
 
 # Pagrindinis taikinys

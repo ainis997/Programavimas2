@@ -1,7 +1,7 @@
 #include "studentas.h"
 #include "isvestis.h"
 #include "isvesties_pagalb_fjos.h"
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 #include "klaidu_valdymas.h"
 #include "ivesties_pagalb_fjos.h"
 

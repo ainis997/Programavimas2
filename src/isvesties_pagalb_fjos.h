@@ -4,7 +4,7 @@
 #include <type_traits>
 
 #include "studentas.h"
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 
 // class Studentas;    // forward declaration, vietoje #include "studentas.h", kad išvengt circular dependency
 

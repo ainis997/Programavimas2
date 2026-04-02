@@ -6,7 +6,7 @@
 #include <list>
 #include <chrono>
 
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 class Studentas;
 
 void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Programos_laikai &t);

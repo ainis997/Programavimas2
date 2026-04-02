@@ -1,7 +1,5 @@
 #pragma once
 
-#include "strukturos_konstantos.h"
-
 class Studentas; // forward declaration, vietoje #include "studentas.h", kad išvengt circular dependency
 
 // įvesties (skaitymo) failo pavadinimo gavimo funkcija

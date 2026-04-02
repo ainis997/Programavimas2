@@ -7,7 +7,7 @@
 #include <fstream> // std::ifstream'ui
 #include <typeinfo>
 
-#include "strukturos_konstantos.h"
+#include "konstantos_kt_klases.h"
 #include "studentas.h"
 #include "ivestis.h"
 #include "isvestis.h"
