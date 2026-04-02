@@ -244,7 +244,80 @@ Paleidžiamojo (.exe) failo dydis: 300 KB
 
 ## Išvados
 
-...
+### Klasių versija:
+
+##### Su O1:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3708698  | 3,6539520 |
+| Surikiavimas (s)  | 0,0772971  | 1,0453140 |
+| Išskirstymas (s)  | 0,0401847  | 0,3584878 |
+| Visa programa (s) | 0,6203628  | 6,3330980 |
+
+##### Su O2:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3466234  | 3,4449840 |
+| Surikiavimas (s)  | 0,0712134  | 0,9483184 |
+| Išskirstymas (s)  | 0,0354765  | 0,3387724 |
+| Visa programa (s) | 0,5766506  | 5,9584880 |
+
+##### Su O3:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3460546  | 3,4596140 |
+| Surikiavimas (s)  | 0,0676074  | 0,9484736 |
+| Išskirstymas (s)  | 0,0385799  | 0,3410182 |
+| Visa programa (s) | 0,5742380  | 5,9198040 |
+
+### Struktūrų versija:
+
+##### Su O1:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3174212  | 3,1974620 |
+| Surikiavimas (s)  | 0,0170127  | 0,2187234 |
+| Išskirstymas (s)  | 0,0099000  | 0,0872966 |
+| Visa programa (s) | 0,4694574  | 4,7772480 |
+
+##### Su O2:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3256272  | 3,1813160 |
+| Surikiavimas (s)  | 0,0185178  | 0,2455842 |
+| Išskirstymas (s)  | 0,0104346  | 0,0899841 |
+| Visa programa (s) | 0,4855236  | 4,7933540 |
+
+##### Su O3:
+
+| Failo įrašų sk.   | 100 tūkst. | 1 mln.    |
+| ----------------- | ---------- | --------- |
+| Nuskaitymas (s)   | 0,3115604  | 3,1576640 |
+| Surikiavimas (s)  | 0,0194823  | 0,2458984 |
+| Išskirstymas (s)  | 0,0101887  | 0,0906315 |
+| Visa programa (s) | 0,4686702  | 4,7470540 |
+
+### Visos programos laikai (su .exe failų dydžiais):
+
+| Failo įrašų sk.             | 100 tūkst. | 1 mln.    | .exe failo dydis: |
+| --------------------------- | ---------- | --------- | ----------------- |
+| Klasių versija su O1 (s)    | 0,6203628  | 6,3330980 | 245 KB            |
+| Klasių versija su O2 (s)    | 0,5766506  | 5,9584880 | 257 KB            |
+| Klasių versija su O3 (s)    | 0,5742380  | 5,9198040 | 298 KB            |
+| Struktūrų versija su O1 (s) | 0,4694574  | 4,7772480 | 255 KB            |
+| Struktūrų versija su O2 (s) | 0,4855236  | 4,7933540 | 250 KB            |
+| Struktūrų versija su O3 (s) | 0,4686702  | 4,7470540 | 300 KB            |
+
+### Išvada:
+
+Klasių versijos programa veikia lėčiau nei struktūrų versija (visa programa trunka apie ketvirtadaliu, trečdaliu lėčiau). Itin didelis spartos skirtumas matomas surikiavimo, taip pat ir išskirstymo etapuose (greitis skiriasi keliais kartais).
+Kompiliatoriaus optimizavimo vėliavėlės programos spartą veikė šiek tiek nevienareikšmiškai. Klasių versijoje aukštesnio optimizacijos lygmens poveikis matomas: su O2 programa veikia šiek tiek greičiau nei O1, o su O3 — šiek tiek greičiau nei O2. Visgi struktūrų versijoje aukštesnio optimizacijos lygmens poveikis nėra matomas: su O2 vėliavėle kompiliuota programa veikia šiek tiek lėčiau nei su O1 ar O3, o su O3 programa veikia panašia sparta kaip su O1 (ar šiek tiek greičiau).
+Skirtingų versijų programų paleidžiamieji (.exe) failai užima šiek tiek skirtingą atminties kiekį. Klasių versijos programos failas užima panašų (šiek tiek mažesnį) kilobaitų skaičių kaip struktūrų versija. Aukštesnio optimizacijos laipsnio programų failai įprastai užima šiek tiek daugiau vietos, nors struktūrų versijos O2 versijos .exe failas užima šiek tiek mažiau vietos nei O1.
 
 ==================
 
