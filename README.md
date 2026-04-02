@@ -184,27 +184,63 @@ Paleidžiamojo (.exe) failo dydis: 298 KB
 
 ### O1
 
-Paleidžiamojo (.exe) failo dydis: 236 KB
+Paleidžiamojo (.exe) failo dydis: 255 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-234.png)
+![alt text](images/image-233.png)
+![alt text](images/image-232.png)
+![alt text](images/image-231.png)
+![alt text](images/image-230.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-239.png)
+![alt text](images/image-238.png)
+![alt text](images/image-237.png)
+![alt text](images/image-236.png)
+![alt text](images/image-235.png)
 
 ### O2
 
-Paleidžiamojo (.exe) failo dydis: 236 KB
+Paleidžiamojo (.exe) failo dydis: 250 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-244.png)
+![alt text](images/image-243.png)
+![alt text](images/image-242.png)
+![alt text](images/image-241.png)
+![alt text](images/image-240.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-249.png)
+![alt text](images/image-248.png)
+![alt text](images/image-247.png)
+![alt text](images/image-246.png)
+![alt text](images/image-245.png)
 
 ### O3
 
-Paleidžiamojo (.exe) failo dydis: 258 KB
+Paleidžiamojo (.exe) failo dydis: 300 KB
 
 ##### 100 tūkst. įrašų:
 
+![alt text](images/image-254.png)
+![alt text](images/image-253.png)
+![alt text](images/image-252.png)
+![alt text](images/image-251.png)
+![alt text](images/image-250.png)
+
 ##### 1 mln. įrašų:
+
+![alt text](images/image-255.png)
+![alt text](images/image-256.png)
+![alt text](images/image-257.png)
+![alt text](images/image-258.png)
+![alt text](images/image-259.png)
 
 ## Išvados
 
