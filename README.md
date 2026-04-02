@@ -148,7 +148,7 @@ Paleidžiamojo (.exe) failo dydis: 298 KB
 
 ### O1
 
-Paleidžiamojo (.exe) failo dydis:
+Paleidžiamojo (.exe) failo dydis: 236 KB
 
 ##### 100 tūkst. įrašų:
 
@@ -156,7 +156,7 @@ Paleidžiamojo (.exe) failo dydis:
 
 ### O2
 
-Paleidžiamojo (.exe) failo dydis:
+Paleidžiamojo (.exe) failo dydis: 236 KB
 
 ##### 100 tūkst. įrašų:
 
@@ -164,7 +164,7 @@ Paleidžiamojo (.exe) failo dydis:
 
 ### O3
 
-Paleidžiamojo (.exe) failo dydis:
+Paleidžiamojo (.exe) failo dydis: 258 KB
 
 ##### 100 tūkst. įrašų:
 
