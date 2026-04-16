@@ -55,9 +55,37 @@ public:
         return *this;
     }
     // perkėlimo konstr
-    //
+    Studentas(Studentas &&kitas)
+        : vardas_(std::move(kitas.vardas_)),
+          pavarde_(std::move(kitas.pavarde_)),
+          pazymiai_(std::move(kitas.pazymiai_)),
+          egzo_rezas_(kitas.egzo_rezas_), // be std::move, nes paprastiem tipam kaip int/float tai netikslinga (skirtingai nei std::string, std::vector — objektam)
+          rezas_vid_(kitas.rezas_vid_),
+          rezas_med_(kitas.rezas_med_)
+    {
+        kitas.egzo_rezas_ = 0;
+        kitas.rezas_vid_ = 0;
+        kitas.rezas_med_ = 0;
+    }
+
     // perkėlimo priskyrimo operatorius
-    //
+    Studentas &operator=(Studentas &&kitas)
+    {
+        if (this != &kitas)
+        {
+            vardas_ = std::move(kitas.vardas_);
+            pavarde_ = std::move(kitas.pavarde_);
+            pazymiai_ = std::move(kitas.pazymiai_);
+            egzo_rezas_ = kitas.egzo_rezas_;
+            rezas_vid_ = kitas.rezas_vid_;
+            rezas_med_ = kitas.rezas_med_;
+
+            kitas.egzo_rezas_ = 0;
+            kitas.rezas_vid_ = 0;
+            kitas.rezas_med_ = 0;
+        }
+        return *this;
+    }
 
     // gavikai / getteriai
 
