@@ -23,14 +23,41 @@ private:
 
 public:
     // nuskaitant
-    Studentas() : vardas_("Vardas"), pavarde_("Pavarde"), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
+    Studentas() : vardas_(""), pavarde_(""), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
     // surasant rankiniu budu
     Studentas(std::string vardas, std::string pavarde) : vardas_(vardas), pavarde_(pavarde), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
 
+    // destruktorius
     ~Studentas()
     {
         pazymiai_.clear();
     }
+    // kopijavimo konstr [Studentas x(y);]
+    Studentas(const Studentas &kitas)
+        : vardas_(kitas.vardas_),
+          pavarde_(kitas.pavarde_),
+          pazymiai_(kitas.pazymiai_),
+          egzo_rezas_(kitas.egzo_rezas_),
+          rezas_vid_(kitas.rezas_vid_),
+          rezas_med_(kitas.rezas_med_) {}
+    // kopijavimo priskyrimo operatorius [x = y]
+    Studentas &operator=(const Studentas &kitas)
+    {
+        if (this != &kitas)
+        {
+            vardas_ = kitas.vardas_;
+            pavarde_ = kitas.pavarde_;
+            pazymiai_ = kitas.pazymiai_;
+            egzo_rezas_ = kitas.egzo_rezas_;
+            rezas_vid_ = kitas.rezas_vid_;
+            rezas_med_ = kitas.rezas_med_;
+        }
+        return *this;
+    }
+    // perkėlimo konstr
+    //
+    // perkėlimo priskyrimo operatorius
+    //
 
     // gavikai / getteriai
 
