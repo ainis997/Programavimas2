@@ -33,7 +33,7 @@ void failo_ivestis(std::ifstream &sk_failas, /*const std::string SK_FAILO_NUOROD
         Studentas A;
         try
         {
-            A.skaityt_studenta(srautas, sk_failo_eil);
+            sk_failas >> A;
         }
         catch (...)
         {

@@ -1,5 +1,69 @@
 #include "studentas.h"
 
+// pārdīgtie operātoŗi
+
+// kopijavimo priskyrimo operatorius [x = y]
+Studentas &Studentas::operator=(const Studentas &kitas)
+{
+    if (this != &kitas)
+    {
+        vardas_ = kitas.vardas_;
+        pavarde_ = kitas.pavarde_;
+        pazymiai_ = kitas.pazymiai_;
+        egzo_rezas_ = kitas.egzo_rezas_;
+        rezas_vid_ = kitas.rezas_vid_;
+        rezas_med_ = kitas.rezas_med_;
+    }
+    return *this;
+}
+
+// perkėlimo priskyrimo operatorius
+Studentas &Studentas::operator=(Studentas &&kitas)
+{
+    if (this == &kitas)
+        return *this;
+
+    vardas_ = std::move(kitas.vardas_);
+    pavarde_ = std::move(kitas.pavarde_);
+    pazymiai_ = std::move(kitas.pazymiai_);
+    egzo_rezas_ = kitas.egzo_rezas_;
+    rezas_vid_ = kitas.rezas_vid_;
+    rezas_med_ = kitas.rezas_med_;
+
+    kitas.egzo_rezas_ = 0;
+    kitas.rezas_vid_ = 0;
+    kitas.rezas_med_ = 0;
+
+    return *this;
+}
+
+std::ostream &operator<<(std::ostream &os, const Studentas &stud)
+{
+    os
+        << std::left << std::setw(20) << stud.vardas_
+        << std::left << std::setw(25) << stud.pavarde_
+        << std::setw(15) << std::fixed << std::setprecision(2) << stud.rezas_vid_;
+    return os;
+}
+
+std::istream &operator>>(std::istream &is, Studentas &stud)
+{
+    if (!(is >> stud.vardas_ >> stud.pavarde_))
+        throw std::invalid_argument("Netinkamas studento duomenu pavidalas.");
+
+    int temp; // laikinas kintamasis pažymių perdavimui
+    while (is >> temp)
+    {
+        stud.pazymiai_.push_back(std::move(temp));
+    }
+
+    stud.egzo_rezas_ = stud.pazymiai_.back();
+    stud.pazymiai_.pop_back();
+
+    stud.apsk_vid();
+    stud.apsk_med();
+}
+
 bool Studentas::ivest_varda_pavarde(bool ar_ivestis_atsaukiama)
 {
     std::cout << "Iveskite varda ir pavarde: ";
@@ -102,50 +166,5 @@ void Studentas::uzpildyt_pazymius_iki_min(int min_pazymiu_sk)
     if (pazymiai_.size() < min_pazymiu_sk)
     {
         pazymiai_.resize(min_pazymiu_sk, 0);
-    }
-}
-
-void Studentas::skaityt_studenta(std::istringstream &srautas, std::string eil)
-{
-    srautas.clear();  // išvalo srautą (išvalo nuo praeitos iteracijos likusį statusą); be šito, skaitytų tik pirmą eilutę iš viso failo! (neveiktų)
-    srautas.str(eil); // įstato naują stringą (eilutę) srautan
-
-    if (!(srautas >> vardas_ >> pavarde_))
-        throw std::invalid_argument("Netinkamas studento duomenu pavidalas.");
-
-    int temp; // laikinas kintamasis pažymių perdavimui
-    while (srautas >> temp)
-    {
-        pazymiai_.push_back(std::move(temp));
-    }
-
-    if (pazymiai_.empty())
-    {
-        throw std::invalid_argument("Nepavyko nuskaityti studento pazymiu.");
-    }
-    egzo_rezas_ = pazymiai_.back(); // paskutinis elementas — egzamino rezas_
-    pazymiai_.pop_back();           // ištrinam egzo rezą iš pažymių vektoriaus
-
-    apsk_vid();
-    apsk_med();
-}
-
-void Studentas::studento_spausd(std::ofstream &ras_failas, char galutinio_pasirinkimas) const
-{
-    if (galutinio_pasirinkimas == 'm')
-    {
-        ras_failas
-            << std::left << std::setw(20) << vardas_
-            << std::left << std::setw(25) << pavarde_
-            << std::setw(15) << std::fixed << std::setprecision(2) << rezas_med_
-            << '\n';
-    }
-    else
-    {
-        ras_failas
-            << std::left << std::setw(20) << vardas_
-            << std::left << std::setw(25) << pavarde_
-            << std::setw(15) << std::fixed << std::setprecision(2) << rezas_vid_
-            << '\n';
     }
 }

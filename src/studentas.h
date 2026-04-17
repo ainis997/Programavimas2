@@ -57,67 +57,12 @@ public:
     // perkrauti operatoriai
 
     // kopijavimo priskyrimo operatorius [x = y]
-    Studentas &operator=(const Studentas &kitas)
-    {
-        if (this != &kitas)
-        {
-            vardas_ = kitas.vardas_;
-            pavarde_ = kitas.pavarde_;
-            pazymiai_ = kitas.pazymiai_;
-            egzo_rezas_ = kitas.egzo_rezas_;
-            rezas_vid_ = kitas.rezas_vid_;
-            rezas_med_ = kitas.rezas_med_;
-        }
-        return *this;
-    }
-
+    Studentas &operator=(const Studentas &kitas);
     // perkėlimo priskyrimo operatorius
-    Studentas &operator=(Studentas &&kitas)
-    {
-        if (this == &kitas)
-            return *this;
+    Studentas &operator=(Studentas &&kitas);
 
-        vardas_ = std::move(kitas.vardas_);
-        pavarde_ = std::move(kitas.pavarde_);
-        pazymiai_ = std::move(kitas.pazymiai_);
-        egzo_rezas_ = kitas.egzo_rezas_;
-        rezas_vid_ = kitas.rezas_vid_;
-        rezas_med_ = kitas.rezas_med_;
-
-        kitas.egzo_rezas_ = 0;
-        kitas.rezas_vid_ = 0;
-        kitas.rezas_med_ = 0;
-
-        return *this;
-    }
-
-    friend std::ostream &operator<<(std::ostream &os, const Studentas &stud)
-    {
-        os
-            << std::left << std::setw(20) << stud.vardas_
-            << std::left << std::setw(25) << stud.pavarde_
-            << std::setw(15) << std::fixed << std::setprecision(2) << stud.rezas_vid_
-            << '\n';
-        return os;
-    }
-
-    friend std::istream &operator>>(std::istream &is, Studentas &stud)
-    {
-        if (!(is >> stud.vardas_ >> stud.pavarde_))
-            throw std::invalid_argument("Netinkamas studento duomenu pavidalas.");
-
-        int temp; // laikinas kintamasis pažymių perdavimui
-        while (is >> temp)
-        {
-            stud.pazymiai_.push_back(std::move(temp));
-        }
-
-        stud.egzo_rezas_ = stud.pazymiai_.back();
-        stud.pazymiai_.pop_back();
-
-        stud.apsk_vid();
-        stud.apsk_med();
-    }
+    friend std::ostream &operator<<(std::ostream &os, const Studentas &stud);
+    friend std::istream &operator>>(std::istream &is, Studentas &stud);
 
     // gavikai / getteriai
 
@@ -144,7 +89,4 @@ public:
     // kt metodai
 
     void uzpildyt_pazymius_iki_min(int min_pazymiu_sk);
-
-    void skaityt_studenta(std::istringstream &srautas, std::string eil);
-    void studento_spausd(std::ofstream &ras_failas, char galutinio_pasirinkimas) const; // const, tai negali pakeist klasės narių
 };

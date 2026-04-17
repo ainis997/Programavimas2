@@ -155,7 +155,7 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
 
     for (const auto &A : grupe)
     {
-        A.studento_spausd(ras_failas, galutinio_pasirinkimas[0]);
+        ras_failas << A << '\n';
     }
 
     ras_failas.close();
@@ -426,7 +426,7 @@ std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::s
 
     for (const auto &A : grupe)
     {
-        A.studento_spausd(ras_failas, galutinio_pasirinkimas[0]);
+        ras_failas << A << '\n';
     }
 
     ras_failas.close();
