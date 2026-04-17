@@ -19,7 +19,6 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
     if (grupe.empty())
         return;
 
-    std::string galutinio_pasirinkimas;
     std::cout << "Ar norite rasti galutini vidurki ar galutine mediana?" << '\n'
               << "Jeigu vidurki, iveskite 'v'. Jeigu mediana, iveskite 'm'. " << '\n';
     for (;;)
@@ -30,7 +29,7 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
             std::getline(std::cin, ivestis);
             if (ivestis == "v" || ivestis == "m")
             {
-                galutinio_pasirinkimas = ivestis;
+                Studentas::nust_galutinio_tipa(ivestis);
                 break;
             }
             throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: v, m).");
@@ -43,10 +42,10 @@ void isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe, Progr
 
     // dinamiškam lentelės stulpelių pavadinimų pavaizdavimui
     std::string pasirinktas_galutinis;
-    if (galutinio_pasirinkimas == "v")
+    if (Studentas::galut() == "v")
         pasirinktas_galutinis = "Galutinis (Vid.)";
 
-    else if (galutinio_pasirinkimas == "m")
+    else if (Studentas::galut() == "m")
         pasirinktas_galutinis = "Galutinis (Med.)";
 
     std::string rus; // rus - rūšiavimo būdas
@@ -221,7 +220,6 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
     if (grupe.empty())
         return;
 
-    std::string galutinio_pasirinkimas;
     std::cout << "Ar norite rasti galutini vidurki ar galutine mediana?" << '\n'
               << "Jeigu vidurki, iveskite 'v'. Jeigu mediana, iveskite 'm'. " << '\n';
     for (;;)
@@ -232,7 +230,7 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
             std::getline(std::cin, ivestis);
             if (ivestis == "v" || ivestis == "m")
             {
-                galutinio_pasirinkimas = ivestis;
+                Studentas::nust_galutinio_tipa(ivestis);
                 break;
             }
             throw std::invalid_argument("Ivestas netinkamas atsakymas (galimi atsakymai: v, m).");
@@ -357,7 +355,7 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
     Container(Studentas) blogi;
     Container(Studentas) geri;
 
-    studentu_skirstymas(strategija, galutinio_pasirinkimas, grupe, blogi, geri);
+    studentu_skirstymas(strategija, grupe, blogi, geri);
 
     auto pab = std::chrono::high_resolution_clock::now();
     t.studentu_skirstymas = pab - pr;
@@ -367,14 +365,14 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
     // std::cout << "GERU SPAUSDINIMAS PRADETAS\n";
     std::cout << "Geru studentu isvedimas:\n";
     if (!geri.empty())
-        spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, geri); // išspausdina ir td grąžina mum spausdinimo trukmę (be vartotojo įvesčių)
+        spausdinimas(RAS_FAILO_NUORODA, geri); // išspausdina ir td grąžina mum spausdinimo trukmę (be vartotojo įvesčių)
     else
-        spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, grupe);
+        spausdinimas(RAS_FAILO_NUORODA, grupe);
     // std::cout << "GERU SPAUSDINIMAS BAIGTAS\n\n";
 
     // std::cout << "BLOGU SPAUSDINIMAS PRADETAS\n";
     std::cout << "Blogu studentu isvedimas:\n";
-    spausdinimas(RAS_FAILO_NUORODA, galutinio_pasirinkimas, blogi);
+    spausdinimas(RAS_FAILO_NUORODA, blogi);
     // std::cout << "BLOGU SPAUSDINIMAS BAIGTAS\n\n";
 
     grupe.clear();
@@ -390,7 +388,7 @@ void skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) & gr
               << '\n';
 }
 
-std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::string galutinio_pasirinkimas, Container(Studentas) & grupe)
+std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, Container(Studentas) & grupe)
 {
     std::ofstream ras_failas = ras_failo_paruosimas(RAS_FAILO_NUORODA);
     // std::ofstream ras_failas(RAS_FAILO_NUORODA + RAS_FAILO_PAV);
@@ -406,10 +404,10 @@ std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::s
 
     // dinamiškam lentelės stulpelių pavadinimų pavaizdavimui
     std::string pasirinktas_galutinis;
-    if (galutinio_pasirinkimas == "v")
+    if (Studentas::galut() == "v")
         pasirinktas_galutinis = "Galutinis (Vid.)";
 
-    else if (galutinio_pasirinkimas == "m")
+    else if (Studentas::galut() == "m")
         pasirinktas_galutinis = "Galutinis (Med.)";
 
     ras_failas
@@ -438,11 +436,11 @@ std::chrono::duration<double> spausdinimas(std::string RAS_FAILO_NUORODA, std::s
     return isvedimo_trukme;
 }
 
-void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Container(Studentas) & grupe, Container(Studentas) & blogi, Container(Studentas) & geri)
+void studentu_skirstymas(int strategija, Container(Studentas) & grupe, Container(Studentas) & blogi, Container(Studentas) & geri)
 {
     if (strategija == 1)
     {
-        if (galutinio_pasirinkimas == "v")
+        if (Studentas::galut() == "v")
         {
             while (!grupe.empty())
             {
@@ -457,7 +455,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
                 //     grupe.shrink_to_fit();
             }
         }
-        else if (galutinio_pasirinkimas == "m")
+        else if (Studentas::galut() == "m")
         {
             while (!grupe.empty())
             {
@@ -477,19 +475,19 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
     else if (strategija == 2)
     {
         // tikrinam ar "v" čia, išorėj, kad nereiktų tikrint per kiekvieną kartojimą
-        if (galutinio_pasirinkimas == "v")
+        if (Studentas::galut() == "v")
         {
             stud_rikiavimas(grupe, pagal_vidurki_maz);
-            while (grupe.back().rezas_vid() < 5.0)
+            while (!grupe.empty() && grupe.back().rezas_vid() < 5.0)
             {
                 blogi.push_back(std::move(grupe.back()));
                 grupe.pop_back();
             }
         }
-        else if (galutinio_pasirinkimas == "m")
+        else if (Studentas::galut() == "m")
         {
             stud_rikiavimas(grupe, pagal_mediana_maz);
-            while (grupe.back().rezas_med() < 5.0)
+            while (!grupe.empty() && grupe.back().rezas_med() < 5.0)
             {
                 blogi.push_back(std::move(grupe.back()));
                 grupe.pop_back();
@@ -499,7 +497,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
     else if (strategija == 3)
     {
         // tikrinam ar "v" čia, išorėj, kad nereiktų tikrint per kiekvieną kartojimą
-        if (galutinio_pasirinkimas == "v")
+        if (Studentas::galut() == "v")
         {
             // apie 4.7 s / 48 s
             // blogi.reserve(grupe.size() / 2); // VECTOR; bsk dijwina
@@ -508,7 +506,7 @@ void studentu_skirstymas(int strategija, std::string galutinio_pasirinkimas, Con
             std::move(pirmas_blogu_elementas, grupe.end(), std::back_inserter(blogi)); // perkelia bloguosna
             grupe.erase(pirmas_blogu_elementas, grupe.end());
         }
-        else if (galutinio_pasirinkimas == "m")
+        else if (Studentas::galut() == "m")
         {
             // blogi.reserve(grupe.size() / 2); // VECTOR; bsk dijwina
             auto pirmas_blogu_elementas = std::stable_partition(grupe.begin(), grupe.end(), [](const Studentas &stud)

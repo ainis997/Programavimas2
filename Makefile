@@ -2,7 +2,7 @@
 #	kodas
 
 CXX = g++
-CXXFLAGS = -O3 -std=c++20 # O3 vėliavėlė — optimizuoja programą
+CXXFLAGS = -g -O3 -std=c++20 # O3 vėliavėlė — optimizuoja programą
 OBJ_DIR = obj
 BIN_DIR = bin
 SRC_DIR = src

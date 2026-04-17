@@ -33,7 +33,9 @@ void failo_ivestis(std::ifstream &sk_failas, /*const std::string SK_FAILO_NUOROD
         Studentas A;
         try
         {
-            sk_failas >> A;
+            srautas.clear();
+            srautas.str(sk_failo_eil); // užpildo srauto turinį
+            srautas >> A;
         }
         catch (...)
         {

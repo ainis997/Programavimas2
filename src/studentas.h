@@ -20,6 +20,7 @@ private:
     int egzo_rezas_;
     float rezas_vid_;
     float rezas_med_;
+    inline static std::string galut_; // "v" / "m"  // be inline — klaida: "undefined reference to Studentas::galut_"
 
 public:
     // nuskaitant
@@ -75,6 +76,8 @@ public:
     inline float rezas_med() const { return rezas_med_; }
     inline size_t pazymiu_sk() { return pazymiai_.size(); }
 
+    static std::string galut() { return galut_; }
+
     // nustatytojai / setteriai
 
     void nust_varda(std::string vardas) { vardas_ = vardas; }
@@ -85,6 +88,8 @@ public:
     void ivest_egzo_reza();
     void apsk_vid();
     void apsk_med();
+
+    static void nust_galutinio_tipa(std::string v_m);
 
     // kt metodai
 

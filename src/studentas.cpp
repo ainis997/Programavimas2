@@ -39,11 +39,22 @@ Studentas &Studentas::operator=(Studentas &&kitas)
 
 std::ostream &operator<<(std::ostream &os, const Studentas &stud)
 {
-    os
-        << std::left << std::setw(20) << stud.vardas_
-        << std::left << std::setw(25) << stud.pavarde_
-        << std::setw(15) << std::fixed << std::setprecision(2) << stud.rezas_vid_;
-    return os;
+    if (Studentas::galut() == "m")
+    {
+        os
+            << std::left << std::setw(20) << stud.vardas_
+            << std::left << std::setw(25) << stud.pavarde_
+            << std::setw(15) << std::fixed << std::setprecision(2) << stud.rezas_med_;
+        return os;
+    }
+    else // "v"
+    {
+        os
+            << std::left << std::setw(20) << stud.vardas_
+            << std::left << std::setw(25) << stud.pavarde_
+            << std::setw(15) << std::fixed << std::setprecision(2) << stud.rezas_vid_;
+        return os;
+    }
 }
 
 std::istream &operator>>(std::istream &is, Studentas &stud)
@@ -57,11 +68,18 @@ std::istream &operator>>(std::istream &is, Studentas &stud)
         stud.pazymiai_.push_back(std::move(temp));
     }
 
+    if (stud.pazymiai_.empty())
+    {
+        throw std::invalid_argument("Nepavyko nuskaityti studento pazymiu.");
+    }
+
     stud.egzo_rezas_ = stud.pazymiai_.back();
     stud.pazymiai_.pop_back();
 
     stud.apsk_vid();
     stud.apsk_med();
+
+    return is;
 }
 
 bool Studentas::ivest_varda_pavarde(bool ar_ivestis_atsaukiama)
@@ -127,6 +145,14 @@ void Studentas::ivest_egzo_reza()
     int paz;
     natur_skaiciaus_ivestis(paz, ar_sk_ne_tarp_0_ir_10);
     egzo_rezas_ = paz;
+}
+
+void Studentas::nust_galutinio_tipa(std::string v_m)
+{
+    if (v_m == "m")
+        galut_ = "m";
+    else
+        galut_ = "v";
 }
 
 void Studentas::apsk_vid()
