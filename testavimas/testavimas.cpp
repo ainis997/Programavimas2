@@ -4,9 +4,9 @@
 
 #include <sstream>
 
-TEST_CASE("Konstruktorių veikimas", "[konstruktorius]")
+TEST_CASE("Paprasti konstruktoriai")
 {
-    SECTION("Paprastas konstruktorius veikia")
+    SECTION("Konstruktorius be parametrų veikia")
     {
         Studentas s;
         REQUIRE(s.vardas() == "");
@@ -101,13 +101,14 @@ TEST_CASE("Kopijavimo ir perkėlimo priskyrimo operatoriai")
 
     SECTION("Perkėlimo priskyrimo operatorius veikia")
     {
+        Studentas c = b;
         a = std::move(b);
-        REQUIRE(a.vardas() == b.vardas());
-        REQUIRE(a.pavarde() == b.pavarde());
-        REQUIRE(a.pazymiai().size() == b.pazymiai().size());
-        REQUIRE(a.egzo_rezas() == b.egzo_rezas());
-        REQUIRE(a.rezas_vid() == b.rezas_vid());
-        REQUIRE(a.rezas_med() == b.rezas_med());
+        REQUIRE(a.vardas() == c.vardas());
+        REQUIRE(a.pavarde() == c.pavarde());
+        REQUIRE(a.pazymiai().size() == c.pazymiai().size());
+        REQUIRE(a.egzo_rezas() == c.egzo_rezas());
+        REQUIRE(a.rezas_vid() == c.rezas_vid());
+        REQUIRE(a.rezas_med() == c.rezas_med());
 
         REQUIRE(b.vardas() == "");
         REQUIRE(b.pavarde() == "");
@@ -118,7 +119,7 @@ TEST_CASE("Kopijavimo ir perkėlimo priskyrimo operatoriai")
     }
 }
 
-TEST_CASE("Išvesties operatoriai")
+TEST_CASE("Išvesties/įvesties operatoriai")
 {
     Studentas s("Vardas", "Pavarde");
     s.pridet_pazymi(10);
