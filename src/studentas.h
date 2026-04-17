@@ -33,7 +33,7 @@ public:
     {
         pazymiai_.clear();
     }
-    // kopijavimo konstr [Studentas x(y);]
+    // kopijavimo konstr [Studentas x(y) / Studentas x = y]
     Studentas(const Studentas &kitas)
         : vardas_(kitas.vardas_),
           pavarde_(kitas.pavarde_),
@@ -41,7 +41,7 @@ public:
           egzo_rezas_(kitas.egzo_rezas_),
           rezas_vid_(kitas.rezas_vid_),
           rezas_med_(kitas.rezas_med_) {}
-    // perkėlimo konstr
+    // perkėlimo konstr [Studentas x(std::move(y)) / Studentas x = std::move(y)]
     Studentas(Studentas &&kitas)
         : vardas_(std::move(kitas.vardas_)),
           pavarde_(std::move(kitas.pavarde_)),
@@ -59,7 +59,7 @@ public:
 
     // kopijavimo priskyrimo operatorius [x = y]
     Studentas &operator=(const Studentas &kitas);
-    // perkėlimo priskyrimo operatorius
+    // perkėlimo priskyrimo operatorius [x = std::move(y)]
     Studentas &operator=(Studentas &&kitas);
 
     friend std::ostream &operator<<(std::ostream &os, const Studentas &stud);

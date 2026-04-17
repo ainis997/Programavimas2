@@ -49,7 +49,6 @@ TEST_DIR = testavimas
 SRC_TEST = 	$(TEST_DIR)/testavimas.cpp \
 			$(SRC_DIR)/studentas.cpp \
 			$(SRC_DIR)/ivesties_pagalb_fjos.cpp \
-			$(SRC_DIR)/isvesties_pagalb_fjos.cpp \
 			$(SRC_DIR)/klaidu_valdymas.cpp
 
 prep_test:
