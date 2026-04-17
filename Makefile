@@ -2,7 +2,7 @@
 #	kodas
 
 CXX = g++
-CXXFLAGS = -g -O3 -std=c++20 # O3 vėliavėlė — optimizuoja programą
+CXXFLAGS = -O3 -std=c++20 # O3 vėliavėlė — optimizuoja programą
 OBJ_DIR = obj
 BIN_DIR = bin
 SRC_DIR = src
@@ -42,12 +42,26 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 # nurodom, kad visi .o failai priklauso nuo visų .h failų
 $(OBJS): $(SRC_DIR)/*.h
 
+# ---- testavimas ----
+
+TEST_DIR = testavimas
+
+SRC_TEST = 	$(TEST_DIR)/testavimas.cpp \
+			$(SRC_DIR)/studentas.cpp \
+			$(SRC_DIR)/ivesties_pagalb_fjos.cpp \
+			$(SRC_DIR)/isvesties_pagalb_fjos.cpp \
+			$(SRC_DIR)/klaidu_valdymas.cpp
+
+prep_test:
+	@if not exist $(TEST_DIR) mkdir $(TEST_DIR)
+	g++ $(SRC_TEST) -o $(TEST_DIR)/testavimas
+
+test:
+	./$(TEST_DIR)/testavimas
+
 clean:
 	del $(OBJ_DIR)\*.o
 	del $(BIN_DIR)\*.exe
-
-# run: $(BIN_DIR)/$(PROGR_PAVADINIMAS)
-# 	./$(BIN_DIR)/$(PROGR_PAVADINIMAS)
 
 
 
