@@ -40,7 +40,29 @@ Duomenų apdorojimas ir išvedimas:
 
 <sup>Pastaba: programos paleidimas pritaikytas Windows operacinei sistemai.</sup>
 
+# Programos kodas
+
+### Programos kode perdengti metodai
+
+Programoje naudojamoje studento klasėje jos naudotojų patogumui perdengti kai kurie operatoriai:
+
+- išvesties srauto operatorius (<<): šis operatorius pritaikytas tiesiogiai išvesti studento klasės objektus į terminalą ar į failą;
+- įvesties srauto operatorius (>>): šis operatorius pritaikytas įvesti duomenis į studento objektą;
+- priskyrimo operatorius (=): šis operatorius pritaikytas studento klasės kintamajam priskirti tiek kopijuote (copy assignment), tiek perkelte (move assignment).
+
+Taip pat klasėje papildomai perdengti ir konstruktorių metodai, pridėti kopijavimo ir perkėlimo konstruktoriai.
+
 # Programos leidimai
+
+## v1.2
+
+### Metodų papildymas
+
+- Programoje naudojama studento klasė papildyta naujais metodais: kopijavimo ir perkėlimo konstruktoriais, kopijavimo ir perkėlimo priskyrimo operatorių bei įvesties ir išvesties operatorių perdengimais.
+
+### Testai
+
+- Programa papildyta paruoštais kodo veikimo testais: paruošti testai šioje versijoje pridėtiems naujiesiems studento klasės metodams, skirti patikrinti jų tinkamą veikimą.
 
 ## v1.1
 
