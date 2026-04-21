@@ -54,6 +54,13 @@ Taip pat klasėje papildomai perdengti ir konstruktorių metodai, pridėti kopij
 
 # Programos leidimai
 
+## v1.5
+
+### Klasių pertvarkymas
+
+- Programoje sukurta abstrakti žmogus klasė, iš kurios paveldi studento klasė.
+- Programos funkcionalumas išlaikytas lygiai toks pat.
+
 ## v1.2
 
 ### Metodų papildymas
