@@ -38,7 +38,7 @@ public:
           rezas_med_(kitas.rezas_med_) {}
     // perkėlimo konstr [Studentas x(std::move(y)) / Studentas x = std::move(y)]
     Studentas(Studentas &&kitas)
-        : Zmogus(kitas),
+        : Zmogus(std::move(kitas)),
           pazymiai_(std::move(kitas.pazymiai_)),
           egzo_rezas_(kitas.egzo_rezas_), // be std::move, nes paprastiem tipam kaip int/float tai netikslinga (skirtingai nei std::string, std::vector — objektam)
           rezas_vid_(kitas.rezas_vid_),
