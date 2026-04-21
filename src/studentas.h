@@ -50,7 +50,7 @@ public:
     }
 
     // destruktorius
-    ~Studentas() override
+    ~Studentas()
     {
         pazymiai_.clear();
     }
@@ -82,7 +82,8 @@ public:
 
     // void nust_varda(std::string vardas) { vardas_ = vardas; }
     // void nust_pavarde(std::string pavarde) { pavarde_ = pavarde; }
-    // bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false);
+    bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false) override;
+
     void pridet_pazymi(int paz);
     void nust_egzo_reza(int rez);
     void ivest_egzo_reza();

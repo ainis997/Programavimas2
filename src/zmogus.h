@@ -26,8 +26,8 @@ public:
         : vardas_(std::move(kitas.vardas_)),
           pavarde_(std::move(kitas.pavarde_)) {}
 
-    // VIRTUALUS destruktorius
-    virtual ~Zmogus() = 0;
+    // destruktorius
+    ~Zmogus() {};
 
     // gavikai / getteriai
 
@@ -39,5 +39,5 @@ public:
     void nust_varda(std::string vardas) { vardas_ = vardas; }
     void nust_pavarde(std::string pavarde) { pavarde_ = pavarde; }
 
-    bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false);
+    virtual bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false) = 0;
 };
