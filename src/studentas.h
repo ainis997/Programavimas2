@@ -15,8 +15,6 @@
 class Studentas : public Zmogus
 {
 private:
-    // std::string vardas_;
-    // std::string pavarde_;
     Container(int) pazymiai_;
     int egzo_rezas_;
     float rezas_vid_;
@@ -67,9 +65,6 @@ public:
 
     // gavikai / getteriai
 
-    // inline float rezas() const { return rezas_; }
-    // inline std::string vardas() const { return vardas_; }
-    // inline std::string pavarde() const { return pavarde_; }
     inline Container(int) pazymiai() const { return pazymiai_; }
     inline int egzo_rezas() const { return egzo_rezas_; }
     inline float rezas_vid() const { return rezas_vid_; }
@@ -80,8 +75,6 @@ public:
 
     // nustatytojai / setteriai
 
-    // void nust_varda(std::string vardas) { vardas_ = vardas; }
-    // void nust_pavarde(std::string pavarde) { pavarde_ = pavarde; }
     bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false) override;
 
     void pridet_pazymi(int paz);
