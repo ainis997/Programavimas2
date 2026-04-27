@@ -45,13 +45,13 @@ public:
     // nuskaitant
     /**
      * @brief Konstruktorius be parametrų.
-     * Sukuria tuščią studento objektą su nulinėmis reikšmėmis.
+     * * Sukuria tuščią studento objektą su nulinėmis reikšmėmis.
      */
     Studentas() : Zmogus(), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
     // surasant rankiniu budu
     /**
      * @brief Konstruktorius su vardu ir pavarde.
-     * Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės.
+     * * Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės.
      * @param vardas Studento vardas.
      * @param pavarde Studento pavardė.
      */
@@ -60,7 +60,7 @@ public:
     // kopijavimo konstr [Studentas x(y) / Studentas x = y]
     /**
      * @brief Kopijavimo konstruktorius.
-     * Sukuria naują objektą nukopijuodamas visus duomenis iš kito studento.
+     * * Sukuria naują objektą nukopijuodamas visus duomenis iš kito studento.
      * @param kitas Nuoroda objekto, iš kurio kopijuojami duomenys.
      */
     Studentas(const Studentas &kitas)
@@ -72,7 +72,7 @@ public:
     // perkėlimo konstr [Studentas x(std::move(y)) / Studentas x = std::move(y)]
     /**
      * @brief Perkėlimo konstruktorius.
-     * Perkelia resursus iš kito objekto į naują, palikdamas senąjį tuščią.
+     * * Perkelia resursus iš kito objekto į naują, palikdamas senąjį tuščią.
      * @param kitas "rvalue" nuoroda į studento objektą.
      */
     Studentas(Studentas &&kitas)
@@ -90,7 +90,7 @@ public:
     // destruktorius
     /**
      * @brief Destruktorius.
-     * Išvalo pažymių konteinerį.
+     * * Išvalo pažymių konteinerį.
      */
     ~Studentas()
     {
@@ -100,43 +100,108 @@ public:
     // perkrauti operatoriai
 
     // kopijavimo priskyrimo operatorius [x = y]
+    /**
+     * @brief Kopijavimo priskyrimo operatorius.
+     *
+     * @param kitas Nuoroda objekto, kurio duomenys bus nukopijuoti ir priskirti.
+     * @return Studentas& Nuoroda į atnaujintą objektą.
+     */
     Studentas &operator=(const Studentas &kitas);
     // perkėlimo priskyrimo operatorius [x = std::move(y)]
     /**
-     * @brief Move assignment operator.
-     * * Transfers ownership of resources from another Studentas object to this one.
-     * The source object (kitas) is left in a valid but reset state.
-     * * @param kitas The rvalue reference to the Studentas object being moved.
-     * @return Studentas& A reference to this object (*this).
+     * @brief Perkėlimo priskyrimo operatorius.
+     * * Perkelia resursus iš kito studento objekto į šį.
+     * Šaltinis (objektas kitas) tampa galimos, tačiau neapibrėžtos būsenos.
+     * * @param kitas "rvalue" nuoroda į perkelsimą studento objektą.
+     * @return Studentas& Nuoroda į šį patį objektą (*this).
      */
     Studentas &operator=(Studentas &&kitas);
 
+    /**
+     * @brief Išvesties operatorius studento duomenims spausdinti.
+     *
+     * @param os Nuoroda į išvesties srautą.
+     * @param stud Nuoroda į išvesimą studentą.
+     * @return std::ostream& Grąžinama nuoroda į išvesties srautą (tinkamam operatoriaus veikimui).
+     */
     friend std::ostream &operator<<(std::ostream &os, const Studentas &stud);
+    /**
+     * @brief Įvesties operatorius studento duomenims nuskaityti.
+     *
+     * @param is Nuoroda į įvesties srautą.
+     * @param stud Nuoroda į studento objektą, į kurį bus nuskaitomi duomenys.
+     * @return std::istream& Grąžinama nuoroda į įvesties srautą (tinkamam operatoriaus veikimui).
+     */
     friend std::istream &operator>>(std::istream &is, Studentas &stud);
 
     // gavikai / getteriai
 
+    /** @return Grąžina pažymių konteinerį. */
     inline Container(int) pazymiai() const { return pazymiai_; }
+    /** @return Grąžina egzamino rezultatą. */
     inline int egzo_rezas() const { return egzo_rezas_; }
+    /** @return Grąžina galutinį rezultatą pagal vidurkį. */
     inline float rezas_vid() const { return rezas_vid_; }
+    /** @return Grąžina galutinį rezultatą pagal medianą. */
     inline float rezas_med() const { return rezas_med_; }
+    /** @return Grąžina esamą pažymių skaičių. */
     inline size_t pazymiu_sk() { return pazymiai_.size(); }
 
+    /** @return Grąžina esamą galutinio skaičiavimo tipą. */
     static std::string galut() { return galut_; }
 
     // nustatytojai / setteriai
 
+    /**
+     * @brief Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu.
+     *
+     * @param ar_ivestis_atsaukiama Ar leidžiama nutraukti studento duomenų įvedimą įvedus "x". Numatytoji reikšmė: false.
+     * @return true Jei įvesta sėkmingai.
+     * @return false Jei įvedimas atšauktas.
+     */
     bool ivest_varda_pavarde(bool ar_ivestis_atsaukiama = false) override;
 
+    /**
+     * @brief Prideda pažymį (nuo 0 iki 10) į sąrašą.
+     *
+     * @param paz Pridedamas pažymys.
+     */
     void pridet_pazymi(int paz);
+    /**
+     * @brief Nustato egzamino rezultatą.
+     *
+     * @param rez Egzamino rezultatas.
+     */
     void nust_egzo_reza(int rez);
+    /**
+     * @brief Leidžia vartotojui įvesti egzamino rezultatą rankiniu būdu.
+     *
+     */
     void ivest_egzo_reza();
+    /**
+     * @brief Apskaičiuoja galutinį rezultatą naudojant aritmetinį vidurkį.
+     *
+     */
     void apsk_vid();
+    /**
+     * @brief Apskaičiuoja galutinį rezultatą naudojant medianą.
+     *
+     */
     void apsk_med();
 
+    /**
+     * @brief Nustato, koks galutinio rezultato skaičiavimo tipas naudosimas išvestyje.
+     *
+     * @param v_m "v": vidurkis, "m": mediana
+     */
     static void nust_galutinio_tipa(std::string v_m);
 
     // kt metodai
 
+    /**
+     * @brief Užpildo pažymių sąrašą nuliais iki nurodyto kiekio.
+     *
+     * @param min_pazymiu_sk Mažiausias privalomas turėti pažymių skaičius.
+     */
     void uzpildyt_pazymius_iki_min(int min_pazymiu_sk);
 };
