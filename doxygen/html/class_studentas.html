@@ -120,12 +120,17 @@ Vieši Metodai</h2></td></tr>
 <tr class="memitem:a99c7be3db3405a0c8221bc38609d1e10" id="r_a99c7be3db3405a0c8221bc38609d1e10"><td class="memItemLeft"><a class="el" href="class_studentas.html">Studentas</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a99c7be3db3405a0c8221bc38609d1e10">operator=</a> (<a class="el" href="class_studentas.html">Studentas</a> &amp;&amp;kitas)</td></tr>
 <tr class="memdesc:a99c7be3db3405a0c8221bc38609d1e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perkėlimo priskyrimo operatorius.  <br /></td></tr>
 <tr class="memitem:aa1df2c6568facf5b91a08d6d58573a2c" id="r_aa1df2c6568facf5b91a08d6d58573a2c"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa1df2c6568facf5b91a08d6d58573a2c">Container</a> (int) pazymiai() const</td></tr>
+<tr class="memdesc:aa1df2c6568facf5b91a08d6d58573a2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina pažymių konteinerį.  <br /></td></tr>
 <tr class="memitem:aa4507e494cc0f24e2cfdc8a87f894ee4" id="r_aa4507e494cc0f24e2cfdc8a87f894ee4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aa4507e494cc0f24e2cfdc8a87f894ee4">egzo_rezas</a> () const</td></tr>
+<tr class="memdesc:aa4507e494cc0f24e2cfdc8a87f894ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina egzamino rezultatą.  <br /></td></tr>
 <tr class="memitem:ab32a13e229fe7a7376c73d01c574c557" id="r_ab32a13e229fe7a7376c73d01c574c557"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab32a13e229fe7a7376c73d01c574c557">rezas_vid</a> () const</td></tr>
+<tr class="memdesc:ab32a13e229fe7a7376c73d01c574c557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina galutinį rezultatą pagal vidurkį.  <br /></td></tr>
 <tr class="memitem:a2aa004079e057dfcf1829e2d829e00a8" id="r_a2aa004079e057dfcf1829e2d829e00a8"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2aa004079e057dfcf1829e2d829e00a8">rezas_med</a> () const</td></tr>
+<tr class="memdesc:a2aa004079e057dfcf1829e2d829e00a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina galutinį rezultatą pagal medianą.  <br /></td></tr>
 <tr class="memitem:a4400b13362638aaaf17ff5ce73a1041f" id="r_a4400b13362638aaaf17ff5ce73a1041f"><td class="memItemLeft">size_t&#160;</td><td class="memItemRight"><a class="el" href="#a4400b13362638aaaf17ff5ce73a1041f">pazymiu_sk</a> ()</td></tr>
+<tr class="memdesc:a4400b13362638aaaf17ff5ce73a1041f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina esamą pažymių skaičių.  <br /></td></tr>
 <tr class="memitem:a1d6f40dd5d50938c1006cf1e9cfeb717" id="r_a1d6f40dd5d50938c1006cf1e9cfeb717"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1d6f40dd5d50938c1006cf1e9cfeb717">ivest_varda_pavarde</a> (bool ar_ivestis_atsaukiama=false) override</td></tr>
-<tr class="memdesc:a1d6f40dd5d50938c1006cf1e9cfeb717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu.  <br /></td></tr>
+<tr class="memdesc:a1d6f40dd5d50938c1006cf1e9cfeb717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu. Įgyvendina tėvinės žmogaus klasės grynąją virtualiąją funkciją.  <br /></td></tr>
 <tr class="memitem:a16cf2e53c06abb0ca653e1bcc29ee85b" id="r_a16cf2e53c06abb0ca653e1bcc29ee85b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16cf2e53c06abb0ca653e1bcc29ee85b">pridet_pazymi</a> (int paz)</td></tr>
 <tr class="memdesc:a16cf2e53c06abb0ca653e1bcc29ee85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prideda pažymį (nuo 0 iki 10) į sąrašą.  <br /></td></tr>
 <tr class="memitem:a31a594766e3cc47a4e6ebaab67f0b89c" id="r_a31a594766e3cc47a4e6ebaab67f0b89c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a31a594766e3cc47a4e6ebaab67f0b89c">nust_egzo_reza</a> (int rez)</td></tr>
@@ -140,18 +145,28 @@ Vieši Metodai</h2></td></tr>
 <tr class="memdesc:af3e29618f811dfdaa481cddfe77efacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Užpildo pažymių sąrašą nuliais iki nurodyto kiekio.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_zmogus"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_zmogus')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Vieši Metodai inherited from <a class="el" href="class_zmogus.html">Zmogus</a></td></tr>
 <tr class="memitem:aa7a8ba4d3c4778f9b35d59eef3e72574 inherit pub_methods_class_zmogus" id="r_aa7a8ba4d3c4778f9b35d59eef3e72574"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#aa7a8ba4d3c4778f9b35d59eef3e72574">Zmogus</a> ()</td></tr>
+<tr class="memdesc:aa7a8ba4d3c4778f9b35d59eef3e72574 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktorius be parametrų.  <br /></td></tr>
 <tr class="memitem:adadfe5845f62fbce03263b7787610d69 inherit pub_methods_class_zmogus" id="r_adadfe5845f62fbce03263b7787610d69"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#adadfe5845f62fbce03263b7787610d69">Zmogus</a> (std::string <a class="el" href="class_zmogus.html#a03de7738fc8f68275e401a3b96954cf0">vardas</a>, std::string <a class="el" href="class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf">pavarde</a>)</td></tr>
+<tr class="memdesc:adadfe5845f62fbce03263b7787610d69 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktorius su vardu ir pavarde.  <br /></td></tr>
 <tr class="memitem:a5c4ff9201f22476b17daf10ddc98c8f2 inherit pub_methods_class_zmogus" id="r_a5c4ff9201f22476b17daf10ddc98c8f2"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a5c4ff9201f22476b17daf10ddc98c8f2">Zmogus</a> (const <a class="el" href="class_zmogus.html">Zmogus</a> &amp;kitas)</td></tr>
+<tr class="memdesc:a5c4ff9201f22476b17daf10ddc98c8f2 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kopijavimo konstruktorius.  <br /></td></tr>
 <tr class="memitem:ab15a58e5d8c407d73ca5d831320580ec inherit pub_methods_class_zmogus" id="r_ab15a58e5d8c407d73ca5d831320580ec"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#ab15a58e5d8c407d73ca5d831320580ec">Zmogus</a> (<a class="el" href="class_zmogus.html">Zmogus</a> &amp;&amp;kitas)</td></tr>
+<tr class="memdesc:ab15a58e5d8c407d73ca5d831320580ec inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perkėlimo konstruktorius.  <br /></td></tr>
 <tr class="memitem:a111f690f499186555a4f318cb1868f32 inherit pub_methods_class_zmogus" id="r_a111f690f499186555a4f318cb1868f32"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a111f690f499186555a4f318cb1868f32">~Zmogus</a> ()</td></tr>
+<tr class="memdesc:a111f690f499186555a4f318cb1868f32 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktorius.  <br /></td></tr>
 <tr class="memitem:a03de7738fc8f68275e401a3b96954cf0 inherit pub_methods_class_zmogus" id="r_a03de7738fc8f68275e401a3b96954cf0"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a03de7738fc8f68275e401a3b96954cf0">vardas</a> () const</td></tr>
+<tr class="memdesc:a03de7738fc8f68275e401a3b96954cf0 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina žmogaus vardą.  <br /></td></tr>
 <tr class="memitem:a24b5b4208f386916dc5c1ccf006bdedf inherit pub_methods_class_zmogus" id="r_a24b5b4208f386916dc5c1ccf006bdedf"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf">pavarde</a> () const</td></tr>
+<tr class="memdesc:a24b5b4208f386916dc5c1ccf006bdedf inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina žmogaus pavardę.  <br /></td></tr>
 <tr class="memitem:abdd681f6a41d736e1aa844a11c50ea24 inherit pub_methods_class_zmogus" id="r_abdd681f6a41d736e1aa844a11c50ea24"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#abdd681f6a41d736e1aa844a11c50ea24">nust_varda</a> (std::string <a class="el" href="class_zmogus.html#a03de7738fc8f68275e401a3b96954cf0">vardas</a>)</td></tr>
+<tr class="memdesc:abdd681f6a41d736e1aa844a11c50ea24 inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nustato žmogaus vardą.  <br /></td></tr>
 <tr class="memitem:a5c00e6f22ec5a6b383e2661447329b0f inherit pub_methods_class_zmogus" id="r_a5c00e6f22ec5a6b383e2661447329b0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a5c00e6f22ec5a6b383e2661447329b0f">nust_pavarde</a> (std::string <a class="el" href="class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf">pavarde</a>)</td></tr>
+<tr class="memdesc:a5c00e6f22ec5a6b383e2661447329b0f inherit pub_methods_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nustato žmogaus pavardę.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Statiniai Vieši Metodai</h2></td></tr>
 <tr class="memitem:ad4b196ef88c01c2f86bafaaa629adb0d" id="r_ad4b196ef88c01c2f86bafaaa629adb0d"><td class="memItemLeft">static std::string&#160;</td><td class="memItemRight"><a class="el" href="#ad4b196ef88c01c2f86bafaaa629adb0d">galut</a> ()</td></tr>
+<tr class="memdesc:ad4b196ef88c01c2f86bafaaa629adb0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina esamą galutinio skaičiavimo tipą.  <br /></td></tr>
 <tr class="memitem:a9ff0e8dfc2f801fd74eee0ad5cbb2fdf" id="r_a9ff0e8dfc2f801fd74eee0ad5cbb2fdf"><td class="memItemLeft">static void&#160;</td><td class="memItemRight"><a class="el" href="#a9ff0e8dfc2f801fd74eee0ad5cbb2fdf">nust_galutinio_tipa</a> (std::string v_m)</td></tr>
 <tr class="memdesc:a9ff0e8dfc2f801fd74eee0ad5cbb2fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nustato, koks galutinio rezultato skaičiavimo tipas naudosimas išvestyje.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -166,7 +181,9 @@ Draugai</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_zmogus"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_zmogus')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Apsaugoti Atributai inherited from <a class="el" href="class_zmogus.html">Zmogus</a></td></tr>
 <tr class="memitem:a80e72cd553492344884a264a72ce33d2 inherit pro_attribs_class_zmogus" id="r_a80e72cd553492344884a264a72ce33d2"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a80e72cd553492344884a264a72ce33d2">vardas_</a></td></tr>
+<tr class="memdesc:a80e72cd553492344884a264a72ce33d2 inherit pro_attribs_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Žmogaus vardas.  <br /></td></tr>
 <tr class="memitem:a85cd6103a5f887059263d15413a3f081 inherit pro_attribs_class_zmogus" id="r_a85cd6103a5f887059263d15413a3f081"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="class_zmogus.html#a85cd6103a5f887059263d15413a3f081">pavarde_</a></td></tr>
+<tr class="memdesc:a85cd6103a5f887059263d15413a3f081 inherit pro_attribs_class_zmogus"><td class="mdescLeft">&#160;</td><td class="mdescRight">Žmogaus pavardė.  <br /></td></tr>
 </table>
 <a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Konstruktoriaus ir Destruktoriaus Dokumentacija</h2>
 <a id="ab459e995e8c9b24cdc9aec5b09a66539" name="ab459e995e8c9b24cdc9aec5b09a66539"></a>
@@ -230,8 +247,8 @@ Additional Inherited Members</h2></td></tr>
 <ul>
 <li>Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės. <dl class="params"><dt>Parametrai</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="class_zmogus.html#a03de7738fc8f68275e401a3b96954cf0">vardas</a></td><td>Studento vardas. </td></tr>
-    <tr><td class="paramname"><a class="el" href="class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf">pavarde</a></td><td>Studento pavardė. </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_zmogus.html#a03de7738fc8f68275e401a3b96954cf0" title="Grąžina žmogaus vardą.">vardas</a></td><td>Studento vardas. </td></tr>
+    <tr><td class="paramname"><a class="el" href="class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf" title="Grąžina žmogaus pavardę.">pavarde</a></td><td>Studento pavardė. </td></tr>
   </table>
   </dd>
 </dl>
@@ -403,7 +420,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina pažymių konteinerį. </dd></dl>
+
+<p>Grąžina pažymių konteinerį. </p>
 
 </div>
 </div>
@@ -429,7 +447,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina egzamino rezultatą. </dd></dl>
+
+<p>Grąžina egzamino rezultatą. </p>
 
 </div>
 </div>
@@ -455,7 +474,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina esamą galutinio skaičiavimo tipą. </dd></dl>
+
+<p>Grąžina esamą galutinio skaičiavimo tipą. </p>
 
 </div>
 </div>
@@ -501,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu. </p>
+<p>Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu. Įgyvendina tėvinės žmogaus klasės grynąją virtualiąją funkciją. </p>
 <dl class="params"><dt>Parametrai</dt><dd>
   <table class="params">
     <tr><td class="paramname">ar_ivestis_atsaukiama</td><td>Ar leidžiama nutraukti studento duomenų įvedimą įvedus "x". Numatytoji reikšmė: false. </td></tr>
@@ -596,7 +616,7 @@ false Jei įvedimas atšauktas. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Gražina</dt><dd><a class="el" href="class_studentas.html">Studentas</a>&amp; Nuoroda į atnaujintą objektą. </dd></dl>
+<dl class="section return"><dt>Gražina</dt><dd><a class="el" href="class_studentas.html">Studentas</a>&amp; nuoroda į atnaujintą objektą. </dd></dl>
 
 </div>
 </div>
@@ -624,7 +644,7 @@ false Jei įvedimas atšauktas. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Gražina</dt><dd><a class="el" href="class_studentas.html">Studentas</a>&amp; Nuoroda į šį patį objektą (*this). </dd></dl>
+<dl class="section return"><dt>Gražina</dt><dd><a class="el" href="class_studentas.html">Studentas</a>&amp; nuoroda į šį patį objektą (*this). </dd></dl>
 </li>
 </ul>
 
@@ -652,7 +672,8 @@ false Jei įvedimas atšauktas. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina esamą pažymių skaičių. </dd></dl>
+
+<p>Grąžina esamą pažymių skaičių. </p>
 
 </div>
 </div>
@@ -703,7 +724,8 @@ false Jei įvedimas atšauktas. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina galutinį rezultatą pagal medianą. </dd></dl>
+
+<p>Grąžina galutinį rezultatą pagal medianą. </p>
 
 </div>
 </div>
@@ -729,7 +751,8 @@ false Jei įvedimas atšauktas. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Gražina</dt><dd>Grąžina galutinį rezultatą pagal vidurkį. </dd></dl>
+
+<p>Grąžina galutinį rezultatą pagal vidurkį. </p>
 
 </div>
 </div>
@@ -794,7 +817,7 @@ false Jei įvedimas atšauktas. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Gražina</dt><dd>std::ostream&amp; Grąžinama nuoroda į išvesties srautą (tinkamam operatoriaus veikimui). </dd></dl>
+<dl class="section return"><dt>Gražina</dt><dd>std::ostream&amp; nuoroda į išvesties srautą (tinkamam operatoriaus veikimui). </dd></dl>
 
 </div>
 </div>

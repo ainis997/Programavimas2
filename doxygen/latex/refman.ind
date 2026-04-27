@@ -1,0 +1,339 @@
+\begin{theindex}
+
+  \item {\texorpdfstring{$\sim$}{\string~}Studentas}
+    \subitem {Studentas}, \hyperpage{15}
+  \item {\texorpdfstring{$\sim$}{\string~}Zmogus}
+    \subitem {Zmogus}, \hyperpage{21}
+
+  \indexspace
+
+  \item {apsk\_med}
+    \subitem {Studentas}, \hyperpage{15}
+  \item {apsk\_vid}
+    \subitem {Studentas}, \hyperpage{15}
+  \item {ar\_sk\_ne\_tarp\_0\_ir\_10}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+  \item {ar\_sk\_nedidesnis\_uz\_0}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+  \item {ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+  \item {ar\_sk\_nera\_1\_2\_3\_4\_5\_6}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {Container}
+    \subitem {konstantos\_kt\_klases.h}, \hyperpage{39}
+    \subitem {Studentas}, \hyperpage{15}
+
+  \indexspace
+
+  \item {duomenu\_nuskaitymas}
+    \subitem {Programos\_laikai}, \hyperpage{11}
+  \item {duomenu\_rikiavimas}
+    \subitem {Programos\_laikai}, \hyperpage{11}
+
+  \indexspace
+
+  \item {egzo\_rezas}
+    \subitem {Studentas}, \hyperpage{16}
+
+  \indexspace
+
+  \item {failo\_ivestis}
+    \subitem {ivestis.cpp}, \hyperpage{36}
+    \subitem {ivestis.h}, \hyperpage{37}
+
+  \indexspace
+
+  \item {galut}
+    \subitem {Studentas}, \hyperpage{16}
+  \item {generuota\_ivestis}
+    \subitem {ivestis.cpp}, \hyperpage{36}
+    \subitem {ivestis.h}, \hyperpage{37}
+
+  \indexspace
+
+  \item {isvesties\_pagalb\_fjos.cpp}
+    \subitem {pagal\_mediana\_did}, \hyperpage{25}
+    \subitem {pagal\_mediana\_maz}, \hyperpage{25}
+    \subitem {pagal\_pavarde\_did}, \hyperpage{26}
+    \subitem {pagal\_pavarde\_maz}, \hyperpage{26}
+    \subitem {pagal\_varda\_did}, \hyperpage{26}
+    \subitem {pagal\_varda\_maz}, \hyperpage{26}
+    \subitem {pagal\_vidurki\_did}, \hyperpage{26}
+    \subitem {pagal\_vidurki\_maz}, \hyperpage{26}
+    \subitem {ras\_failo\_paruosimas}, \hyperpage{26}
+  \item {isvesties\_pagalb\_fjos.h}
+    \subitem {pagal\_mediana\_did}, \hyperpage{27}
+    \subitem {pagal\_mediana\_maz}, \hyperpage{27}
+    \subitem {pagal\_pavarde\_did}, \hyperpage{27}
+    \subitem {pagal\_pavarde\_maz}, \hyperpage{27}
+    \subitem {pagal\_varda\_did}, \hyperpage{27}
+    \subitem {pagal\_varda\_maz}, \hyperpage{28}
+    \subitem {pagal\_vidurki\_did}, \hyperpage{28}
+    \subitem {pagal\_vidurki\_maz}, \hyperpage{28}
+    \subitem {ras\_failo\_paruosimas}, \hyperpage{28}
+    \subitem {rikiavimas}, \hyperpage{28}
+    \subitem {stud\_rikiavimas}, \hyperpage{28}
+  \item {isvestis}
+    \subitem {isvestis.cpp}, \hyperpage{30}
+    \subitem {isvestis.h}, \hyperpage{31}
+  \item {isvestis.cpp}
+    \subitem {isvestis}, \hyperpage{30}
+    \subitem {skirstoma\_isvestis}, \hyperpage{30}
+    \subitem {spausdinimas}, \hyperpage{30}
+    \subitem {studentu\_skirstymas}, \hyperpage{30}
+    \subitem {visu\_stud\_duomenu\_generavimo\_isvestis}, 
+		\hyperpage{30}
+  \item {isvestis.h}
+    \subitem {isvestis}, \hyperpage{31}
+    \subitem {skirstoma\_isvestis}, \hyperpage{31}
+    \subitem {spausdinimas}, \hyperpage{31}
+    \subitem {studentu\_skirstymas}, \hyperpage{32}
+    \subitem {visu\_stud\_duomenu\_generavimo\_isvestis}, 
+		\hyperpage{32}
+  \item {ivest\_egzo\_reza}
+    \subitem {Studentas}, \hyperpage{16}
+  \item {ivest\_varda\_pavarde}
+    \subitem {Studentas}, \hyperpage{16}
+    \subitem {Zmogus}, \hyperpage{22}
+  \item {ivesties\_klaidos\_valdymas}
+    \subitem {klaidu\_valdymas.cpp}, \hyperpage{38}
+    \subitem {klaidu\_valdymas.h}, \hyperpage{38}
+  \item {ivesties\_pagalb\_fjos.cpp}
+    \subitem {ar\_sk\_ne\_tarp\_0\_ir\_10}, \hyperpage{33}
+    \subitem {ar\_sk\_nedidesnis\_uz\_0}, \hyperpage{33}
+    \subitem {ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}, 
+		\hyperpage{33}
+    \subitem {ar\_sk\_nera\_1\_2\_3\_4\_5\_6}, \hyperpage{33}
+    \subitem {natur\_skaiciaus\_ivestis}, \hyperpage{33}
+    \subitem {skait\_failo\_paruosimas}, \hyperpage{33}
+    \subitem {vardo\_pavardes\_ivestis}, \hyperpage{33}
+  \item {ivesties\_pagalb\_fjos.h}
+    \subitem {ar\_sk\_ne\_tarp\_0\_ir\_10}, \hyperpage{34}
+    \subitem {ar\_sk\_nedidesnis\_uz\_0}, \hyperpage{34}
+    \subitem {ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}, 
+		\hyperpage{34}
+    \subitem {ar\_sk\_nera\_1\_2\_3\_4\_5\_6}, \hyperpage{34}
+    \subitem {natur\_skaiciaus\_ivestis}, \hyperpage{34}
+    \subitem {skait\_failo\_paruosimas}, \hyperpage{34}
+    \subitem {vardo\_pavardes\_ivestis}, \hyperpage{35}
+  \item {ivestis.cpp}
+    \subitem {failo\_ivestis}, \hyperpage{36}
+    \subitem {generuota\_ivestis}, \hyperpage{36}
+    \subitem {misri\_ivestis}, \hyperpage{36}
+    \subitem {rank\_ivestis}, \hyperpage{36}
+    \subitem {visu\_stud\_duomenu\_generavimo\_ivestis}, \hyperpage{36}
+  \item {ivestis.h}
+    \subitem {failo\_ivestis}, \hyperpage{37}
+    \subitem {generuota\_ivestis}, \hyperpage{37}
+    \subitem {misri\_ivestis}, \hyperpage{37}
+    \subitem {rank\_ivestis}, \hyperpage{37}
+    \subitem {visu\_stud\_duomenu\_generavimo\_ivestis}, \hyperpage{37}
+
+  \indexspace
+
+  \item {klaidu\_valdymas.cpp}
+    \subitem {ivesties\_klaidos\_valdymas}, \hyperpage{38}
+  \item {klaidu\_valdymas.h}
+    \subitem {ivesties\_klaidos\_valdymas}, \hyperpage{38}
+  \item {konstantos\_kt\_klases.h}
+    \subitem {Container}, \hyperpage{39}
+    \subitem {MAX\_INT}, \hyperpage{39}
+
+  \indexspace
+
+  \item {main}
+    \subitem {pagr.cpp}, \hyperpage{40}
+  \item {MAX\_INT}
+    \subitem {konstantos\_kt\_klases.h}, \hyperpage{39}
+  \item {misri\_ivestis}
+    \subitem {ivestis.cpp}, \hyperpage{36}
+    \subitem {ivestis.h}, \hyperpage{37}
+
+  \indexspace
+
+  \item {natur\_skaiciaus\_ivestis}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+  \item {nust\_egzo\_reza}
+    \subitem {Studentas}, \hyperpage{16}
+  \item {nust\_galutinio\_tipa}
+    \subitem {Studentas}, \hyperpage{17}
+  \item {nust\_pavarde}
+    \subitem {Zmogus}, \hyperpage{22}
+  \item {nust\_varda}
+    \subitem {Zmogus}, \hyperpage{22}
+
+  \indexspace
+
+  \item {operator$<$$<$}
+    \subitem {Studentas}, \hyperpage{19}
+    \subitem {studentas.cpp}, \hyperpage{41}
+  \item {operator$>$$>$}
+    \subitem {Studentas}, \hyperpage{19}
+    \subitem {studentas.cpp}, \hyperpage{41}
+  \item {operator=}
+    \subitem {Studentas}, \hyperpage{17}
+
+  \indexspace
+
+  \item {pagal\_mediana\_did}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{25}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{27}
+  \item {pagal\_mediana\_maz}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{25}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{27}
+  \item {pagal\_pavarde\_did}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{27}
+  \item {pagal\_pavarde\_maz}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{27}
+  \item {pagal\_varda\_did}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{27}
+  \item {pagal\_varda\_maz}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+  \item {pagal\_vidurki\_did}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+  \item {pagal\_vidurki\_maz}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+  \item {pagr.cpp}
+    \subitem {main}, \hyperpage{40}
+  \item {pavarde}
+    \subitem {Zmogus}, \hyperpage{22}
+  \item {pavarde\_}
+    \subitem {Zmogus}, \hyperpage{23}
+  \item {pazymiu\_sk}
+    \subitem {Studentas}, \hyperpage{18}
+  \item {pridet\_pazymi}
+    \subitem {Studentas}, \hyperpage{18}
+  \item {Programos\_laikai}, \hyperpage{11}
+    \subitem {duomenu\_nuskaitymas}, \hyperpage{11}
+    \subitem {duomenu\_rikiavimas}, \hyperpage{11}
+    \subitem {spausd\_laikus}, \hyperpage{11}
+    \subitem {studentu\_skirstymas}, \hyperpage{11}
+    \subitem {visa\_trukme\_su\_ivestim}, \hyperpage{12}
+
+  \indexspace
+
+  \item {rank\_ivestis}
+    \subitem {ivestis.cpp}, \hyperpage{36}
+    \subitem {ivestis.h}, \hyperpage{37}
+  \item {ras\_failo\_paruosimas}
+    \subitem {isvesties\_pagalb\_fjos.cpp}, \hyperpage{26}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+  \item {rezas\_med}
+    \subitem {Studentas}, \hyperpage{18}
+  \item {rezas\_vid}
+    \subitem {Studentas}, \hyperpage{18}
+  \item {rikiavimas}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+
+  \indexspace
+
+  \item {skait\_failo\_paruosimas}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{34}
+  \item {skirstoma\_isvestis}
+    \subitem {isvestis.cpp}, \hyperpage{30}
+    \subitem {isvestis.h}, \hyperpage{31}
+  \item {spausd\_laikus}
+    \subitem {Programos\_laikai}, \hyperpage{11}
+  \item {spausdinimas}
+    \subitem {isvestis.cpp}, \hyperpage{30}
+    \subitem {isvestis.h}, \hyperpage{31}
+  \item {src Directorijos aprašas}, \hyperpage{9}
+  \item {src/isvesties\_pagalb\_fjos.cpp}, \hyperpage{25}
+  \item {src/isvesties\_pagalb\_fjos.h}, \hyperpage{27}, \hyperpage{29}
+  \item {src/isvestis.cpp}, \hyperpage{29}
+  \item {src/isvestis.h}, \hyperpage{31, 32}
+  \item {src/ivesties\_pagalb\_fjos.cpp}, \hyperpage{32}
+  \item {src/ivesties\_pagalb\_fjos.h}, \hyperpage{34, 35}
+  \item {src/ivestis.cpp}, \hyperpage{35}
+  \item {src/ivestis.h}, \hyperpage{36, 37}
+  \item {src/klaidu\_valdymas.cpp}, \hyperpage{38}
+  \item {src/klaidu\_valdymas.h}, \hyperpage{38}
+  \item {src/konstantos\_kt\_klases.h}, \hyperpage{38, 39}
+  \item {src/kt\_klasiu\_metodai.cpp}, \hyperpage{40}
+  \item {src/pagr.cpp}, \hyperpage{40}
+  \item {src/studentas.cpp}, \hyperpage{40}
+  \item {src/studentas.h}, \hyperpage{41, 42}
+  \item {src/zmogus.h}, \hyperpage{43}
+  \item {stud\_rikiavimas}
+    \subitem {isvesties\_pagalb\_fjos.h}, \hyperpage{28}
+  \item {Studentas}, \hyperpage{12}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Studentas}, 
+		\hyperpage{15}
+    \subitem {apsk\_med}, \hyperpage{15}
+    \subitem {apsk\_vid}, \hyperpage{15}
+    \subitem {Container}, \hyperpage{15}
+    \subitem {egzo\_rezas}, \hyperpage{16}
+    \subitem {galut}, \hyperpage{16}
+    \subitem {ivest\_egzo\_reza}, \hyperpage{16}
+    \subitem {ivest\_varda\_pavarde}, \hyperpage{16}
+    \subitem {nust\_egzo\_reza}, \hyperpage{16}
+    \subitem {nust\_galutinio\_tipa}, \hyperpage{17}
+    \subitem {operator$<$$<$}, \hyperpage{19}
+    \subitem {operator$>$$>$}, \hyperpage{19}
+    \subitem {operator=}, \hyperpage{17}
+    \subitem {pazymiu\_sk}, \hyperpage{18}
+    \subitem {pridet\_pazymi}, \hyperpage{18}
+    \subitem {rezas\_med}, \hyperpage{18}
+    \subitem {rezas\_vid}, \hyperpage{18}
+    \subitem {Studentas}, \hyperpage{14, 15}
+    \subitem {uzpildyt\_pazymius\_iki\_min}, \hyperpage{18}
+  \item {studentas.cpp}
+    \subitem {operator$<$$<$}, \hyperpage{41}
+    \subitem {operator$>$$>$}, \hyperpage{41}
+  \item {studentu\_skirstymas}
+    \subitem {isvestis.cpp}, \hyperpage{30}
+    \subitem {isvestis.h}, \hyperpage{32}
+    \subitem {Programos\_laikai}, \hyperpage{11}
+
+  \indexspace
+
+  \item {uzpildyt\_pazymius\_iki\_min}
+    \subitem {Studentas}, \hyperpage{18}
+
+  \indexspace
+
+  \item {vardas}
+    \subitem {Zmogus}, \hyperpage{22}
+  \item {vardas\_}
+    \subitem {Zmogus}, \hyperpage{23}
+  \item {vardo\_pavardes\_ivestis}
+    \subitem {ivesties\_pagalb\_fjos.cpp}, \hyperpage{33}
+    \subitem {ivesties\_pagalb\_fjos.h}, \hyperpage{35}
+  \item {visa\_trukme\_su\_ivestim}
+    \subitem {Programos\_laikai}, \hyperpage{12}
+  \item {visu\_stud\_duomenu\_generavimo\_isvestis}
+    \subitem {isvestis.cpp}, \hyperpage{30}
+    \subitem {isvestis.h}, \hyperpage{32}
+  \item {visu\_stud\_duomenu\_generavimo\_ivestis}
+    \subitem {ivestis.cpp}, \hyperpage{36}
+    \subitem {ivestis.h}, \hyperpage{37}
+
+  \indexspace
+
+  \item {Zmogus}, \hyperpage{20}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Zmogus}, \hyperpage{21}
+    \subitem {ivest\_varda\_pavarde}, \hyperpage{22}
+    \subitem {nust\_pavarde}, \hyperpage{22}
+    \subitem {nust\_varda}, \hyperpage{22}
+    \subitem {pavarde}, \hyperpage{22}
+    \subitem {pavarde\_}, \hyperpage{23}
+    \subitem {vardas}, \hyperpage{22}
+    \subitem {vardas\_}, \hyperpage{23}
+    \subitem {Zmogus}, \hyperpage{20, 21}
+
+\end{theindex}
