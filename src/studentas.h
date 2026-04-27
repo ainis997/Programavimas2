@@ -15,30 +15,15 @@
 class Studentas : public Zmogus
 {
 private:
-    /**
-     * @brief Studento namų darbų pažymių konteineris (tipas Container = std::vector).
-     *
-     */
+    /** @brief Studento namų darbų pažymių konteineris (tipas Container = std::vector). */
     Container(int) pazymiai_;
-    /**
-     * @brief Egzamino rezultatas.
-     *
-     */
+    /** @brief Egzamino rezultatas. */
     int egzo_rezas_;
-    /**
-     * @brief Galutinis rezultatas, skaičiuojamas pagal vidurkį.
-     *
-     */
+    /** @brief Galutinis rezultatas, skaičiuojamas pagal vidurkį. */
     float rezas_vid_;
-    /**
-     * @brief Galutinis rezultatas, skaičiuojamas pagal medianą.
-     *
-     */
+    /** @brief Galutinis rezultatas, skaičiuojamas pagal medianą. */
     float rezas_med_;
-    /**
-     * @brief Statinis nustatymas, nurodantis galutinio rezultato skaičiavimo tipą ("v" — vidurkis, "m" — mediana).
-     *
-     */
+    /** @brief Statinis nustatymas, nurodantis galutinio rezultato skaičiavimo tipą ("v" — vidurkis, "m" — mediana). */
     inline static std::string galut_; // "v" / "m"  // be inline — klaida: "undefined reference to Studentas::galut_"
 
 public:
@@ -104,7 +89,7 @@ public:
      * @brief Kopijavimo priskyrimo operatorius.
      *
      * @param kitas Nuoroda objekto, kurio duomenys bus nukopijuoti ir priskirti.
-     * @return Studentas& Nuoroda į atnaujintą objektą.
+     * @return Studentas& nuoroda į atnaujintą objektą.
      */
     Studentas &operator=(const Studentas &kitas);
     // perkėlimo priskyrimo operatorius [x = std::move(y)]
@@ -113,7 +98,7 @@ public:
      * * Perkelia resursus iš kito studento objekto į šį.
      * Šaltinis (objektas kitas) tampa galimos, tačiau neapibrėžtos būsenos.
      * * @param kitas "rvalue" nuoroda į perkelsimą studento objektą.
-     * @return Studentas& Nuoroda į šį patį objektą (*this).
+     * @return Studentas& nuoroda į šį patį objektą (*this).
      */
     Studentas &operator=(Studentas &&kitas);
 
@@ -122,7 +107,7 @@ public:
      *
      * @param os Nuoroda į išvesties srautą.
      * @param stud Nuoroda į išvesimą studentą.
-     * @return std::ostream& Grąžinama nuoroda į išvesties srautą (tinkamam operatoriaus veikimui).
+     * @return std::ostream& nuoroda į išvesties srautą (tinkamam operatoriaus veikimui).
      */
     friend std::ostream &operator<<(std::ostream &os, const Studentas &stud);
     /**
@@ -136,25 +121,25 @@ public:
 
     // gavikai / getteriai
 
-    /** @return Grąžina pažymių konteinerį. */
+    /** @brief Grąžina pažymių konteinerį. */
     inline Container(int) pazymiai() const { return pazymiai_; }
-    /** @return Grąžina egzamino rezultatą. */
+    /** @brief Grąžina egzamino rezultatą. */
     inline int egzo_rezas() const { return egzo_rezas_; }
-    /** @return Grąžina galutinį rezultatą pagal vidurkį. */
+    /** @brief Grąžina galutinį rezultatą pagal vidurkį. */
     inline float rezas_vid() const { return rezas_vid_; }
-    /** @return Grąžina galutinį rezultatą pagal medianą. */
+    /** @brief Grąžina galutinį rezultatą pagal medianą. */
     inline float rezas_med() const { return rezas_med_; }
-    /** @return Grąžina esamą pažymių skaičių. */
+    /** @brief Grąžina esamą pažymių skaičių. */
     inline size_t pazymiu_sk() { return pazymiai_.size(); }
 
-    /** @return Grąžina esamą galutinio skaičiavimo tipą. */
+    /** @brief Grąžina esamą galutinio skaičiavimo tipą. */
     static std::string galut() { return galut_; }
 
     // nustatytojai / setteriai
 
     /**
      * @brief Leidžia vartotojui įvesti vardą ir pavardę rankiniu būdu.
-     *
+     ** Įgyvendina tėvinės žmogaus klasės grynąją virtualiąją funkciją.
      * @param ar_ivestis_atsaukiama Ar leidžiama nutraukti studento duomenų įvedimą įvedus "x". Numatytoji reikšmė: false.
      * @return true Jei įvesta sėkmingai.
      * @return false Jei įvedimas atšauktas.
