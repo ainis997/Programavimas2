@@ -54,6 +54,13 @@ Taip pat klasėje papildomai perdengti ir konstruktorių metodai, pridėti kopij
 
 # Programos leidimai
 
+## v2.0
+
+### Dokumentacija
+
+- Naudojantis Doxygen įrankiu sukurta dokumentacija.
+- Dokumentacija prieinama tiek HTML, tiek LaTeX, tiek PDF formatais.
+
 ## v1.5
 
 ### Klasių pertvarkymas
