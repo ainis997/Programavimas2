@@ -1,0 +1,22 @@
+\doxysection{ivesties\+\_\+pagalb\+\_\+fjos.\+h}
+\hypertarget{ivesties__pagalb__fjos_8h_source}{}\label{ivesties__pagalb__fjos_8h_source}\index{src/ivesties\_pagalb\_fjos.h@{src/ivesties\_pagalb\_fjos.h}}
+\doxymbox{\hyperlink{ivesties__pagalb__fjos_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_studentas}{Studentas}};\ \textcolor{comment}{//\ forward\ declaration,\ vietoje\ \#include\ "{}studentas.h"{},\ kad\ išvengt\ circular\ dependency}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ įvesties\ (skaitymo)\ failo\ pavadinimo\ gavimo\ funkcija}}
+\DoxyCodeLine{00006\ std::ifstream\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_ad2e4a449234c42f19f2ff835f4fbcb39}{skait\_failo\_paruosimas}}(std::string\ SK\_FAILO\_NUORODA);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ pagalbinės\ vartotojo\ įvesties\ programoj\ funkcijos}}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a8aefa0c854b41f96b9869c04b049c560}{vardo\_pavardes\_ivestis}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \textcolor{keywordtype}{bool}\ ar\_ivestis\_atsaukiama);}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a114f2190604b1e5bbc8df1a0aae1a3c7}{natur\_skaiciaus\_ivestis}}(\textcolor{keywordtype}{int}\ \&sk,\ \textcolor{keywordtype}{bool}\ (*papild\_salygu\_fja)(\textcolor{keywordtype}{int})\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keywordtype}{bool}\ ar\_ivestis\_atsaukiama\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ pagalbinės\ įvesties\ sąlygų\ tikrinimo\ funkcijos}}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a0ec18ec9868948bb8578dbfe16a7ab50}{ar\_sk\_nedidesnis\_uz\_0}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a1be6c4f1f941b8c28f8b18c16649b843}{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a1635436ca934a0709f3b95d2f60b039f}{ar\_sk\_ne\_tarp\_0\_ir\_10}}(\textcolor{keywordtype}{int}\ x);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{ivesties__pagalb__fjos_8h_a4b963848541fa2d18f56fcb693c40a5b}{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}}(\textcolor{keywordtype}{int}\ x);}
+
+\end{DoxyCode}

@@ -1,0 +1,39 @@
+\doxysection{konstantos\+\_\+kt\+\_\+klases.\+h}
+\hypertarget{konstantos__kt__klases_8h_source}{}\label{konstantos__kt__klases_8h_source}\index{src/konstantos\_kt\_klases.h@{src/konstantos\_kt\_klases.h}}
+\doxymbox{\hyperlink{konstantos__kt__klases_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <limits>}\ \textcolor{comment}{//\ maksimaliai\ int\ reikšmei\ gauti}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ KONTEINERIO\ TIPAS,\ KURĮ\ NAUDOJA\ VISA\ PROGRAMA\ (VECTOR\ /\ DEQUE\ /\ LIST)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ Container(T)\ std::vector<T>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ kad\ būtų\ trumpiau}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\ \doxymbox{\hyperlink{konstantos__kt__klases_8h_a5bfc9b2f04b5970ce0566dc515054efd}{MAX\_INT}}\ =\ std::numeric\_limits<int>::max();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_programos__laikai}{Programos\_laikai}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ failo\ apdorojimo\ laikai}}
+\DoxyCodeLine{00020\ \ \ \ \ std::chrono::duration<double>\ \doxymbox{\hyperlink{class_programos__laikai_af6bfdec38619a8532b91bc4f6a0db396}{duomenu\_nuskaitymas}};}
+\DoxyCodeLine{00021\ \ \ \ \ std::chrono::duration<double>\ \doxymbox{\hyperlink{class_programos__laikai_ab23732591f20be431917b7fadd0215b9}{duomenu\_rikiavimas}};}
+\DoxyCodeLine{00022\ \ \ \ \ std::chrono::duration<double>\ \doxymbox{\hyperlink{class_programos__laikai_a3c77955475baf633980ae4e26cae5be0}{studentu\_skirstymas}};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ std::chrono::duration<double>\ geru\_isvedimas;}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ std::chrono::duration<double>\ blogu\_isvedimas;}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ std::chrono::duration<double>\ visa\_trukme\ =\ std::chrono::milliseconds::zero();}}
+\DoxyCodeLine{00026\ \ \ \ \ std::chrono::duration<double>\ \doxymbox{\hyperlink{class_programos__laikai_a5183d17a0c9ea643bc2fd068c4f86e3a}{visa\_trukme\_su\_ivestim}}\ =\ std::chrono::milliseconds::zero();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ failo\ sukūrimo\ (su\ visais\ stud.\ duomenimis)\ laikai}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ std::chrono::duration<double>\ failo\_generavimo\_trukme\ =\ std::chrono::milliseconds::zero();}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ metodai}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_programos__laikai_a690cb43aceb235b4881f39dfc6f51e29}{spausd\_laikus}}();}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

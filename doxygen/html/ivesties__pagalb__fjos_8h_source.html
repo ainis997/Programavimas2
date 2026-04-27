@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programa: src/ivesties_pagalb_fjos.h išeities tekstas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Programa
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Paieška',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ivesties__pagalb__fjos_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ivesties_pagalb_fjos.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="ivesties__pagalb__fjos_8h.html">Eiti į šio failo dokumentaciją.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">class </span><a class="code hl_class" href="class_studentas.html">Studentas</a>; <span class="comment">// forward declaration, vietoje #include &quot;studentas.h&quot;, kad išvengt circular dependency</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// įvesties (skaitymo) failo pavadinimo gavimo funkcija</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>std::ifstream <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#ad2e4a449234c42f19f2ff835f4fbcb39">skait_failo_paruosimas</a>(std::string SK_FAILO_NUORODA);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// pagalbinės vartotojo įvesties programoj funkcijos</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a8aefa0c854b41f96b9869c04b049c560">vardo_pavardes_ivestis</a>(<a class="code hl_class" href="class_studentas.html">Studentas</a> &amp;A, <span class="keywordtype">bool</span> ar_ivestis_atsaukiama);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a114f2190604b1e5bbc8df1a0aae1a3c7">natur_skaiciaus_ivestis</a>(<span class="keywordtype">int</span> &amp;sk, <span class="keywordtype">bool</span> (*papild_salygu_fja)(<span class="keywordtype">int</span>) = <span class="keyword">nullptr</span>, <span class="keywordtype">bool</span> ar_ivestis_atsaukiama = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// pagalbinės įvesties sąlygų tikrinimo funkcijos</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a0ec18ec9868948bb8578dbfe16a7ab50">ar_sk_nedidesnis_uz_0</a>(<span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a1be6c4f1f941b8c28f8b18c16649b843">ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil</a>(<span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a1635436ca934a0709f3b95d2f60b039f">ar_sk_ne_tarp_0_ir_10</a>(<span class="keywordtype">int</span> x);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">bool</span> <a class="code hl_function" href="ivesties__pagalb__fjos_8h.html#a4b963848541fa2d18f56fcb693c40a5b">ar_sk_nera_1_2_3_4_5_6</a>(<span class="keywordtype">int</span> x);</div>
+<div class="ttc" id="aclass_studentas_html"><div class="ttname"><a href="class_studentas.html">Studentas</a></div><div class="ttdef"><b>Definition</b> studentas.h:16</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a0ec18ec9868948bb8578dbfe16a7ab50"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a0ec18ec9868948bb8578dbfe16a7ab50">ar_sk_nedidesnis_uz_0</a></div><div class="ttdeci">bool ar_sk_nedidesnis_uz_0(int x)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:147</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a114f2190604b1e5bbc8df1a0aae1a3c7"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a114f2190604b1e5bbc8df1a0aae1a3c7">natur_skaiciaus_ivestis</a></div><div class="ttdeci">bool natur_skaiciaus_ivestis(int &amp;sk, bool(*papild_salygu_fja)(int)=nullptr, bool ar_ivestis_atsaukiama=false)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:53</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a1635436ca934a0709f3b95d2f60b039f"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a1635436ca934a0709f3b95d2f60b039f">ar_sk_ne_tarp_0_ir_10</a></div><div class="ttdeci">bool ar_sk_ne_tarp_0_ir_10(int x)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:142</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a1be6c4f1f941b8c28f8b18c16649b843"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a1be6c4f1f941b8c28f8b18c16649b843">ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil</a></div><div class="ttdeci">bool ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil(int x)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:152</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a4b963848541fa2d18f56fcb693c40a5b"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a4b963848541fa2d18f56fcb693c40a5b">ar_sk_nera_1_2_3_4_5_6</a></div><div class="ttdeci">bool ar_sk_nera_1_2_3_4_5_6(int x)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:157</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_a8aefa0c854b41f96b9869c04b049c560"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#a8aefa0c854b41f96b9869c04b049c560">vardo_pavardes_ivestis</a></div><div class="ttdeci">bool vardo_pavardes_ivestis(Studentas &amp;A, bool ar_ivestis_atsaukiama)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:95</div></div>
+<div class="ttc" id="aivesties__pagalb__fjos_8h_html_ad2e4a449234c42f19f2ff835f4fbcb39"><div class="ttname"><a href="ivesties__pagalb__fjos_8h.html#ad2e4a449234c42f19f2ff835f4fbcb39">skait_failo_paruosimas</a></div><div class="ttdeci">std::ifstream skait_failo_paruosimas(std::string SK_FAILO_NUORODA)</div><div class="ttdef"><b>Definition</b> ivesties_pagalb_fjos.cpp:15</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="ivesties__pagalb__fjos_8h.html">ivesties_pagalb_fjos.h</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

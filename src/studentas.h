@@ -58,6 +58,13 @@ public:
     // kopijavimo priskyrimo operatorius [x = y]
     Studentas &operator=(const Studentas &kitas);
     // perkėlimo priskyrimo operatorius [x = std::move(y)]
+    /**
+     * @brief Move assignment operator.
+     * * Transfers ownership of resources from another Studentas object to this one.
+     * The source object (kitas) is left in a valid but reset state.
+     * * @param kitas The rvalue reference to the Studentas object being moved.
+     * @return Studentas& A reference to this object (*this).
+     */
     Studentas &operator=(Studentas &&kitas);
 
     friend std::ostream &operator<<(std::ostream &os, const Studentas &stud);

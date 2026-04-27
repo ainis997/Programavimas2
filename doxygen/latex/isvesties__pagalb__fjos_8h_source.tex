@@ -1,0 +1,60 @@
+\doxysection{isvesties\+\_\+pagalb\+\_\+fjos.\+h}
+\hypertarget{isvesties__pagalb__fjos_8h_source}{}\label{isvesties__pagalb__fjos_8h_source}\index{src/isvesties\_pagalb\_fjos.h@{src/isvesties\_pagalb\_fjos.h}}
+\doxymbox{\hyperlink{isvesties__pagalb__fjos_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{studentas_8h}{studentas.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{konstantos__kt__klases_8h}{konstantos\_kt\_klases.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ class\ Studentas;\ \ \ \ //\ forward\ declaration,\ vietoje\ \#include\ "{}studentas.h"{},\ kad\ išvengt\ circular\ dependency}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ std::ofstream\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a1c718c777576774ebfe20bb44e6090d9}{ras\_failo\_paruosimas}}(std::string\ RAS\_FAILO\_NUORODA);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ =====\ Pagalbinė\ rikiavimą\ įvykdanti\ funkcija\ (rikiuoja\ skirtingai,\ priklausomai\ nuo\ to,\ ar\ rikiuojamas\ vector/deque,\ ar\ list)\ =====}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{comment}{//\ T\ =\ Studentas;\ be\ template,\ kompiliatorius\ neįvertins\ constexpr\ sąlygų\ ir\ mes\ klaidą,\ kad\ pvz.\ std::deque\ neturi\ .sort()\ metodo}}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a08516b4dc8ca9068d40051dff1edf512}{stud\_rikiavimas}}(\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T)\ \&\ grupe,\ \textcolor{keywordtype}{bool}\ (*rikiavimo\_taisykle)(T\ \&,\ T\ \&))}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ LIST}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::list<T>>)}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ grupe.sort(rikiavimo\_taisykle);}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ VECTOR\ /\ DEQUE}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::vector<T>>\ ||\ std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::deque<T>>)}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::sort(grupe.begin(),\ grupe.end(),\ rikiavimo\_taisykle);}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ APRAŠAS\ PERKELTAS\ ČIA,\ NES\ TEMPLATE\ FUNKCIJA\ (.cpp\ failan\ įdėjus\ —\ neveikia)}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ be\ nurodytos\ specif\ taisyklės,\ bet\ kokiam\ tipui}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a56410f98d5860174d54a5f626ce32619}{rikiavimas}}(\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T)\ \&\ konteineris)}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ LIST}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::list<T>>)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ konteineris.sort();}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ VECTOR\ /\ DEQUE}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::vector<T>>\ ||\ std::is\_same\_v<\doxymbox{\hyperlink{konstantos__kt__klases_8h_a1965bb8373623de55b7bed329991d900}{Container}}(T),\ std::deque<T>>)}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::sort(konteineris.begin(),\ konteineris.end());}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_aed738e257fd31999d2821087ccb9ae53}{pagal\_varda\_did}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_af4b12287d55595d96df0b724a2d0b68b}{pagal\_varda\_maz}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a17117463870d0e9a31fa5da376792a75}{pagal\_pavarde\_did}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a5da4db6f99261d3464b3ee823de58376}{pagal\_pavarde\_maz}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a74a6b9d3e63fad2a57e3dbd68e8c397a}{pagal\_vidurki\_did}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a7282d98bc8684e6bedd24a7c47b12cc4}{pagal\_vidurki\_maz}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a55b3783f6c91955e59a351f0963065dc}{pagal\_mediana\_did}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{isvesties__pagalb__fjos_8h_a76846b644d08f66cf2a215d0a5ddcb1b}{pagal\_mediana\_maz}}(\doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&A,\ \doxymbox{\hyperlink{class_studentas}{Studentas}}\ \&B);}
+
+\end{DoxyCode}

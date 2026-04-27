@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="lt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Programa: src/ivesties_pagalb_fjos.cpp Failo Nuoroda</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Programa
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Sugeneruota Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Paieška',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('ivesties__pagalb__fjos_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ivesties_pagalb_fjos.cpp Failo Nuoroda</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;deque&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &quot;<a class="el" href="ivesties__pagalb__fjos_8h_source.html">ivesties_pagalb_fjos.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="studentas_8h_source.html">studentas.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="klaidu__valdymas_8h_source.html">klaidu_valdymas.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcijos</h2></td></tr>
+<tr class="memitem:ad2e4a449234c42f19f2ff835f4fbcb39" id="r_ad2e4a449234c42f19f2ff835f4fbcb39"><td class="memItemLeft">std::ifstream&#160;</td><td class="memItemRight"><a class="el" href="#ad2e4a449234c42f19f2ff835f4fbcb39">skait_failo_paruosimas</a> (std::string SK_FAILO_NUORODA)</td></tr>
+<tr class="memitem:a8704bd2e9e830cc6ea693500d772daf3" id="r_a8704bd2e9e830cc6ea693500d772daf3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8704bd2e9e830cc6ea693500d772daf3">natur_skaiciaus_ivestis</a> (int &amp;sk, bool(*papild_salygu_netenkinimo_fja)(int), bool ar_ivestis_atsaukiama)</td></tr>
+<tr class="memitem:a8aefa0c854b41f96b9869c04b049c560" id="r_a8aefa0c854b41f96b9869c04b049c560"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a8aefa0c854b41f96b9869c04b049c560">vardo_pavardes_ivestis</a> (<a class="el" href="class_studentas.html">Studentas</a> &amp;A, bool ar_ivestis_atsaukiama)</td></tr>
+<tr class="memitem:a1635436ca934a0709f3b95d2f60b039f" id="r_a1635436ca934a0709f3b95d2f60b039f"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1635436ca934a0709f3b95d2f60b039f">ar_sk_ne_tarp_0_ir_10</a> (int x)</td></tr>
+<tr class="memitem:a0ec18ec9868948bb8578dbfe16a7ab50" id="r_a0ec18ec9868948bb8578dbfe16a7ab50"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0ec18ec9868948bb8578dbfe16a7ab50">ar_sk_nedidesnis_uz_0</a> (int x)</td></tr>
+<tr class="memitem:a1be6c4f1f941b8c28f8b18c16649b843" id="r_a1be6c4f1f941b8c28f8b18c16649b843"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1be6c4f1f941b8c28f8b18c16649b843">ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil</a> (int x)</td></tr>
+<tr class="memitem:a4b963848541fa2d18f56fcb693c40a5b" id="r_a4b963848541fa2d18f56fcb693c40a5b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4b963848541fa2d18f56fcb693c40a5b">ar_sk_nera_1_2_3_4_5_6</a> (int x)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funkcijos Dokumentacija</h2>
+<a id="a1635436ca934a0709f3b95d2f60b039f" name="a1635436ca934a0709f3b95d2f60b039f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1635436ca934a0709f3b95d2f60b039f">&#9670;&#160;</a></span>ar_sk_ne_tarp_0_ir_10()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ar_sk_ne_tarp_0_ir_10 </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ec18ec9868948bb8578dbfe16a7ab50" name="a0ec18ec9868948bb8578dbfe16a7ab50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec18ec9868948bb8578dbfe16a7ab50">&#9670;&#160;</a></span>ar_sk_nedidesnis_uz_0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ar_sk_nedidesnis_uz_0 </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1be6c4f1f941b8c28f8b18c16649b843" name="a1be6c4f1f941b8c28f8b18c16649b843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1be6c4f1f941b8c28f8b18c16649b843">&#9670;&#160;</a></span>ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b963848541fa2d18f56fcb693c40a5b" name="a4b963848541fa2d18f56fcb693c40a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b963848541fa2d18f56fcb693c40a5b">&#9670;&#160;</a></span>ar_sk_nera_1_2_3_4_5_6()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ar_sk_nera_1_2_3_4_5_6 </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8704bd2e9e830cc6ea693500d772daf3" name="a8704bd2e9e830cc6ea693500d772daf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8704bd2e9e830cc6ea693500d772daf3">&#9670;&#160;</a></span>natur_skaiciaus_ivestis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool natur_skaiciaus_ivestis </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>sk</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool(*</td>          <td class="paramname"><span class="paramname"><em>papild_salygu_netenkinimo_fja&#160;</em></span>)(int), </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ar_ivestis_atsaukiama</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2e4a449234c42f19f2ff835f4fbcb39" name="ad2e4a449234c42f19f2ff835f4fbcb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e4a449234c42f19f2ff835f4fbcb39">&#9670;&#160;</a></span>skait_failo_paruosimas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ifstream skait_failo_paruosimas </td>
+          <td>(</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>SK_FAILO_NUORODA</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8aefa0c854b41f96b9869c04b049c560" name="a8aefa0c854b41f96b9869c04b049c560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aefa0c854b41f96b9869c04b049c560">&#9670;&#160;</a></span>vardo_pavardes_ivestis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vardo_pavardes_ivestis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_studentas.html">Studentas</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>ar_ivestis_atsaukiama</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="ivesties__pagalb__fjos_8cpp.html">ivesties_pagalb_fjos.cpp</a></li>
+    <li class="footer">Sugeneruota <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
