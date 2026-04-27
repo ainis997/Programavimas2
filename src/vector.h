@@ -1,3 +1,5 @@
+#pragma once
+
 #include <cstddef>
 #include <algorithm>
 #include <vector> // pavyzdžiui
@@ -48,26 +50,25 @@ public:
         std::fill(data_, data_ + n, x); // užpildo masyvą reikšmėmis x iki size_-tojo elemento
     }
     // konstruktorius su inicializavimo sąrašu
-    Vector(std::initializer_list<T> list) : size_(list.size()), capacity_(list.size())
+    Vector(std::initializer_list<T> list) : size_(list.size_), capacity_(list.size_)
     {
         data_ = new T[n];
         std::copy(list.begin(), list.end(), data_);
     }
     // kopijavimo konstruktorius
-    Vector(const Vector &other) : size_(other.size()), capacity_(other.size())
+    Vector(const Vector &other) : size_(other.size_), capacity_(other.size_)
     {
         data_ = new T[capacity_];
-        std::copy(other.begin(), other.end(), data_);
+        std::copy(other.data_, other.data_ + other.size_, data_);
     }
     // perkėlimo konstruktorius
-    Vector(Vector &&other) : data_(other.data_), size_(other.size()), capacity_(other.size())
+    Vector(Vector &&other) : data_(other.data_), size_(other.size_), capacity_(other.size_)
     {
         // AR TSG DESTRUKTORIUM?
         other.data_ = nullptr;
         other.size_ = 0;
         other.capacity_ = 0;
     }
-    ///
 
     ~Vector()
     {
@@ -75,6 +76,52 @@ public:
         size_ = 0;
         capacity_ = 0;
     }
+
+    // priskyrimo operatoriai
+
+    // kopijavimo priskyrimo operatorius
+    Vector &operator=(const Vector &other)
+    {
+        if (this == &other)
+            return *this;
+
+        delete[] data_;
+        size_ = other.size_;
+        capacity_ = other.capacity_;
+
+        if (other.data_) // tikrinam, kad nereiktų priskirt new T[0] ar kopijuot nullptr turinį
+        {
+            data_ = new T[capacity_];
+            std::copy(other.data_, other.data_ + other.size_, data_);
+        }
+        else
+        {
+            data_ = nullptr;
+        }
+
+        return *this;
+    }
+
+    // perkėlimo priskyrimo operatorius
+    Vector &operator=(Vector &&other)
+    {
+        if (this == &other)
+            return *this;
+
+        delete[] data_;
+
+        data_ = other.data_;
+        size_ = other.size_;
+        capacity_ = other.capacity_;
+
+        delete[] other.data_;
+        other.size_ = 0;
+        other.capacity_ = 0;
+
+        return *this;
+    }
+
+    //
 
     size_type size()
     {
