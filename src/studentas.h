@@ -15,19 +15,54 @@
 class Studentas : public Zmogus
 {
 private:
+    /**
+     * @brief Studento namų darbų pažymių konteineris (tipas Container = std::vector).
+     *
+     */
     Container(int) pazymiai_;
+    /**
+     * @brief Egzamino rezultatas.
+     *
+     */
     int egzo_rezas_;
+    /**
+     * @brief Galutinis rezultatas, skaičiuojamas pagal vidurkį.
+     *
+     */
     float rezas_vid_;
+    /**
+     * @brief Galutinis rezultatas, skaičiuojamas pagal medianą.
+     *
+     */
     float rezas_med_;
+    /**
+     * @brief Statinis nustatymas, nurodantis galutinio rezultato skaičiavimo tipą ("v" — vidurkis, "m" — mediana).
+     *
+     */
     inline static std::string galut_; // "v" / "m"  // be inline — klaida: "undefined reference to Studentas::galut_"
 
 public:
     // nuskaitant
+    /**
+     * @brief Konstruktorius be parametrų.
+     * Sukuria tuščią studento objektą su nulinėmis reikšmėmis.
+     */
     Studentas() : Zmogus(), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
     // surasant rankiniu budu
+    /**
+     * @brief Konstruktorius su vardu ir pavarde.
+     * Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės.
+     * @param vardas Studento vardas.
+     * @param pavarde Studento pavardė.
+     */
     Studentas(std::string vardas, std::string pavarde) : Zmogus(vardas, pavarde), egzo_rezas_(0), rezas_vid_(0), rezas_med_(0) {}
 
     // kopijavimo konstr [Studentas x(y) / Studentas x = y]
+    /**
+     * @brief Kopijavimo konstruktorius.
+     * Sukuria naują objektą nukopijuodamas visus duomenis iš kito studento.
+     * @param kitas Nuoroda objekto, iš kurio kopijuojami duomenys.
+     */
     Studentas(const Studentas &kitas)
         : Zmogus(kitas),
           pazymiai_(kitas.pazymiai_),
@@ -35,6 +70,11 @@ public:
           rezas_vid_(kitas.rezas_vid_),
           rezas_med_(kitas.rezas_med_) {}
     // perkėlimo konstr [Studentas x(std::move(y)) / Studentas x = std::move(y)]
+    /**
+     * @brief Perkėlimo konstruktorius.
+     * Perkelia resursus iš kito objekto į naują, palikdamas senąjį tuščią.
+     * @param kitas "rvalue" nuoroda į studento objektą.
+     */
     Studentas(Studentas &&kitas)
         : Zmogus(std::move(kitas)),
           pazymiai_(std::move(kitas.pazymiai_)),
@@ -48,6 +88,10 @@ public:
     }
 
     // destruktorius
+    /**
+     * @brief Destruktorius.
+     * Išvalo pažymių konteinerį.
+     */
     ~Studentas()
     {
         pazymiai_.clear();

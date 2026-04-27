@@ -14,15 +14,15 @@ Paveldimumo diagrama Studentas:\+\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \doxymbox{\hyperlink{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}{Studentas}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktorius be parametrų. Sukuria tuščią studento objektą su nulinėmis reikšmėmis. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_studentas_ad1aba34910872c18baace0509b03fe6a}{Studentas}} (std::\+string \doxymbox{\hyperlink{class_zmogus_a03de7738fc8f68275e401a3b96954cf0}{vardas}}, std::\+string \doxymbox{\hyperlink{class_zmogus_a24b5b4208f386916dc5c1ccf006bdedf}{pavarde}})
-\item 
+\begin{DoxyCompactList}\small\item\em Konstruktorius su vardu ir pavarde. Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f}{Studentas}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&kitas)
-\item 
+\begin{DoxyCompactList}\small\item\em Kopijavimo konstruktorius. Sukuria naują objektą nukopijuodamas visus duomenis iš kito studento. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_studentas_a60a91a548557e25e09ad4b66dd7044e6}{Studentas}} (\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&kitas)
-\item 
+\begin{DoxyCompactList}\small\item\em Perkėlimo konstruktorius. Perkelia resursus iš kito objekto į naują, palikdamas senąjį tuščią. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_studentas_a63e449e0f51a0b14340d02ee71b4be23}{\texorpdfstring{$\sim$}{\string~}\+Studentas}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destruktorius. Išvalo pažymių konteinerį. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{class_studentas}{Studentas}} \& \doxymbox{\hyperlink{class_studentas_a8bd0a78e7c4ba39c5459c8e0b298bc47}{operator=}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&kitas)
 \item 
 \doxymbox{\hyperlink{class_studentas}{Studentas}} \& \doxymbox{\hyperlink{class_studentas_a99c7be3db3405a0c8221bc38609d1e10}{operator=}} (\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&kitas)
@@ -105,29 +105,66 @@ std::\+string \doxymbox{\hyperlink{class_zmogus_a85cd6103a5f887059263d15413a3f08
 {\footnotesize\ttfamily \label{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539} 
 Studentas::\+\+Studentas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Konstruktorius be parametrų. Sukuria tuščią studento objektą su nulinėmis reikšmėmis. 
+
 \Hypertarget{class_studentas_ad1aba34910872c18baace0509b03fe6a}\index{Studentas@{Studentas}!Studentas@{Studentas}}
 \index{Studentas@{Studentas}!Studentas@{Studentas}}
 \doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
 {\footnotesize\ttfamily \label{class_studentas_ad1aba34910872c18baace0509b03fe6a} 
 Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{std::\+string}]{vardas}{, }\item[{std::\+string}]{pavarde}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Konstruktorius su vardu ir pavarde. Sukuria studento objektą su vardu ir pavarde, o likusios reikšmės — nulinės. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em \doxylink{class_zmogus_a03de7738fc8f68275e401a3b96954cf0}{vardas}} & Studento vardas. \\
+\hline
+{\em \doxylink{class_zmogus_a24b5b4208f386916dc5c1ccf006bdedf}{pavarde}} & Studento pavardė. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f}\index{Studentas@{Studentas}!Studentas@{Studentas}}
 \index{Studentas@{Studentas}!Studentas@{Studentas}}
 \doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
 {\footnotesize\ttfamily \label{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f} 
 Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{kitas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Kopijavimo konstruktorius. Sukuria naują objektą nukopijuodamas visus duomenis iš kito studento. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em kitas} & Nuoroda objekto, iš kurio kopijuojami duomenys. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_studentas_a60a91a548557e25e09ad4b66dd7044e6}\index{Studentas@{Studentas}!Studentas@{Studentas}}
 \index{Studentas@{Studentas}!Studentas@{Studentas}}
 \doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
 {\footnotesize\ttfamily \label{class_studentas_a60a91a548557e25e09ad4b66dd7044e6} 
 Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&}]{kitas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Perkėlimo konstruktorius. Perkelia resursus iš kito objekto į naują, palikdamas senąjį tuščią. 
+
+
+\begin{DoxyParams}{Parametrai}
+{\em kitas} & "{}rvalue"{} nuoroda į studento objektą. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_studentas_a63e449e0f51a0b14340d02ee71b4be23}\index{Studentas@{Studentas}!````~Studentas@{\texorpdfstring{$\sim$}{\string~}Studentas}}
 \index{````~Studentas@{\texorpdfstring{$\sim$}{\string~}Studentas}!Studentas@{Studentas}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Studentas()}{\string~Studentas()}}
 {\footnotesize\ttfamily \label{class_studentas_a63e449e0f51a0b14340d02ee71b4be23} 
 Studentas::\+\texorpdfstring{$\sim$}{\string~}\+Studentas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destruktorius. Išvalo pažymių konteinerį. 
 
 
 
