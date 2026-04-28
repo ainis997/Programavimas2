@@ -240,10 +240,46 @@ public:
         return std::reverse_iterator(data_ + size_);
     }
 
-    //
+    // ===== talpa
+
+    bool empty()
+    {
+        return begin() == end();
+    }
 
     size_type size()
     {
         return size_;
+    }
+
+    void reserve(size_type new_cap)
+    {
+        if (new_cap <= capacity_)
+            return;
+
+        T *new_alloc = new T[new_cap];
+        std::move(begin(), end(), new_alloc);
+        delete[] data_;
+        data_ = new_alloc;
+
+        capacity_ = new_cap;
+    }
+
+    size_type capacity() const
+    {
+        return capacity_;
+    }
+
+    void shrink_to_fit()
+    {
+        if (capacity_ == size_)
+            return;
+
+        T *new_alloc = new T[size_];
+        std::move(begin(), end(), new_alloc);
+        delete[] data_;
+        data_ = new_alloc;
+
+        capacity_ = size_;
     }
 };
