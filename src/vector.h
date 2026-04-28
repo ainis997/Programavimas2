@@ -3,6 +3,8 @@
 #include <cstddef>
 #include <algorithm>
 #include <vector> // pavyzdžiui
+#include <stdexcept>
+#include <string>
 
 template <typename T>
 class Vector
@@ -34,7 +36,7 @@ private:
 public:
     // METODAI (MEMBER FUNCTIONS)
 
-    // konstruktoriai
+    // ===== konstruktoriai
 
     // numatytasai konstruktorius
     Vector() : data_(nullptr), size_(0), capacity_(0) {}
@@ -77,7 +79,7 @@ public:
         capacity_ = 0;
     }
 
-    // priskyrimo operatoriai
+    // ===== priskyrimo operatoriai
 
     // kopijavimo priskyrimo operatorius
     Vector &operator=(const Vector &other)
@@ -119,6 +121,61 @@ public:
         other.capacity_ = 0;
 
         return *this;
+    }
+
+    // ===== elementų pasiekimo metodai
+
+    reference at(size_type i) // size_type — neigiamas nebus
+    {
+        if (i >= size_)
+        {
+            throw std::out_of_range("Vector::at() : Index " + std::to_string(i) + " is out of range (size is " + std::to_string(size_) + ")");
+        }
+        return data_[i];
+    }
+
+    const_reference at(size_type i) const // size_type — neigiamas nebus
+    {
+        if (i >= size_)
+        {
+            throw std::out_of_range("Vector::at() const : Index " + std::to_string(i) + " is out of range (size is " + std::to_string(size_) + ")");
+        }
+        return data_[i];
+    }
+
+    reference operator[](size_type i)
+    {
+        return data_[i];
+    }
+
+    const_reference operator[](size_type i) const
+    {
+        return data_[i];
+    }
+
+    reference front()
+    {
+        return data_[0];
+    }
+
+    const_reference front() const
+    {
+        return data_[0];
+    }
+
+    reference back()
+    {
+        return data_[size_ - 1];
+    }
+
+    const_reference back() const
+    {
+        return data_[size_ - 1];
+    }
+
+    T *data()
+    {
+        return data_;
     }
 
     //
