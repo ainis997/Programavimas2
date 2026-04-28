@@ -362,10 +362,148 @@ public:
         }
         for (size_type i = count - 1; i >= 0; i--) // įterpiam count skaičių elementų value prieš buvusį pos-tąjį elementą
         {
-            data[idx + i] = std::move(value);
+            data[idx + i] = value; // std::move negalima naudot, nes value yra const
         }
         size_ = new_size;
 
         return begin() + idx;
+    }
+
+    iterator erase(iterator pos)
+    {
+        size_type idx = pos - begin();
+        for (size_type i = idx; i < size_ - 1; i++)
+        {
+            data_[i] = std::move(data_[i + 1]);
+        }
+        size_--;
+        // buvęs paskutinysis elementas dar likęs, tačiau jis už borto (už size_), tai jis netrukdo, tai neverta jo perrašinėt (ar kviest jo destruktoriaus, nors tai — sudėtingiau)
+        return pos;
+    }
+
+    iterator erase(const_iterator pos)
+    {
+        size_type idx = pos - begin();
+        for (size_type i = idx; i < size_ - 1; i++)
+        {
+            data_[i] = std::move(data_[i + 1]);
+        }
+        size_--;
+        // buvęs paskutinysis elementas dar likęs, tačiau jis už borto (už size_), tai jis netrukdo, tai neverta jo perrašinėt (ar kviest jo destruktoriaus, nors tai — sudėtingiau)
+        return pos;
+    }
+
+    iterator erase(iterator first, iterator last)
+    {
+        size_type first_idx = first - begin();
+        size_type count = last - first;
+
+        if (count == 0)
+            return first;
+
+        for (size_type i = first_idx; i < size_ - count; i++)
+        {
+            data_[i] = std::move(data_[i + count]);
+        }
+
+        size_ -= count;
+
+        return begin() + first_idx;
+    }
+
+    iterator erase(const_iterator first, const_iterator last)
+    {
+        size_type first_idx = first - begin();
+        size_type count = last - first;
+
+        if (count == 0)
+            return first;
+
+        for (size_type i = first_idx; i < size_ - count; i++)
+        {
+            data_[i] = std::move(data_[i + count]);
+        }
+
+        size_ -= count;
+
+        return begin() + first_idx;
+    }
+
+    void push_back(const T &value)
+    {
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2);
+        }
+
+        data_[size_++] = value; // std::move negalima naudot, nes value yra const
+    }
+
+    void push_back(T &&value)
+    {
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2);
+        }
+
+        data_[size_++] = std::move(value); // pirma paima size_ indeksui, td jį pakelia vienetu
+    }
+
+    void pop_back()
+    {
+        if (size_ > 0)
+            size_--; // nešaukiam elemento destruktoriaus, nes po to vėl pridedant elementą ton buvusion vieton gali kilt problemų (nebent pridedant naudojamas placement new)
+    }
+
+    void resize(size_type count)
+    {
+        if (count == size_)
+        {
+            return;
+        }
+        if (count < size_)
+        {
+            size_ = count; // nešaukiam elementų destruktorių, nes po to vėl pridedant elementus tosna buvusiosna vietosna gali kilt problemų (nebent pridedant naudojamas placement new)
+        }
+        else
+        {
+            if (capacity_ < count)
+                reserve(count);
+
+            for (size_type i = size_; i < count; i++)
+            {
+                data_[i] = T(); // T() — default konstruktorius / default reikšmė
+            }
+            size_ = count;
+        }
+    }
+
+    void resize(size_type count, const T &value)
+    {
+        if (count == size_)
+        {
+            return;
+        }
+        if (count < size_)
+        {
+            size_ = count; // nešaukiam elementų destruktorių, nes po to vėl pridedant elementus tosna buvusiosna vietosna gali kilt problemų (nebent pridedant naudojamas placement new)
+        }
+        else
+        {
+            if (capacity_ < count)
+                reserve(count);
+
+            for (size_type i = size_; i < count; i++)
+            {
+                data_[i] = value;
+            }
+            size_ = count;
+        }
     }
 };
