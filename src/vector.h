@@ -178,6 +178,68 @@ public:
         return data_;
     }
 
+    // ===== iteratoriai
+
+    iterator begin()
+    {
+        return data_;
+    }
+
+    const_iterator begin() const // kaipo perdengimas
+    {
+        return data_;
+    }
+
+    const_iterator cbegin() const
+    {
+        return data_;
+    }
+
+    iterator end()
+    {
+        return data_ + size_;
+    }
+
+    const_iterator end() const // kaipo perdengimas
+    {
+        return data_ + size_;
+    }
+
+    const_iterator cend() const
+    {
+        return data_ + size_;
+    }
+
+    reverse_iterator rbegin()
+    {
+        return std::reverse_iterator(data_);
+    }
+
+    const_reverse_iterator rbegin() const
+    {
+        return std::reverse_iterator(data_);
+    }
+
+    const_reverse_iterator crbegin() const
+    {
+        return std::reverse_iterator(data_);
+    }
+
+    reverse_iterator rend()
+    {
+        return std::reverse_iterator(data_ + size_);
+    }
+
+    const_reverse_iterator rend() const
+    {
+        return std::reverse_iterator(data_ + size_);
+    }
+
+    const_reverse_iterator crend() const
+    {
+        return std::reverse_iterator(data_ + size_);
+    }
+
     //
 
     size_type size()
