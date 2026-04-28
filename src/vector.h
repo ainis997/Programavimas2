@@ -75,6 +75,7 @@ public:
     ~Vector()
     {
         delete[] data_;
+        data_ = nullptr;
         size_ = 0;
         capacity_ = 0;
     }
@@ -117,6 +118,7 @@ public:
         capacity_ = other.capacity_;
 
         delete[] other.data_;
+        other.data_ = nullptr;
         other.size_ = 0;
         other.capacity_ = 0;
 
@@ -281,5 +283,89 @@ public:
         data_ = new_alloc;
 
         capacity_ = size_;
+    }
+
+    // ===== keitimo/modifikavimo metodai
+
+    // !!!!!!!!!!!!!!!!!! ?????????????????
+    void clear()
+    {
+        size_ = 0; // kadangi mūsų realizacija yra ne su atskiru allocatorium, o tsg su pointeriais, tai mes negalim PAPRASTAI ištrint masyvo elementų, bet tuo pačiu palikt atmintį (atminties skyrimas ir objektų gyvavimas neatskiri)
+    }
+
+    iterator insert(const_iterator pos, const T &value)
+    {
+        size_type idx = pos - begin();
+
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2); // po reserve, iteratorius pos nebegalioja
+        }
+
+        for (size_type i = size_; i > idx; i--)
+        {
+            data_[i] = std::move(data_[i - 1]);
+        }
+        data_[idx] = value;
+        size_++;
+
+        return begin() + idx;
+    }
+    iterator insert(const_iterator pos, T &&value)
+    {
+        size_type idx = pos - begin();
+
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2);
+        }
+
+        for (size_type i = size_; i > idx; i--)
+        {
+            data[i] = std::move(data_[i - 1]);
+        }
+        data[idx] = value;
+        size_++;
+
+        return begin() + idx;
+    }
+    iterator insert(const_iterator pos, size_type count, const T &value)
+    {
+        if (count == 0)
+            return pos;
+
+        size_type idx = pos - begin();
+
+        size_type new_size = size_ + count;
+        if (new_size > capacity_)
+        {
+            if (capacity_ == 0)
+            {
+                reserve(count);
+            }
+            else
+            {
+                unsigned int multiplicator = 1 + ((new_size - 1) / capacity_); // kad sužinot, kiek kartų didint capacity_, darom lubinę dalybą new_size / capacity_
+                reserve(capacity_ * multiplicator);
+            }
+        }
+
+        for (size_type i = size_ - 1; i >= idx; i--) // pastumiam elementus, kurie toliau nei pos, tolyn
+        {
+            data[i + count] = std::move(data_[i]);
+        }
+        for (size_type i = count - 1; i >= 0; i--) // įterpiam count skaičių elementų value prieš buvusį pos-tąjį elementą
+        {
+            data[idx + i] = std::move(value);
+        }
+        size_ = new_size;
+
+        return begin() + idx;
     }
 };
