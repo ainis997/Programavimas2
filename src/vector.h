@@ -506,4 +506,56 @@ public:
             size_ = count;
         }
     }
+
+    void swap(Vector &other)
+    {
+        std::swap(data_, other.data_);
+        std::swap(size_, other.size_);
+        std::swap(capacity_, other.capacity_);
+    }
+
+    // ===== lyginimo operatoriai
 };
+
+template <typename T>
+bool operator==(const Vector<T> &lhs, const Vector<T> &rhs)
+{
+    if (lhs.size() != rhs.size() or lhs.capacity() != rhs.capacity())
+        return false;
+    for (size_type i = 0; i < lhs.size(); i++)
+    {
+        if (lhs[i] != rhs[i])
+            return false;
+    }
+    return true;
+}
+
+template <typename T>
+bool operator!=(const Vector<T> &lhs, const Vector<T> &rhs)
+{
+    return !(lhs == rhs);
+}
+
+template <typename T>
+void swap(Vector<T> &lhs, Vector<T> &rhs) noexcept
+{
+    lhs.swap(rhs);
+}
+
+template <typename T, typename U>
+constexpr Vector<T>::size_type erase(Vector<T> &vector, const U &value)
+{
+    auto first_removed = std::remove(vector.begin(), vector.end(), value);
+    auto removed_elems_num = vector.end() - first_removed;
+    vector.erase(first_removed, vector.end());
+    return removed_elems_num;
+}
+
+template <typename T, typename Pred>
+constexpr Vector<T>::size_type erase_if(Vector<T> &vector, Pred pred)
+{
+    auto first_removed = std::remove_if(vector.begin(), vector.end(), pred);
+    auto removed_elems_num = vector.end() - first_removed;
+    vector.erase(first_removed, vector.end());
+    return removed_elems_num;
+}
