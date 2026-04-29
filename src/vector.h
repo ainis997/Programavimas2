@@ -88,19 +88,22 @@ public:
         if (this == &other)
             return *this;
 
-        delete[] data_;
-        size_ = other.size_;
-        capacity_ = other.capacity_;
+        T *temp;
 
         if (other.data_) // tikrinam, kad nereiktų priskirt new T[0] ar kopijuot nullptr turinį
         {
-            data_ = new T[capacity_];
-            std::copy(other.data_, other.data_ + other.size_, data_);
+            temp = new T[capacity_];
+            std::copy(other.data_, other.data_ + other.size_, temp);
         }
         else
         {
-            data_ = nullptr;
+            temp = nullptr;
         }
+
+        delete[] data_; // ištrinam po atminties (galimo) priskyrimo, kad jeigu netyčia nepavyktų jos paskirt, duomenys nepradingtų
+        data_ = temp;
+        size_ = other.size_;
+        capacity_ = other.capacity_;
 
         return *this;
     }
@@ -289,7 +292,7 @@ public:
 
     void clear()
     {
-        size_ = 0; // kadangi mūsų realizacija yra ne su atskiru allocatorium, o tsg su pointeriais, tai mes negalim PAPRASTAI ištrint masyvo elementų, bet tuo pačiu palikt atmintį (atminties skyrimas ir objektų gyvavimas neatskiri)
+        size_ = 0; // kadangi mūsų realizacija yra ne su atskiru allocatorium, o tsg su pointeriais, tai mes negalim PAPRASTAI ištrint masyvo elementų, BET tuo pačiu palikt atmintį (atminties skyrimas ir objektų gyvavimas neatskiri)
     }
 
     iterator insert(const_iterator pos, const T &value)
@@ -521,7 +524,7 @@ bool operator==(const Vector<T> &lhs, const Vector<T> &rhs)
 {
     if (lhs.size() != rhs.size())
         return false;
-    for (size_type i = 0; i < lhs.size(); i++)
+    for (size_t i = 0; i < lhs.size(); i++)
     {
         if (lhs[i] != rhs[i])
             return false;
@@ -542,7 +545,7 @@ void swap(Vector<T> &lhs, Vector<T> &rhs) noexcept
 }
 
 template <typename T, typename U>
-constexpr Vector<T>::size_type erase(Vector<T> &vector, const U &value)
+constexpr size_t erase(Vector<T> &vector, const U &value)
 {
     auto first_removed = std::remove(vector.begin(), vector.end(), value);
     auto removed_elems_num = vector.end() - first_removed;
@@ -551,7 +554,7 @@ constexpr Vector<T>::size_type erase(Vector<T> &vector, const U &value)
 }
 
 template <typename T, typename Pred>
-constexpr Vector<T>::size_type erase_if(Vector<T> &vector, Pred pred)
+constexpr size_t erase_if(Vector<T> &vector, Pred pred)
 {
     auto first_removed = std::remove_if(vector.begin(), vector.end(), pred);
     auto removed_elems_num = vector.end() - first_removed;
