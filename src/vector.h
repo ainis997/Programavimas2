@@ -46,15 +46,15 @@ public:
         data_ = new T[n](); // () — daro value-initialization visiem nariam (int: 0, float: 0.0, objektam: default konstruktoriai)
     }
     // konstruktorius su visų prad. elementų užpildymu elementais x
-    Vector(size_type n, const T &x) : size_(n), capacity(n)
+    Vector(size_type n, const T &x) : size_(n), capacity_(n)
     {
         data_ = new T[n];
         std::fill(data_, data_ + n, x); // užpildo masyvą reikšmėmis x iki size_-tojo elemento
     }
     // konstruktorius su inicializavimo sąrašu
-    Vector(std::initializer_list<T> list) : size_(list.size_), capacity_(list.size_)
+    Vector(std::initializer_list<T> list) : size_(list.size()), capacity_(list.size())
     {
-        data_ = new T[n];
+        data_ = new T[list.size()];
         std::copy(list.begin(), list.end(), data_);
     }
     // kopijavimo konstruktorius
@@ -287,7 +287,6 @@ public:
 
     // ===== keitimo/modifikavimo metodai
 
-    // !!!!!!!!!!!!!!!!!! ?????????????????
     void clear()
     {
         size_ = 0; // kadangi mūsų realizacija yra ne su atskiru allocatorium, o tsg su pointeriais, tai mes negalim PAPRASTAI ištrint masyvo elementų, bet tuo pačiu palikt atmintį (atminties skyrimas ir objektų gyvavimas neatskiri)
@@ -328,9 +327,9 @@ public:
 
         for (size_type i = size_; i > idx; i--)
         {
-            data[i] = std::move(data_[i - 1]);
+            data_[i] = std::move(data_[i - 1]);
         }
-        data[idx] = value;
+        data_[idx] = value;
         size_++;
 
         return begin() + idx;
@@ -356,13 +355,13 @@ public:
             }
         }
 
-        for (size_type i = size_ - 1; i >= idx; i--) // pastumiam elementus, kurie toliau nei pos, tolyn
+        for (size_type i = size_; i > idx; i--) // pastumiam elementus, kurie toliau nei pos, tolyn
         {
-            data[i + count] = std::move(data_[i]);
+            data_[i - 1 + count] = std::move(data_[i - 1]);
         }
-        for (size_type i = count - 1; i >= 0; i--) // įterpiam count skaičių elementų value prieš buvusį pos-tąjį elementą
+        for (size_type i = 0; i < count; i++) // įterpiam count skaičių elementų value prieš buvusį pos-tąjį elementą
         {
-            data[idx + i] = value; // std::move negalima naudot, nes value yra const
+            data_[idx + i] = value; // std::move negalima naudot, nes value yra const
         }
         size_ = new_size;
 
@@ -520,7 +519,7 @@ public:
 template <typename T>
 bool operator==(const Vector<T> &lhs, const Vector<T> &rhs)
 {
-    if (lhs.size() != rhs.size() or lhs.capacity() != rhs.capacity())
+    if (lhs.size() != rhs.size())
         return false;
     for (size_type i = 0; i < lhs.size(); i++)
     {
