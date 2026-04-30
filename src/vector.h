@@ -67,7 +67,7 @@ public:
         std::uninitialized_copy(other.data_, other.data_ + size_, data_);
     }
     // perkėlimo konstruktorius
-    Vector(Vector &&other) : data_(other.data_), size_(other.size_), capacity_(other.size_)
+    Vector(Vector &&other) noexcept : data_(other.data_), size_(other.size_), capacity_(other.size_) // be noexcept neveiks perkėlimas, vyks kopijavimas tsg
     {
         // AR TSG DESTRUKTORIUM?
         other.data_ = nullptr;
@@ -96,7 +96,7 @@ public:
 
         if (other.data_) // tikrinam, kad nereiktų priskirt new T[0] ar kopijuot nullptr turinį
         {
-            temp = static_cast<T *>(operator new(capacity_ * sizeof(T)));
+            temp = static_cast<T *>(operator new(other.capacity_ * sizeof(T)));
             std::uninitialized_copy(other.data_, other.data_ + other.size_, temp);
         }
         else
@@ -114,7 +114,7 @@ public:
     }
 
     // perkėlimo priskyrimo operatorius
-    Vector &operator=(Vector &&other)
+    Vector &operator=(Vector &&other) noexcept // be noexcept neveiks perkėlimas, vyks kopijavimas tsg
     {
         if (this == &other)
             return *this;
@@ -252,12 +252,12 @@ public:
 
     // ===== talpa
 
-    bool empty()
+    bool empty() const
     {
         return begin() == end();
     }
 
-    size_type size()
+    size_type size() const
     {
         return size_;
     }
@@ -315,7 +315,7 @@ public:
                 reserve(capacity_ * 2);
         }
 
-        data_[size_++] = value; // std::move negalima naudot, nes value yra const
+        std::construct_at(data_ + size_, value);
     }
 
     void push_back(T &&value)
@@ -328,13 +328,16 @@ public:
                 reserve(capacity_ * 2);
         }
 
-        data_[size_++] = std::move(value); // pirma paima size_ indeksui, td jį pakelia vienetu
+        std::construct_at(data_ + size_, std::move(value));
     }
 
     void pop_back()
     {
         if (size_ > 0)
-            size_--; // nešaukiam elemento destruktoriaus, nes po to vėl pridedant elementą ton buvusion vieton gali kilt problemų (nebent pridedant naudojamas placement new)
+        {
+            std::destroy_at(data_ + size_ - 1);
+            size_--;
+        }
     }
 
     iterator insert(const_iterator pos, const T &value) // value — const, tai negalėsim std::move(value)
@@ -351,18 +354,15 @@ public:
 
         if (idx == size_)
         {
-            push_back(value);
+            std::construct_at(data_ + size_, value);
         }
         else
         {
             std::construct_at(data_ + size_, std::move(data_[size_ - 1])); // paskutinis elementas vienintelis turi būti perkeltas nenaudojamon atmintin, taigi čia padarom atskirai
-            for (size_type i = size_ - 1; i > idx; i--)
-            {
-                data_[i] = std::move(data_[i - 1]);
-            }
+            std::move_backward(data_ + idx, data_ + size_ - 1, data_ + size_);
             data_[idx] = value;
-            size_++;
         }
+        size_++;
 
         return begin() + idx;
     }
@@ -380,18 +380,15 @@ public:
 
         if (idx == size_)
         {
-            push_back(std::move(value));
+            std::construct_at(data_ + size_, std::move(value));
         }
         else
         {
             std::construct_at(data_ + size_, std::move(data_[size_ - 1])); // paskutinis elementas vienintelis turi būti perkeltas nenaudojamon atmintin, taigi čia padarom atskirai
-            for (size_type i = size_ - 1; i > idx; i--)
-            {
-                data_[i] = std::move(data_[i - 1]);
-            }
+            std::move_backward(data_ + idx, data_ + size_ - 1, data_ + size_);
             data_[idx] = std::move(value);
-            size_++;
         }
+        size_++;
 
         return begin() + idx;
     }
@@ -456,9 +453,9 @@ public:
         {
             data_[i] = std::move(data_[i + 1]);
         }
+        std::destroy_at(data_ + size_ - 1); // ištrinam paskutinį elementą (dabar jis dubliuojas su priešpaskutiniuoju)
         size_--;
-        // buvęs paskutinysis elementas dar likęs, tačiau jis už borto (už size_), tai jis netrukdo, tai neverta jo perrašinėt (ar kviest jo destruktoriaus, nors tai — sudėtingiau)
-        return pos;
+        return begin() + idx; // == pos
     }
 
     iterator erase(const_iterator pos)
@@ -468,9 +465,9 @@ public:
         {
             data_[i] = std::move(data_[i + 1]);
         }
+        std::destroy_at(data_ + size_ - 1); // ištrinam paskutinį elementą (dabar jis dubliuojas su priešpaskutiniuoju)
         size_--;
-        // buvęs paskutinysis elementas dar likęs, tačiau jis už borto (už size_), tai jis netrukdo, tai neverta jo perrašinėt (ar kviest jo destruktoriaus, nors tai — sudėtingiau)
-        return pos;
+        return begin() + idx; // == pos
     }
 
     iterator erase(iterator first, iterator last)
@@ -479,12 +476,13 @@ public:
         size_type count = last - first;
 
         if (count == 0)
-            return first;
+            return begin() + first_idx; // == first
 
         for (size_type i = first_idx; i < size_ - count; i++)
         {
             data_[i] = std::move(data_[i + count]);
         }
+        std::destroy(data_ + (size_ - count), data_ + size_); // ištrinam paskutinius count elementų (dbr jie dubliuojas, nebereikalingi)
 
         size_ -= count;
 
@@ -497,12 +495,13 @@ public:
         size_type count = last - first;
 
         if (count == 0)
-            return first;
+            return begin() + first_idx; // == first
 
         for (size_type i = first_idx; i < size_ - count; i++)
         {
             data_[i] = std::move(data_[i + count]);
         }
+        std::destroy(data_ + (size_ - count), data_ + size_); // ištrinam paskutinius count elementų (dbr jie dubliuojas, nebereikalingi)
 
         size_ -= count;
 
@@ -517,20 +516,20 @@ public:
         }
         if (count < size_)
         {
-            size_ = count; // nešaukiam elementų destruktorių, nes po to vėl pridedant elementus tosna buvusiosna vietosna gali kilt problemų (nebent pridedant naudojamas placement new)
+            std::destroy(data_ + count, data_ + size_);
         }
         else
         {
             if (capacity_ < count)
-                reserve(count);
-
-            for (size_type i = size_; i < count; i++)
             {
-                std::uninitia
-                    data_[i] = T(); // T() — default konstruktorius / default reikšmė
+                size_type new_cap = capacity_;
+                while (new_cap < count)
+                    new_cap *= 2;
+                reserve(new_cap);
             }
-            size_ = count;
+            std::uninitialized_default_construct_n(data_ + size_, count);
         }
+        size_ = count;
     }
 
     void resize(size_type count, const T &value)
@@ -541,22 +540,23 @@ public:
         }
         if (count < size_)
         {
-            size_ = count; // nešaukiam elementų destruktorių, nes po to vėl pridedant elementus tosna buvusiosna vietosna gali kilt problemų (nebent pridedant naudojamas placement new)
+            std::destroy(data_ + count, data_ + size_);
         }
         else
         {
             if (capacity_ < count)
-                reserve(count);
-
-            for (size_type i = size_; i < count; i++)
             {
-                data_[i] = value;
+                size_type new_cap = capacity_;
+                while (new_cap < count)
+                    new_cap *= 2;
+                reserve(new_cap);
             }
-            size_ = count;
+            std::uninitialized_fill_n(data_ + size_, count, value);
         }
+        size_ = count;
     }
 
-    void swap(Vector &other)
+    void swap(Vector &other) noexcept
     {
         std::swap(data_, other.data_);
         std::swap(size_, other.size_);
