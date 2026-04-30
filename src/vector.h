@@ -5,6 +5,8 @@
 #include <vector> // pavyzdžiui
 #include <stdexcept>
 #include <string>
+#include <new>    // dėl placement new
+#include <memory> // dėl std::uninitialized_..., std::destroy
 
 template <typename T>
 class Vector
@@ -43,25 +45,26 @@ public:
     // konstruktorius n elementų vektoriaus
     Vector(size_type n) : size_(n), capacity_(n)
     {
-        data_ = new T[n](); // () — daro value-initialization visiem nariam (int: 0, float: 0.0, objektam: default konstruktoriai)
+        data_ = static_cast<T *>(operator new(n * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
+        std::uninitialized_default_construct_n(data_, n);      // sukonstruojam objektus default reikšmėmis paskirtoje neužimtoje atmintyje
     }
     // konstruktorius su visų prad. elementų užpildymu elementais x
     Vector(size_type n, const T &x) : size_(n), capacity_(n)
     {
-        data_ = new T[n];
-        std::fill(data_, data_ + n, x); // užpildo masyvą reikšmėmis x iki size_-tojo elemento
+        data_ = static_cast<T *>(operator new(n * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
+        std::uninitialized_fill_n(data_, n, x);                // užpildo neužimtą atmintį reikšmėmis (objektais) x iki n-tojo (size_-tojo) elemento
     }
     // konstruktorius su inicializavimo sąrašu
     Vector(std::initializer_list<T> list) : size_(list.size()), capacity_(list.size())
     {
-        data_ = new T[list.size()];
-        std::copy(list.begin(), list.end(), data_);
+        data_ = static_cast<T *>(operator new(list.size() * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
+        std::uninitialized_copy(list.begin(), list.end(), data_);
     }
     // kopijavimo konstruktorius
     Vector(const Vector &other) : size_(other.size_), capacity_(other.size_)
     {
-        data_ = new T[capacity_];
-        std::copy(other.data_, other.data_ + other.size_, data_);
+        data_ = static_cast<T *>(operator new(other.size_ * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
+        std::uninitialized_copy(other.data_, other.data_ + size_, data_);
     }
     // perkėlimo konstruktorius
     Vector(Vector &&other) : data_(other.data_), size_(other.size_), capacity_(other.size_)
@@ -74,10 +77,11 @@ public:
 
     ~Vector()
     {
-        delete[] data_;
-        data_ = nullptr;
+        std::destroy(data_, data_ + size_); // iškviečia visų masyvo data_ objektų destruktorius
         size_ = 0;
         capacity_ = 0;
+        operator delete(data_); // atlaisvina data_ atmintį
+        data_ = nullptr;
     }
 
     // ===== priskyrimo operatoriai
@@ -92,15 +96,16 @@ public:
 
         if (other.data_) // tikrinam, kad nereiktų priskirt new T[0] ar kopijuot nullptr turinį
         {
-            temp = new T[capacity_];
-            std::copy(other.data_, other.data_ + other.size_, temp);
+            temp = static_cast<T *>(operator new(capacity_ * sizeof(T)));
+            std::uninitialized_copy(other.data_, other.data_ + other.size_, temp);
         }
         else
         {
             temp = nullptr;
         }
 
-        delete[] data_; // ištrinam po atminties (galimo) priskyrimo, kad jeigu netyčia nepavyktų jos paskirt, duomenys nepradingtų
+        std::destroy(data_, data_ + size_); // operator delete pats nekviečia destruktorių, dėl to turim juos išsikviest patys prieš laisvinant atmintį
+        operator delete(data_);             // ištrinam PO atminties (galimo) priskyrimo, kad jeigu netyčia nepavyktų jos paskirt, duomenys nepradingtų
         data_ = temp;
         size_ = other.size_;
         capacity_ = other.capacity_;
@@ -114,13 +119,13 @@ public:
         if (this == &other)
             return *this;
 
-        delete[] data_;
+        std::destroy(data_, data_ + size_);
+        operator delete(data_);
 
         data_ = other.data_;
         size_ = other.size_;
         capacity_ = other.capacity_;
 
-        delete[] other.data_;
         other.data_ = nullptr;
         other.size_ = 0;
         other.capacity_ = 0;
@@ -260,13 +265,15 @@ public:
     void reserve(size_type new_cap)
     {
         if (new_cap <= capacity_)
-            return;
+            return; // taip elgiasi std::vector::reserve — jei prašoma rezervuoti mažiau nei dab. capacity_, tai funkcija nieko nedaro
 
-        T *new_alloc = new T[new_cap];
-        std::move(begin(), end(), new_alloc);
-        delete[] data_;
+        T *new_alloc = static_cast<T *>(operator new(new_cap * sizeof(T)));
+        std::uninitialized_move(begin(), end(), new_alloc);
+
+        std::destroy(begin(), end()); // net ir po move, objektai nėra sunaikinti
+        operator delete(data_);
+
         data_ = new_alloc;
-
         capacity_ = new_cap;
     }
 
@@ -280,11 +287,13 @@ public:
         if (capacity_ == size_)
             return;
 
-        T *new_alloc = new T[size_];
-        std::move(begin(), end(), new_alloc);
-        delete[] data_;
-        data_ = new_alloc;
+        T *new_alloc = static_cast<T *>(operator new(size_ * sizeof(T)));
+        std::uninitialized_move(begin(), end(), new_alloc);
 
+        std::destroy(begin(), end());
+        operator delete(data_);
+
+        data_ = new_alloc;
         capacity_ = size_;
     }
 
@@ -292,10 +301,43 @@ public:
 
     void clear()
     {
-        size_ = 0; // kadangi mūsų realizacija yra ne su atskiru allocatorium, o tsg su pointeriais, tai mes negalim PAPRASTAI ištrint masyvo elementų, BET tuo pačiu palikt atmintį (atminties skyrimas ir objektų gyvavimas neatskiri)
+        std::destroy(begin(), end());
+        size_ = 0;
     }
 
-    iterator insert(const_iterator pos, const T &value)
+    void push_back(const T &value)
+    {
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2);
+        }
+
+        data_[size_++] = value; // std::move negalima naudot, nes value yra const
+    }
+
+    void push_back(T &&value)
+    {
+        if (size_ == capacity_)
+        {
+            if (capacity_ == 0)
+                reserve(1);
+            else
+                reserve(capacity_ * 2);
+        }
+
+        data_[size_++] = std::move(value); // pirma paima size_ indeksui, td jį pakelia vienetu
+    }
+
+    void pop_back()
+    {
+        if (size_ > 0)
+            size_--; // nešaukiam elemento destruktoriaus, nes po to vėl pridedant elementą ton buvusion vieton gali kilt problemų (nebent pridedant naudojamas placement new)
+    }
+
+    iterator insert(const_iterator pos, const T &value) // value — const, tai negalėsim std::move(value)
     {
         size_type idx = pos - begin();
 
@@ -307,12 +349,20 @@ public:
                 reserve(capacity_ * 2); // po reserve, iteratorius pos nebegalioja
         }
 
-        for (size_type i = size_; i > idx; i--)
+        if (idx == size_)
         {
-            data_[i] = std::move(data_[i - 1]);
+            push_back(value);
         }
-        data_[idx] = value;
-        size_++;
+        else
+        {
+            std::construct_at(data_ + size_, std::move(data_[size_ - 1])); // paskutinis elementas vienintelis turi būti perkeltas nenaudojamon atmintin, taigi čia padarom atskirai
+            for (size_type i = size_ - 1; i > idx; i--)
+            {
+                data_[i] = std::move(data_[i - 1]);
+            }
+            data_[idx] = value;
+            size_++;
+        }
 
         return begin() + idx;
     }
@@ -325,15 +375,23 @@ public:
             if (capacity_ == 0)
                 reserve(1);
             else
-                reserve(capacity_ * 2);
+                reserve(capacity_ * 2); // po reserve, iteratorius pos nebegalioja
         }
 
-        for (size_type i = size_; i > idx; i--)
+        if (idx == size_)
         {
-            data_[i] = std::move(data_[i - 1]);
+            push_back(std::move(value));
         }
-        data_[idx] = value;
-        size_++;
+        else
+        {
+            std::construct_at(data_ + size_, std::move(data_[size_ - 1])); // paskutinis elementas vienintelis turi būti perkeltas nenaudojamon atmintin, taigi čia padarom atskirai
+            for (size_type i = size_ - 1; i > idx; i--)
+            {
+                data_[i] = std::move(data_[i - 1]);
+            }
+            data_[idx] = std::move(value);
+            size_++;
+        }
 
         return begin() + idx;
     }
@@ -353,19 +411,39 @@ public:
             }
             else
             {
-                unsigned int multiplicator = 1 + ((new_size - 1) / capacity_); // kad sužinot, kiek kartų didint capacity_, darom lubinę dalybą new_size / capacity_
-                reserve(capacity_ * multiplicator);
+                size_type new_cap = capacity_;
+                while (new_cap < new_size)
+                    new_cap *= 2;
+                reserve(new_cap);
             }
         }
 
-        for (size_type i = size_; i > idx; i--) // pastumiam elementus, kurie toliau nei pos, tolyn
+        if (idx == size_)
         {
-            data_[i - 1 + count] = std::move(data_[i - 1]);
+            std::uninitialized_fill_n(data_ + size_, count, value); // naudojam tai, o ne push_back(), kad išvengt nebereikalingų capacity_ patikrų (push_back kas kart tai tikrina, bet mes gi jau patikrinom)
         }
-        for (size_type i = 0; i < count; i++) // įterpiam count skaičių elementų value prieš buvusį pos-tąjį elementą
+        else
         {
-            data_[idx + i] = value; // std::move negalima naudot, nes value yra const
+            if (size_ - idx > count) // jei įterpsimų elementų sk. yra mažesnis už pastumsimų elementų skaičių (pvz. prieš 3-ąjį nuo galo elementą įterpiant 1-2 elementus)
+            {
+                // čia taip perkeliam tuos elementus, kurie atsidurs DAR NELIESTOJ atminty
+                std::uninitialized_move(data_ + size_ - count, data_ + size_, data_ + size_);
+                // čia taip perkeliam tuos elementus, kurie atsidurs JAU LIESTOJ atminty
+                std::move_backward(data_ + idx, data_ + size_ - count, data_ + size_);
+                // čia pagaliau įterpiam count skaičių elementų value prieš buvusį idx-tąjį elementą (buvusį adresu pos)
+                std::fill(data_ + idx, data_ + idx + count, value);
+            }
+            else // jei įterpsimų elementų sk. yra lygus/didesnis už pastumsimų elementų skaičių (pvz., prieš 3-ąjį nuo galo elementą įterpiant 3+ elementus)
+            {
+                // čia taip įterpiam tuos elementus value, kurie atsidurs DAR NELIESTOJ atminty
+                std::uninitialized_fill_n(data_ + size_, idx + count - size_, value); // jeigu size_ - idx == count, tai čia niekas neįvyks
+                // čia taip perkeliam perkeltinus elementus (dar nelieston atmintin)
+                std::uninitialized_move(data_ + idx, data_ + size_, data_ + idx + count);
+                // čia taip įterpiam tuos elementus value, kurie atsidurs JAU LIESTOJ atminty
+                std::fill(data_ + idx, data_ + size_, value);
+            }
         }
+
         size_ = new_size;
 
         return begin() + idx;
@@ -431,38 +509,6 @@ public:
         return begin() + first_idx;
     }
 
-    void push_back(const T &value)
-    {
-        if (size_ == capacity_)
-        {
-            if (capacity_ == 0)
-                reserve(1);
-            else
-                reserve(capacity_ * 2);
-        }
-
-        data_[size_++] = value; // std::move negalima naudot, nes value yra const
-    }
-
-    void push_back(T &&value)
-    {
-        if (size_ == capacity_)
-        {
-            if (capacity_ == 0)
-                reserve(1);
-            else
-                reserve(capacity_ * 2);
-        }
-
-        data_[size_++] = std::move(value); // pirma paima size_ indeksui, td jį pakelia vienetu
-    }
-
-    void pop_back()
-    {
-        if (size_ > 0)
-            size_--; // nešaukiam elemento destruktoriaus, nes po to vėl pridedant elementą ton buvusion vieton gali kilt problemų (nebent pridedant naudojamas placement new)
-    }
-
     void resize(size_type count)
     {
         if (count == size_)
@@ -480,7 +526,8 @@ public:
 
             for (size_type i = size_; i < count; i++)
             {
-                data_[i] = T(); // T() — default konstruktorius / default reikšmė
+                std::uninitia
+                    data_[i] = T(); // T() — default konstruktorius / default reikšmė
             }
             size_ = count;
         }
