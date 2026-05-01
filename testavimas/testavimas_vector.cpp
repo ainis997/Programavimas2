@@ -4,6 +4,7 @@
 
 #include <memory>
 #include <string>
+#include <iterator> // reik dėl std::distance
 
 // naudosim destruktoriaus tikrinimui
 class ObjectCounter
@@ -87,6 +88,7 @@ TEST_CASE("Vektoriaus konstruktoriai ir destruktorius veikia tinkamai")
         // patikrinam senąjį vektorių
         REQUIRE(pirminis.size() == 0);
         REQUIRE(pirminis.capacity() == 0);
+        REQUIRE(pirminis.data() == nullptr);
     }
 
     SECTION("Destruktorius veikia tinkamai")
@@ -110,10 +112,10 @@ TEST_CASE("Vektoriaus konstruktoriai ir destruktorius veikia tinkamai")
     }
 }
 
-TEST_CASE("Priskyrimo operatoriai veikia teisingai", "[Vector][operator=]")
+TEST_CASE("Priskyrimo operatoriai veikia teisingai")
 {
 
-    SECTION("Kopijavimo priskyrimas sukuria gilią kopiją (deep copy)")
+    SECTION("Kopijavimo priskyrimas sukuria deep copy")
     {
         Vector<int> v1 = {1, 2, 3};
         Vector<int> v2;
@@ -150,7 +152,7 @@ TEST_CASE("Priskyrimo operatoriai veikia teisingai", "[Vector][operator=]")
             v2 = v1;
             REQUIRE(ObjectCounter::count == 10); // 5(v1) + 5(v2 kopijos)
         }
-        REQUIRE(ObjectCounter::count == 0); // visiems išėjus iš scope, viskas išvaloma
+        REQUIRE(ObjectCounter::count == 0);
     }
 
     SECTION("Perkėlimo priskyrimas perkelia resursus ir išvalo šaltinį")
@@ -158,14 +160,12 @@ TEST_CASE("Priskyrimo operatoriai veikia teisingai", "[Vector][operator=]")
         Vector<int> v1 = {7, 8, 9};
         Vector<int> v2 = {1, 2};
 
-        v2 = std::move(v1); // iškviečia perkėlimo priskyrimą
+        v2 = std::move(v1);
 
-        // v2 perima duomenis
         REQUIRE(v2.size() == 3);
         REQUIRE(v2[0] == 7);
         REQUIRE(v2[2] == 9);
 
-        // v1 tampa tuščias
         REQUIRE(v1.size() == 0);
         REQUIRE(v1.capacity() == 0);
         REQUIRE(v1.data() == nullptr);
@@ -179,7 +179,7 @@ TEST_CASE("Priskyrimo operatoriai veikia teisingai", "[Vector][operator=]")
         REQUIRE(v[0] == 10);
     }
 
-    SECTION("Perkėlimo priskyrimas sunaikina senus paskirties (target) elementus")
+    SECTION("Perkėlimo priskyrimas sunaikina senus elementus")
     {
         ObjectCounter::count = 0;
         {
@@ -195,10 +195,10 @@ TEST_CASE("Priskyrimo operatoriai veikia teisingai", "[Vector][operator=]")
     }
 }
 
-TEST_CASE("Elementų pasiekimo metodai veikia teisingai", "[Vector][access]")
+TEST_CASE("Elementų pasiekimo metodai veikia teisingai")
 {
 
-    SECTION("at() grąžina elementus ir meta išimtį už ribų")
+    SECTION("at() grąžina elementus ir meta klaidą")
     {
         Vector<int> v = {10, 20, 30};
 
@@ -213,14 +213,14 @@ TEST_CASE("Elementų pasiekimo metodai veikia teisingai", "[Vector][access]")
         REQUIRE_THROWS_AS(v.at(100), std::out_of_range);
     }
 
-    SECTION("at() const versija meta išimtį už ribų")
+    SECTION("at() const versija meta klaidą")
     {
         const Vector<int> v = {1, 2};
         REQUIRE(v.at(1) == 2);
         REQUIRE_THROWS_AS(v.at(2), std::out_of_range);
     }
 
-    SECTION("operator[] grąžina teisingus elementus ir leidžia modifikuoti")
+    SECTION("operator[] grąžina teisingus elementus ir leidžia keisti")
     {
         Vector<int> v = {5, 6, 7};
         REQUIRE(v[0] == 5);
@@ -262,5 +262,183 @@ TEST_CASE("Elementų pasiekimo metodai veikia teisingai", "[Vector][access]")
         // pakeitus per rodyklę, turi pasikeist vektoriaus turinys
         ptr[1] = 99;
         REQUIRE(v[1] == 99);
+    }
+}
+
+TEST_CASE("Iteratoriai veikia tinkamai")
+{
+
+    SECTION("begin() ir end() leidžia pravaryt per elementus ir juos modifikuot")
+    {
+        Vector<int> v = {10, 20, 30};
+
+        REQUIRE(*v.begin() == 10);
+        // end() rodo į VIENĄ elementą už paskutiniojo, todėl atimame 1, kad gautume paskutinį
+        REQUIRE(*(v.end() - 1) == 30);
+
+        // Modifikuojame elementus naudodami iteratorius
+        for (auto it = v.begin(); it != v.end(); it++)
+        {
+            *it += 5;
+        }
+
+        REQUIRE(v[0] == 15);
+        REQUIRE(v[1] == 25);
+        REQUIRE(v[2] == 35);
+    }
+
+    SECTION("const begin() ir end() veikia su const objektais (tik skaitymui)")
+    {
+        const Vector<int> v = {1, 2, 3};
+
+        REQUIRE(*v.begin() == 1);
+        REQUIRE(*(v.end() - 1) == 3);
+
+        // atstumas tarp iteratorių turi atitikt vektoriaus dydį
+        REQUIRE(std::distance(v.begin(), v.end()) == 3);
+    }
+
+    SECTION("cbegin() ir cend() užtikrina const iteratorių grąžinimą net ir ne-const objektams")
+    {
+        Vector<int> v = {4, 5, 6};
+
+        REQUIRE(*v.cbegin() == 4);
+        REQUIRE(*(v.cend() - 1) == 6);
+
+        int suma = 0;
+        for (auto it = v.cbegin(); it != v.cend(); it++)
+        {
+            suma += *it;
+        }
+        REQUIRE(suma == 15);
+    }
+
+    SECTION("rbegin() ir rend() leidžia pravaryt atvirkščia tvarka ir modifikuot")
+    {
+        Vector<int> v = {100, 200, 300};
+
+        // rbegin() grąžina PASKUTINĮ elementą
+        REQUIRE(*v.rbegin() == 300);
+        // rend() yra vienas elementas PRIEŠ pirmąjį
+        REQUIRE(*(v.rend() - 1) == 100);
+
+        int skaitliukas = 1;
+        for (auto it = v.rbegin(); it != v.rend(); it++)
+        {
+            *it = skaitliukas++;
+        }
+
+        // vektorius po pakeitimo turi būt {3, 2, 1}
+        REQUIRE(v[0] == 3);
+        REQUIRE(v[1] == 2);
+        REQUIRE(v[2] == 1);
+    }
+
+    SECTION("crbegin() ir crend() veikia atvirkščiai tik skaitymui")
+    {
+        Vector<int> v = {7, 8, 9};
+
+        REQUIRE(*v.crbegin() == 9);
+        REQUIRE(*(v.crend() - 1) == 7);
+
+        Vector<int> atvirksciai;
+        for (auto it = v.crbegin(); it != v.crend(); it++)
+        {
+            atvirksciai.push_back(*it);
+        }
+
+        REQUIRE(atvirksciai.size() == 3);
+        REQUIRE(atvirksciai[0] == 9);
+        REQUIRE(atvirksciai[1] == 8);
+        REQUIRE(atvirksciai[2] == 7);
+    }
+}
+
+TEST_CASE("Talpos metodai veikia tinkamai")
+{
+
+    SECTION("empty() metodas veikia tinkamai")
+    {
+        Vector<int> v_tuscias;
+        REQUIRE(v_tuscias.empty() == true);
+
+        Vector<int> v_netuscias(5, 10); // 5 elementai, kurių reikšmė 10
+        REQUIRE(v_netuscias.empty() == false);
+    }
+
+    SECTION("reserve() padidina talpą, bet nekeičia dydžio ar elementų")
+    {
+        Vector<int> v = {1, 2, 3};
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 3);
+
+        v.reserve(10);
+
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 10);
+        REQUIRE(v.empty() == false);
+
+        // elementai turi atlikt savo vietose
+        REQUIRE(v[0] == 1);
+        REQUIRE(v[2] == 3);
+    }
+
+    SECTION("reserve() nieko nedaro, jei prašoma talpa mažesnė arba lygi esamai")
+    {
+        Vector<int> v = {1, 2, 3, 4, 5};
+        v.reserve(10);
+        REQUIRE(v.capacity() == 10);
+
+        v.reserve(3);
+        REQUIRE(v.capacity() == 10);
+
+        v.reserve(10);
+        REQUIRE(v.capacity() == 10);
+    }
+
+    SECTION("reserve() teisingai perkelia elementus ir atlaisvina senus (be nutekėjimų)")
+    {
+        ObjectCounter::count = 0;
+
+        Vector<ObjectCounter> v(4);
+        REQUIRE(ObjectCounter::count == 4);
+
+        v.reserve(8);
+
+        REQUIRE(ObjectCounter::count == 4);
+        REQUIRE(v.capacity() == 8);
+        REQUIRE(v.size() == 4);
+    }
+
+    SECTION("shrink_to_fit() sumažina talpą iki elementų skaičiaus")
+    {
+        Vector<int> v = {10, 20, 30};
+        v.reserve(100);
+
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 100);
+
+        v.shrink_to_fit();
+
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 3); // talpa turi susitraukt ligi pat size()
+
+        // duomenys turi atlikt
+        REQUIRE(v[0] == 10);
+        REQUIRE(v[1] == 20);
+        REQUIRE(v[2] == 30);
+    }
+
+    SECTION("shrink_to_fit() nieko nedaro, jei size() ir capacity() jau sutampa")
+    {
+        Vector<int> v = {5, 15, 25};
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 3);
+
+        int *senas_ptr = v.data();
+        v.shrink_to_fit();
+
+        REQUIRE(v.capacity() == 3);
+        REQUIRE(v.data() == senas_ptr); // rodyklė neturi pasikeist (neturėjo būti jokių reallocationų)
     }
 }
