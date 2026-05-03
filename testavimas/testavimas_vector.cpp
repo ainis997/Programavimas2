@@ -10,7 +10,7 @@
 class ObjectCounter
 {
 public:
-    static int count;
+    static inline int count; // be inline reiktų atskirai deklaruot išorėj šį kintamąjį
     ObjectCounter() { count++; }
     ~ObjectCounter() { count--; }
 };
@@ -440,5 +440,130 @@ TEST_CASE("Talpos metodai veikia tinkamai")
 
         REQUIRE(v.capacity() == 3);
         REQUIRE(v.data() == senas_ptr); // rodyklė neturi pasikeist (neturėjo būti jokių reallocationų)
+    }
+}
+
+TEST_CASE("Modifikavimo metodai (clear, push_back, pop_back) veikia tinkamai")
+{
+
+    SECTION("clear() sunaikina elementus ir dydis tampa 0, bet talpa išlieka")
+    {
+        ObjectCounter::count = 0;
+        {
+            Vector<ObjectCounter> v(5);
+            REQUIRE(ObjectCounter::count == 5);
+
+            size_t sena_talpa = v.capacity();
+            v.clear();
+
+            REQUIRE(v.size() == 0);
+            REQUIRE(v.capacity() == sena_talpa); // talpa neturi keistis
+            REQUIRE(ObjectCounter::count == 0);  // visų objektų turi nelikt
+        }
+    }
+
+    SECTION("push_back(const T& value) ir push_back(T&& value) veikia tinkamai")
+    {
+        Vector<int> v;
+        REQUIRE(v.capacity() == 0);
+
+        v.push_back(10); // R-value
+        REQUIRE(v.size() == 1);
+        REQUIRE(v.capacity() == 1);
+
+        int val = 20;
+        v.push_back(val); // L-value
+        REQUIRE(v.size() == 2);
+        REQUIRE(v.capacity() == 2);
+
+        v.push_back(30);
+        REQUIRE(v.size() == 3);
+        REQUIRE(v.capacity() == 4);
+
+        REQUIRE(v[0] == 10);
+        REQUIRE(v[1] == 20);
+        REQUIRE(v[2] == 30);
+    }
+
+    SECTION("pop_back() pašalina paskutinį elementą ir jį sunaikina")
+    {
+        ObjectCounter::count = 0;
+        {
+            Vector<ObjectCounter> v(3);
+            REQUIRE(ObjectCounter::count == 3);
+
+            v.pop_back();
+            REQUIRE(v.size() == 2);
+            REQUIRE(ObjectCounter::count == 2);
+
+            v.pop_back();
+            v.pop_back();
+            REQUIRE(v.size() == 0);
+            REQUIRE(ObjectCounter::count == 0);
+
+            // pop_back ant tuščio vektoriaus (turi nebūt klaidos)
+            v.pop_back();
+            REQUIRE(v.size() == 0);
+        }
+    }
+}
+
+TEST_CASE("insert() metodai teisingai iterpia elementus ir valdo atminti")
+{
+
+    SECTION("insert(pos, value) įterpia elementą bet kurion vieton")
+    {
+        Vector<int> v = {10, 30};
+
+        // vidury
+        auto it = v.insert(v.begin() + 1, 20);
+        REQUIRE(*it == 20);
+        REQUIRE(v.size() == 3);
+        REQUIRE(v[1] == 20); // {10, 20, 30}
+
+        // pradžioj
+        it = v.insert(v.begin(), 5);
+        REQUIRE(*it == 5);
+        REQUIRE(v[0] == 5); // {5, 10, 20, 30}
+
+        // pabaigoj
+        it = v.insert(v.end(), 40);
+        REQUIRE(*it == 40);
+        REQUIRE(v.back() == 40); // {5, 10, 20, 30, 40}
+    }
+
+    SECTION("insert(pos, count, value) veikia tinkamai, kai count = 0")
+    {
+        Vector<int> v = {1, 2, 3};
+        v.insert(v.begin() + 1, 0, 99);
+        REQUIRE(v.size() == 3);
+        REQUIRE(v[1] == 2); // turi tas pats likt antroj vietoj
+    }
+
+    SECTION("insert(pos, count, value) veikia tinkamai, kai įterpiamų elementų mažiau nei pastumiamų")
+    {
+        Vector<int> v = {1, 5, 6};
+
+        v.insert(v.begin() + 1, 1, 99);
+
+        REQUIRE(v.size() == 4);
+        REQUIRE(v[0] == 1);
+        REQUIRE(v[1] == 99);
+        REQUIRE(v[2] == 5);
+        REQUIRE(v[3] == 6);
+    }
+
+    SECTION("insert(pos, count, value) veikia tinkamai, kai įterpiamų elementų daugiau/lygu nei pastumiamų")
+    {
+        Vector<int> v = {1, 2};
+
+        v.insert(v.begin() + 1, 3, 7);
+
+        REQUIRE(v.size() == 5);
+        REQUIRE(v[0] == 1);
+        REQUIRE(v[1] == 7);
+        REQUIRE(v[2] == 7);
+        REQUIRE(v[3] == 7);
+        REQUIRE(v[4] == 2); // pastumtasai elementas atsiduria pačian gali
     }
 }

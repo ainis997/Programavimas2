@@ -394,10 +394,10 @@ public:
     }
     iterator insert(const_iterator pos, size_type count, const T &value)
     {
-        if (count == 0)
-            return pos;
-
         size_type idx = pos - begin();
+
+        if (count == 0)
+            return begin() + idx; // pos — const, tai gal neleis grąžint jo tiesiogiai (grąžina ne const)
 
         size_type new_size = size_ + count;
         if (new_size > capacity_)

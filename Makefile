@@ -51,12 +51,22 @@ SRC_TEST = 	$(TEST_DIR)/testavimas.cpp \
 			$(SRC_DIR)/ivesties_pagalb_fjos.cpp \
 			$(SRC_DIR)/klaidu_valdymas.cpp
 
+SRC_VECTOR_TEST = $(TEST_DIR)/testavimas_vector.cpp \
+					$(SRC_DIR)/vector.h
+
 prep_test:
 	@if not exist $(TEST_DIR) mkdir $(TEST_DIR)
 	g++ $(SRC_TEST) -o $(TEST_DIR)/testavimas
 
 test:
 	./$(TEST_DIR)/testavimas
+
+prep_vector_test:
+	@if not exist $(TEST_DIR) mkdir $(TEST_DIR)
+	g++ -std=c++20 $(SRC_VECTOR_TEST) -o $(TEST_DIR)/testavimas_vector
+
+vector_test:
+	./$(TEST_DIR)/testavimas_vector
 
 clean:
 	del $(OBJ_DIR)\*.o
