@@ -567,3 +567,215 @@ TEST_CASE("insert() metodai teisingai iterpia elementus ir valdo atminti")
         REQUIRE(v[4] == 2); // pastumtasai elementas atsiduria pačian gali
     }
 }
+
+TEST_CASE("erase() metodai veikia tinkamai")
+{
+
+    SECTION("erase(pos) ištrina vieną elementą iš vidurio")
+    {
+        Vector<int> v = {10, 20, 30, 40, 50};
+
+        auto it = v.erase(v.begin() + 2); // Šaliname 30
+
+        REQUIRE(*it == 40); // turi grąžint iteratorių kitan elementan
+        REQUIRE(v.size() == 4);
+        REQUIRE(v[0] == 10);
+        REQUIRE(v[1] == 20);
+        REQUIRE(v[2] == 40);
+        REQUIRE(v[3] == 50);
+    }
+
+    SECTION("erase(pos) ištrina pirmą ir paskutinį elementus")
+    {
+        Vector<int> v = {1, 2, 3};
+
+        v.erase(v.begin()); // šalinam pirmą
+        REQUIRE(v.size() == 2);
+        REQUIRE(v[0] == 2);
+
+        v.erase(v.end() - 1); // šalinam paskutinį
+        REQUIRE(v.size() == 1);
+        REQUIRE(v[0] == 2);
+    }
+
+    SECTION("erase(first, last) ištrina elementų rėžį")
+    {
+        Vector<int> v = {1, 2, 3, 4, 5, 6};
+
+        // šalinama {3, 4}
+        auto it = v.erase(v.begin() + 2, v.begin() + 4);
+
+        REQUIRE(*it == 5); // erase grąžina pirmą elementą po ištrintųjų
+        REQUIRE(v.size() == 4);
+        REQUIRE(v[0] == 1);
+        REQUIRE(v[1] == 2);
+        REQUIRE(v[2] == 5);
+        REQUIRE(v[3] == 6);
+    }
+
+    SECTION("erase() tinkamai destruktina ištrintus elementus")
+    {
+        ObjectCounter::count = 0;
+        {
+            Vector<ObjectCounter> v(5);
+            REQUIRE(ObjectCounter::count == 5);
+
+            v.erase(v.begin() + 1);
+            REQUIRE(ObjectCounter::count == 4);
+            REQUIRE(v.size() == 4);
+
+            v.erase(v.begin(), v.begin() + 2);
+            REQUIRE(ObjectCounter::count == 2);
+            REQUIRE(v.size() == 2);
+        }
+        REQUIRE(ObjectCounter::count == 0);
+    }
+}
+
+TEST_CASE("resize() veikia tinkamai")
+{
+
+    SECTION("resize(count) sumažinant dydį sunaikina nereikalingus elementus")
+    {
+        ObjectCounter::count = 0;
+        {
+            Vector<ObjectCounter> v(5);
+            size_t old_cap = v.capacity(); // Tarkim 5
+
+            v.resize(3); // Sumažiname
+
+            REQUIRE(v.size() == 3);
+            REQUIRE(v.capacity() == old_cap);   // Talpa neturi sumažėti
+            REQUIRE(ObjectCounter::count == 3); // 2 objektai turi būti sunaikinti
+        }
+    }
+
+    SECTION("resize(count) padidinant dydį dapildo default reikšmių")
+    {
+        Vector<int> v = {1, 2};
+        v.resize(5); // default int — 0
+
+        REQUIRE(v.size() == 5);
+        REQUIRE(v.capacity() >= 5);
+        REQUIRE(v[0] == 1);
+        REQUIRE(v[1] == 2);
+        REQUIRE(v[2] == 0);
+        REQUIRE(v[3] == 0);
+        REQUIRE(v[4] == 0);
+    }
+
+    SECTION("resize(count, value) padidinant dydį dapildo nurodyta reikšme")
+    {
+        Vector<int> v = {9, 8};
+        v.resize(4, 10);
+
+        REQUIRE(v.size() == 4);
+        REQUIRE(v[0] == 9);
+        REQUIRE(v[1] == 8);
+        REQUIRE(v[2] == 10);
+        REQUIRE(v[3] == 10);
+    }
+}
+
+TEST_CASE("swap() veikia tinkamai")
+{
+
+    SECTION("swap() tinkamai apsikeičia skirtingais vektoriais")
+    {
+        Vector<int> v1 = {1, 2, 3};
+
+        Vector<int> v2 = {99, 88};
+
+        int *v1_data = v1.data();
+        int *v2_data = v2.data();
+
+        v1.swap(v2);
+
+        // tikrinam v1
+        REQUIRE(v1.size() == 2);
+        REQUIRE(v1.capacity() == 2);
+        REQUIRE(v1[0] == 99);
+        REQUIRE(v1.data() == v2_data); // rodyklės turėjo apsimainyt
+
+        // tikrinam v2
+        REQUIRE(v2.size() == 3);
+        REQUIRE(v2.capacity() == 3);
+        REQUIRE(v2[2] == 3);
+        REQUIRE(v2.data() == v1_data);
+    }
+}
+
+TEST_CASE("Vector non-member funkcijos veikia tinkamai")
+{
+
+    SECTION("operator== ir operator!= veikia tinkamai")
+    {
+        Vector<int> v1 = {1, 2, 3};
+        Vector<int> v2 = {1, 2, 3};
+        Vector<int> v3 = {1, 2, 4};
+        Vector<int> v4 = {1, 2};
+        Vector<int> v_empty1;
+        Vector<int> v_empty2;
+
+        REQUIRE(v1 == v2);
+        REQUIRE_FALSE(v1 != v2);
+
+        REQUIRE(v1 != v3);
+        REQUIRE_FALSE(v1 == v3);
+
+        REQUIRE(v1 != v4);
+
+        REQUIRE(v_empty1 == v_empty2);
+
+        REQUIRE(v1 != v_empty1);
+    }
+
+    SECTION("Non-member swap() permaino tinkamai")
+    {
+        Vector<int> v1 = {10, 20};
+        Vector<int> v2 = {99, 88, 77};
+
+        swap(v1, v2);
+
+        REQUIRE(v1.size() == 3);
+        REQUIRE(v1[0] == 99);
+
+        REQUIRE(v2.size() == 2);
+        REQUIRE(v2[0] == 10);
+    }
+
+    SECTION("erase(vector, value) ištrina nurodytus elementus ir grąžina jų kiekį")
+    {
+        Vector<int> v = {1, 2, 3, 2, 4, 2, 5};
+
+        size_t removed_count = erase(v, 2);
+
+        REQUIRE(removed_count == 3); // dingo 3 dvejetai
+        REQUIRE(v.size() == 4);
+
+        REQUIRE(v == Vector<int>{1, 3, 4, 5});
+    }
+
+    SECTION("erase(vector, value) nieko nedaro, kai nurodyto elemento nėra")
+    {
+        Vector<int> v = {10, 20, 30};
+
+        size_t removed_count = erase(v, 99);
+
+        REQUIRE(removed_count == 0);
+        REQUIRE(v.size() == 3);
+        REQUIRE(v == Vector<int>{10, 20, 30});
+    }
+
+    SECTION("erase_if(vector, pred) tinkamai ištrina elementus pagal sąlygą")
+    {
+        Vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        size_t removed_count = erase_if(v, [](int x)
+                                        { return x % 2 == 0; });
+
+        REQUIRE(removed_count == 4); // dingo 2, 4, 6, 8
+        REQUIRE(v.size() == 4);
+        REQUIRE(v == Vector<int>{1, 3, 5, 7});
+    }
+}

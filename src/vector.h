@@ -527,7 +527,7 @@ public:
                     new_cap *= 2;
                 reserve(new_cap);
             }
-            std::uninitialized_default_construct_n(data_ + size_, count);
+            std::uninitialized_default_construct_n(data_ + size_, count - size_);
         }
         size_ = count;
     }
@@ -551,7 +551,7 @@ public:
                     new_cap *= 2;
                 reserve(new_cap);
             }
-            std::uninitialized_fill_n(data_ + size_, count, value);
+            std::uninitialized_fill_n(data_ + size_, count - size_, value);
         }
         size_ = count;
     }
