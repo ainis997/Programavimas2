@@ -46,7 +46,7 @@ public:
     Vector(size_type n) : size_(n), capacity_(n)
     {
         data_ = static_cast<T *>(operator new(n * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
-        std::uninitialized_default_construct_n(data_, n);      // sukonstruojam objektus default reikšmėmis paskirtoje neužimtoje atmintyje
+        std::uninitialized_value_construct_n(data_, n);        // sukonstruojam objektus default reikšmėmis paskirtoje neužimtoje atmintyje
     }
     // konstruktorius su visų prad. elementų užpildymu elementais x
     Vector(size_type n, const T &x) : size_(n), capacity_(n)
@@ -222,32 +222,32 @@ public:
 
     reverse_iterator rbegin()
     {
-        return std::reverse_iterator(data_);
+        return std::reverse_iterator(data_ + size_);
     }
 
     const_reverse_iterator rbegin() const
     {
-        return std::reverse_iterator(data_);
+        return std::reverse_iterator(data_ + size_);
     }
 
     const_reverse_iterator crbegin() const
     {
-        return std::reverse_iterator(data_);
+        return std::reverse_iterator(data_ + size_);
     }
 
     reverse_iterator rend()
     {
-        return std::reverse_iterator(data_ + size_);
+        return std::reverse_iterator(data_);
     }
 
     const_reverse_iterator rend() const
     {
-        return std::reverse_iterator(data_ + size_);
+        return std::reverse_iterator(data_);
     }
 
     const_reverse_iterator crend() const
     {
-        return std::reverse_iterator(data_ + size_);
+        return std::reverse_iterator(data_);
     }
 
     // ===== talpa
@@ -316,6 +316,7 @@ public:
         }
 
         std::construct_at(data_ + size_, value);
+        size_++;
     }
 
     void push_back(T &&value)
@@ -329,6 +330,7 @@ public:
         }
 
         std::construct_at(data_ + size_, std::move(value));
+        size_++;
     }
 
     void pop_back()
@@ -527,7 +529,7 @@ public:
                     new_cap *= 2;
                 reserve(new_cap);
             }
-            std::uninitialized_default_construct_n(data_ + size_, count - size_);
+            std::uninitialized_value_construct_n(data_ + size_, count - size_);
         }
         size_ = count;
     }

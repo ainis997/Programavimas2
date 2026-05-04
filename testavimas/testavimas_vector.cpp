@@ -12,7 +12,15 @@ class ObjectCounter
 public:
     static inline int count; // be inline reiktų atskirai deklaruot išorėj šį kintamąjį
     ObjectCounter() { count++; }
+    // kopijavimo konstruktorius
+    ObjectCounter(const ObjectCounter &) { count++; }
+    // perkėlimo konstruktorius
+    ObjectCounter(ObjectCounter &&) noexcept { count++; }
     ~ObjectCounter() { count--; }
+
+    // nurodom, kad programa persidengtų = operatorius savaip (be to neveikia)
+    ObjectCounter &operator=(const ObjectCounter &) = default;
+    ObjectCounter &operator=(ObjectCounter &&) = default;
 };
 
 TEST_CASE("Vektoriaus konstruktoriai ir destruktorius veikia tinkamai")
