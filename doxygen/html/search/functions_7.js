@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['natur_5fskaiciaus_5fivestis_0',['natur_skaiciaus_ivestis',['../ivesties__pagalb__fjos_8cpp.html#a8704bd2e9e830cc6ea693500d772daf3',1,'natur_skaiciaus_ivestis(int &amp;sk, bool(*papild_salygu_netenkinimo_fja)(int), bool ar_ivestis_atsaukiama):&#160;ivesties_pagalb_fjos.cpp'],['../ivesties__pagalb__fjos_8h.html#a114f2190604b1e5bbc8df1a0aae1a3c7',1,'natur_skaiciaus_ivestis(int &amp;sk, bool(*papild_salygu_fja)(int)=nullptr, bool ar_ivestis_atsaukiama=false):&#160;ivesties_pagalb_fjos.cpp']]],
-  ['nust_5fegzo_5freza_1',['nust_egzo_reza',['../class_studentas.html#a31a594766e3cc47a4e6ebaab67f0b89c',1,'Studentas']]],
-  ['nust_5fgalutinio_5ftipa_2',['nust_galutinio_tipa',['../class_studentas.html#a9ff0e8dfc2f801fd74eee0ad5cbb2fdf',1,'Studentas']]],
-  ['nust_5fpavarde_3',['nust_pavarde',['../class_zmogus.html#a5c00e6f22ec5a6b383e2661447329b0f',1,'Zmogus']]],
-  ['nust_5fvarda_4',['nust_varda',['../class_zmogus.html#abdd681f6a41d736e1aa844a11c50ea24',1,'Zmogus']]]
+  ['insert_0',['insert',['../class_vector.html#a543330cea78641b32eb35d37e3642b51',1,'Vector::insert(const_iterator pos, const T &amp;value)'],['../class_vector.html#a3deda2957a8d4ec73fb9a6f1218d550a',1,'Vector::insert(const_iterator pos, T &amp;&amp;value)'],['../class_vector.html#a4ff158eb21cf52087614b3f2e3ae0467',1,'Vector::insert(const_iterator pos, size_type count, const T &amp;value)']]],
+  ['isvestis_1',['isvestis',['../isvestis_8cpp.html#a993cc989d777e891262819db8449e780',1,'isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe, Programos_laikai &amp;t):&#160;isvestis.cpp'],['../isvestis_8h.html#a993cc989d777e891262819db8449e780',1,'isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe, Programos_laikai &amp;t):&#160;isvestis.cpp']]],
+  ['ivest_5fegzo_5freza_2',['ivest_egzo_reza',['../class_studentas.html#a55f9186ddc914c915c7b1e20af762820',1,'Studentas']]],
+  ['ivest_5fvarda_5fpavarde_3',['ivest_varda_pavarde',['../class_studentas.html#a1d6f40dd5d50938c1006cf1e9cfeb717',1,'Studentas::ivest_varda_pavarde()'],['../class_zmogus.html#aaf7a6fc2e95b24d4806f47af79c162ce',1,'Zmogus::ivest_varda_pavarde()']]],
+  ['ivesties_5fklaidos_5fvaldymas_4',['ivesties_klaidos_valdymas',['../klaidu__valdymas_8cpp.html#a02dda8425ac61d28549312c774c07497',1,'ivesties_klaidos_valdymas():&#160;klaidu_valdymas.cpp'],['../klaidu__valdymas_8h.html#a02dda8425ac61d28549312c774c07497',1,'ivesties_klaidos_valdymas():&#160;klaidu_valdymas.cpp']]]
 ];

@@ -31,9 +31,11 @@ var menudata={children:[
 {text:"Klasių Nariai",url:"functions.html",children:[
 {text:"Visi",url:"functions.html",children:[
 {text:"a",url:"functions.html#index_a"},
+{text:"b",url:"functions.html#index_b"},
 {text:"c",url:"functions.html#index_c"},
 {text:"d",url:"functions.html#index_d"},
 {text:"e",url:"functions.html#index_e"},
+{text:"f",url:"functions.html#index_f"},
 {text:"g",url:"functions.html#index_g"},
 {text:"i",url:"functions.html#index_i"},
 {text:"n",url:"functions.html#index_n"},
@@ -47,8 +49,11 @@ var menudata={children:[
 {text:"~",url:"functions.html#index__7E"}]},
 {text:"Funkcijos",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
+{text:"b",url:"functions_func.html#index_b"},
 {text:"c",url:"functions_func.html#index_c"},
+{text:"d",url:"functions_func.html#index_d"},
 {text:"e",url:"functions_func.html#index_e"},
+{text:"f",url:"functions_func.html#index_f"},
 {text:"g",url:"functions_func.html#index_g"},
 {text:"i",url:"functions_func.html#index_i"},
 {text:"n",url:"functions_func.html#index_n"},
@@ -61,6 +66,7 @@ var menudata={children:[
 {text:"z",url:"functions_func.html#index_z"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Kintamieji",url:"functions_vars.html"},
+{text:"Tipų apibrėžimai",url:"functions_type.html"},
 {text:"Susiję Funkcijos",url:"functions_rela.html"}]}]},
 {text:"Failai",url:"files.html",children:[
 {text:"Failai",url:"files.html"},
@@ -68,6 +74,7 @@ var menudata={children:[
 {text:"Visi",url:"globals.html",children:[
 {text:"a",url:"globals.html#index_a"},
 {text:"c",url:"globals.html#index_c"},
+{text:"e",url:"globals.html#index_e"},
 {text:"f",url:"globals.html#index_f"},
 {text:"g",url:"globals.html#index_g"},
 {text:"i",url:"globals.html#index_i"},
@@ -80,6 +87,7 @@ var menudata={children:[
 {text:"v",url:"globals.html#index_v"}]},
 {text:"Funkcijos",url:"globals_func.html",children:[
 {text:"a",url:"globals_func.html#index_a"},
+{text:"e",url:"globals_func.html#index_e"},
 {text:"f",url:"globals_func.html#index_f"},
 {text:"g",url:"globals_func.html#index_g"},
 {text:"i",url:"globals_func.html#index_i"},

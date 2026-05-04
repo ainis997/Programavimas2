@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['container_0',['Container',['../class_studentas.html#aa1df2c6568facf5b91a08d6d58573a2c',1,'Studentas::Container()'],['../konstantos__kt__klases_8h.html#a1965bb8373623de55b7bed329991d900',1,'Container:&#160;konstantos_kt_klases.h']]]
+  ['back_0',['back',['../class_vector.html#a8abc3f8273089dadf91fb8eaca0676e6',1,'Vector::back()'],['../class_vector.html#a66ecda4d7c3a5d0260451be6f2e30d30',1,'Vector::back() const']]],
+  ['begin_1',['begin',['../class_vector.html#a466e8c045ea10d62c28b689888e9fe5a',1,'Vector::begin()'],['../class_vector.html#a514c5f6246f07f0012f1d00912838b19',1,'Vector::begin() const']]]
 ];

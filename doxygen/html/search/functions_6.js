@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../pagr_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'pagr.cpp']]],
-  ['misri_5fivestis_1',['misri_ivestis',['../ivestis_8cpp.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]]
+  ['galut_0',['galut',['../class_studentas.html#ad4b196ef88c01c2f86bafaaa629adb0d',1,'Studentas']]],
+  ['generuota_5fivestis_1',['generuota_ivestis',['../ivestis_8cpp.html#ac3efa7433b911a758e820682e3e316e4',1,'generuota_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#ac3efa7433b911a758e820682e3e316e4',1,'generuota_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]]
 ];

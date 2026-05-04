@@ -33,6 +33,7 @@ var NAVTREE =
         [ "Visi", "functions.html", null ],
         [ "Funkcijos", "functions_func.html", null ],
         [ "Kintamieji", "functions_vars.html", null ],
+        [ "Tipų apibrėžimai", "functions_type.html", null ],
         [ "Susiję Funkcijos", "functions_rela.html", null ]
       ] ]
     ] ],

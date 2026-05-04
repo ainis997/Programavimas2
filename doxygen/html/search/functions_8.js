@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../studentas_8cpp.html#a31bfec90626476eb319220e06ff26889',1,'studentas.cpp']]],
-  ['operator_3d_1',['operator=',['../class_studentas.html#a8bd0a78e7c4ba39c5459c8e0b298bc47',1,'Studentas::operator=(const Studentas &amp;kitas)'],['../class_studentas.html#a99c7be3db3405a0c8221bc38609d1e10',1,'Studentas::operator=(Studentas &amp;&amp;kitas)']]],
-  ['operator_3e_3e_2',['operator&gt;&gt;',['../studentas_8cpp.html#af0a946209b0c8d9cf60c44924f7fa5d6',1,'studentas.cpp']]]
+  ['main_0',['main',['../pagr_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'pagr.cpp']]],
+  ['misri_5fivestis_1',['misri_ivestis',['../ivestis_8cpp.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]]
 ];

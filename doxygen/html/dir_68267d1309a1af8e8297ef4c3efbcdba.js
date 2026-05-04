@@ -15,5 +15,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "pagr.cpp", "pagr_8cpp.html", "pagr_8cpp" ],
     [ "studentas.cpp", "studentas_8cpp.html", "studentas_8cpp" ],
     [ "studentas.h", "studentas_8h.html", "studentas_8h" ],
+    [ "vector.h", "vector_8h.html", "vector_8h" ],
     [ "zmogus.h", "zmogus_8h.html", "zmogus_8h" ]
 ];

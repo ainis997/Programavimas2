@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['rank_5fivestis_0',['rank_ivestis',['../ivestis_8cpp.html#aab3e6ba9010794c3f9dc2b4743baa9bc',1,'rank_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#aab3e6ba9010794c3f9dc2b4743baa9bc',1,'rank_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]],
-  ['ras_5ffailo_5fparuosimas_1',['ras_failo_paruosimas',['../isvesties__pagalb__fjos_8cpp.html#a1c718c777576774ebfe20bb44e6090d9',1,'ras_failo_paruosimas(std::string RAS_FAILO_NUORODA):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a1c718c777576774ebfe20bb44e6090d9',1,'ras_failo_paruosimas(std::string RAS_FAILO_NUORODA):&#160;isvesties_pagalb_fjos.cpp']]],
-  ['rezas_5fmed_2',['rezas_med',['../class_studentas.html#a2aa004079e057dfcf1829e2d829e00a8',1,'Studentas']]],
-  ['rezas_5fvid_3',['rezas_vid',['../class_studentas.html#ab32a13e229fe7a7376c73d01c574c557',1,'Studentas']]],
-  ['rikiavimas_4',['rikiavimas',['../isvesties__pagalb__fjos_8h.html#a56410f98d5860174d54a5f626ce32619',1,'isvesties_pagalb_fjos.h']]]
+  ['operator_21_3d_0',['operator!=',['../vector_8h.html#af33b362313e0a866431e3d419769e45c',1,'vector.h']]],
+  ['operator_3c_3c_1',['operator&lt;&lt;',['../studentas_8cpp.html#a31bfec90626476eb319220e06ff26889',1,'studentas.cpp']]],
+  ['operator_3d_2',['operator=',['../class_studentas.html#a8bd0a78e7c4ba39c5459c8e0b298bc47',1,'Studentas::operator=(const Studentas &amp;kitas)'],['../class_studentas.html#a99c7be3db3405a0c8221bc38609d1e10',1,'Studentas::operator=(Studentas &amp;&amp;kitas)'],['../class_vector.html#a2fe37b54a47d28015829196cb5abec05',1,'Vector::operator=(const Vector &amp;other)'],['../class_vector.html#ac7a5d1c7410208d7ce8f13497e31dd87',1,'Vector::operator=(Vector &amp;&amp;other) noexcept']]],
+  ['operator_3d_3d_3',['operator==',['../vector_8h.html#a4a042dd1c2e48b3e3e4f9a48c3e00a33',1,'vector.h']]],
+  ['operator_3e_3e_4',['operator&gt;&gt;',['../studentas_8cpp.html#af0a946209b0c8d9cf60c44924f7fa5d6',1,'studentas.cpp']]],
+  ['operator_5b_5d_5',['operator[]',['../class_vector.html#a0f1c7de2e1f125f38f73ec3e6f172197',1,'Vector::operator[](size_type i)'],['../class_vector.html#a64601f68d6b680e3d9e45754e6bc4660',1,'Vector::operator[](size_type i) const']]]
 ];

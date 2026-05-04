@@ -1,8 +1,20 @@
 var searchData=
 [
-  ['rank_5fivestis_0',['rank_ivestis',['../ivestis_8cpp.html#aab3e6ba9010794c3f9dc2b4743baa9bc',1,'rank_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#aab3e6ba9010794c3f9dc2b4743baa9bc',1,'rank_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]],
-  ['ras_5ffailo_5fparuosimas_1',['ras_failo_paruosimas',['../isvesties__pagalb__fjos_8cpp.html#a1c718c777576774ebfe20bb44e6090d9',1,'ras_failo_paruosimas(std::string RAS_FAILO_NUORODA):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a1c718c777576774ebfe20bb44e6090d9',1,'ras_failo_paruosimas(std::string RAS_FAILO_NUORODA):&#160;isvesties_pagalb_fjos.cpp']]],
-  ['rezas_5fmed_2',['rezas_med',['../class_studentas.html#a2aa004079e057dfcf1829e2d829e00a8',1,'Studentas']]],
-  ['rezas_5fvid_3',['rezas_vid',['../class_studentas.html#ab32a13e229fe7a7376c73d01c574c557',1,'Studentas']]],
-  ['rikiavimas_4',['rikiavimas',['../isvesties__pagalb__fjos_8h.html#a56410f98d5860174d54a5f626ce32619',1,'isvesties_pagalb_fjos.h']]]
+  ['pagal_5fmediana_5fdid_0',['pagal_mediana_did',['../isvesties__pagalb__fjos_8cpp.html#a55b3783f6c91955e59a351f0963065dc',1,'pagal_mediana_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a55b3783f6c91955e59a351f0963065dc',1,'pagal_mediana_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fmediana_5fmaz_1',['pagal_mediana_maz',['../isvesties__pagalb__fjos_8cpp.html#a76846b644d08f66cf2a215d0a5ddcb1b',1,'pagal_mediana_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a76846b644d08f66cf2a215d0a5ddcb1b',1,'pagal_mediana_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fpavarde_5fdid_2',['pagal_pavarde_did',['../isvesties__pagalb__fjos_8cpp.html#a17117463870d0e9a31fa5da376792a75',1,'pagal_pavarde_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a17117463870d0e9a31fa5da376792a75',1,'pagal_pavarde_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fpavarde_5fmaz_3',['pagal_pavarde_maz',['../isvesties__pagalb__fjos_8cpp.html#a5da4db6f99261d3464b3ee823de58376',1,'pagal_pavarde_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a5da4db6f99261d3464b3ee823de58376',1,'pagal_pavarde_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fvarda_5fdid_4',['pagal_varda_did',['../isvesties__pagalb__fjos_8cpp.html#aed738e257fd31999d2821087ccb9ae53',1,'pagal_varda_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#aed738e257fd31999d2821087ccb9ae53',1,'pagal_varda_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fvarda_5fmaz_5',['pagal_varda_maz',['../isvesties__pagalb__fjos_8cpp.html#af4b12287d55595d96df0b724a2d0b68b',1,'pagal_varda_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#af4b12287d55595d96df0b724a2d0b68b',1,'pagal_varda_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fvidurki_5fdid_6',['pagal_vidurki_did',['../isvesties__pagalb__fjos_8cpp.html#a74a6b9d3e63fad2a57e3dbd68e8c397a',1,'pagal_vidurki_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a74a6b9d3e63fad2a57e3dbd68e8c397a',1,'pagal_vidurki_did(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagal_5fvidurki_5fmaz_7',['pagal_vidurki_maz',['../isvesties__pagalb__fjos_8cpp.html#a7282d98bc8684e6bedd24a7c47b12cc4',1,'pagal_vidurki_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp'],['../isvesties__pagalb__fjos_8h.html#a7282d98bc8684e6bedd24a7c47b12cc4',1,'pagal_vidurki_maz(Studentas &amp;A, Studentas &amp;B):&#160;isvesties_pagalb_fjos.cpp']]],
+  ['pagr_2ecpp_8',['pagr.cpp',['../pagr_8cpp.html',1,'']]],
+  ['pavarde_9',['pavarde',['../class_zmogus.html#a24b5b4208f386916dc5c1ccf006bdedf',1,'Zmogus']]],
+  ['pavarde_5f_10',['pavarde_',['../class_zmogus.html#a85cd6103a5f887059263d15413a3f081',1,'Zmogus']]],
+  ['pazymiu_5fsk_11',['pazymiu_sk',['../class_studentas.html#a4400b13362638aaaf17ff5ce73a1041f',1,'Studentas']]],
+  ['pointer_12',['pointer',['../class_vector.html#ae28d14081d39ec08d697e47ceab9b571',1,'Vector']]],
+  ['pop_5fback_13',['pop_back',['../class_vector.html#adcba035109febbe55cba2a25f8483ba6',1,'Vector']]],
+  ['pridet_5fpazymi_14',['pridet_pazymi',['../class_studentas.html#a16cf2e53c06abb0ca653e1bcc29ee85b',1,'Studentas']]],
+  ['programos_5flaikai_15',['Programos_laikai',['../class_programos__laikai.html',1,'']]],
+  ['push_5fback_16',['push_back',['../class_vector.html#a4415960a83615855ec32f8169f641786',1,'Vector::push_back(const T &amp;value)'],['../class_vector.html#a7e9c3a4530e85fd3490d932846307683',1,'Vector::push_back(T &amp;&amp;value)']]]
 ];

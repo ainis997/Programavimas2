@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../pagr_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'pagr.cpp']]],
-  ['max_5fint_1',['MAX_INT',['../konstantos__kt__klases_8h.html#a5bfc9b2f04b5970ce0566dc515054efd',1,'konstantos_kt_klases.h']]],
-  ['misri_5fivestis_2',['misri_ivestis',['../ivestis_8cpp.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp'],['../ivestis_8h.html#a8fb655b95e8e6cb2da9e59587e46171a',1,'misri_ivestis(Container(Studentas) &amp;grupe):&#160;ivestis.cpp']]]
+  ['klaidu_5fvaldymas_2ecpp_0',['klaidu_valdymas.cpp',['../klaidu__valdymas_8cpp.html',1,'']]],
+  ['klaidu_5fvaldymas_2eh_1',['klaidu_valdymas.h',['../klaidu__valdymas_8h.html',1,'']]],
+  ['konstantos_5fkt_5fklases_2eh_2',['konstantos_kt_klases.h',['../konstantos__kt__klases_8h.html',1,'']]],
+  ['kt_5fklasiu_5fmetodai_2ecpp_3',['kt_klasiu_metodai.cpp',['../kt__klasiu__metodai_8cpp.html',1,'']]]
 ];

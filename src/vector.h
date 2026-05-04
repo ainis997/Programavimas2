@@ -43,32 +43,52 @@ public:
     // ===== konstruktoriai
 
     // numatytasai konstruktorius
+    /// @brief Numatytasis konstruktorius. Sukuria tuščią vektorių.
+    ///
+    /// Pradinė talpa ir dydis yra lygi nuliui, atmintis nėra išskiriama.
     Vector() : data_(nullptr), size_(0), capacity_(0) {}
     // konstruktorius n elementų vektoriaus
+    /// @brief Sukuria nurodyto dydžio vektorių, užpildytą numatytosiomis reikšmėmis.
+    ///
+    /// Atmintis rezervuojama naudojant `operator new`, o objektai sukonstruojami naudojant
+    /// `std::uninitialized_value_construct_n`. Tai užtikrina, kad primityvūs tipai (pvz., `int`)
+    /// bus inicializuoti nuliais, o ne atminties "šiukšlėmis".
+    /// @param n Pradinis vektoriaus dydis ir talpa.
     Vector(size_type n) : size_(n), capacity_(n)
     {
         data_ = static_cast<T *>(operator new(n * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
         std::uninitialized_value_construct_n(data_, n);        // sukonstruojam objektus default reikšmėmis paskirtoje neužimtoje atmintyje
     }
     // konstruktorius su visų prad. elementų užpildymu elementais x
+    /// @brief Sukuria vektorių ir užpildo jį nurodyto objekto kopijomis.
+    /// @param n Pradinis vektoriaus dydis ir talpa.
+    /// @param x Reikšmė, kuria bus užpildyti visi elementai.
     Vector(size_type n, const T &x) : size_(n), capacity_(n)
     {
         data_ = static_cast<T *>(operator new(n * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
         std::uninitialized_fill_n(data_, n, x);                // užpildo neužimtą atmintį reikšmėmis (objektais) x iki n-tojo (size_-tojo) elemento
     }
     // konstruktorius su inicializavimo sąrašu
+    /// @brief Sukuria vektorių iš inicializavimo sąrašo (initializer_list).
+    /// @param list Sąrašas elementų, kurie bus nukopijuoti į naująjį vektorių.
     Vector(std::initializer_list<T> list) : size_(list.size()), capacity_(list.size())
     {
         data_ = static_cast<T *>(operator new(list.size() * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
         std::uninitialized_copy(list.begin(), list.end(), data_);
     }
     // kopijavimo konstruktorius
+    /// @brief Kopijavimo konstruktorius. Sukuria naują vektorių kaip kito vektoriaus kopiją.
+    /// @param other Vektorius, iš kurio kopijuojami elementai.
     Vector(const Vector &other) : size_(other.size_), capacity_(other.size_)
     {
         data_ = static_cast<T *>(operator new(other.size_ * sizeof(T))); // paskiriam gryną neužimtą dinaminę atmintį (BE objektų konstravimo)
         std::uninitialized_copy(other.data_, other.data_ + size_, data_);
     }
     // perkėlimo konstruktorius
+    /// @brief Perkėlimo (move) konstruktorius. Perima kito vektoriaus resursus be kopijavimo.
+    ///
+    /// Po šios operacijos pradinis vektorius `other` tampa tuščias (galimoje, bet neapibrėžtoje būsenoje).
+    /// @param other Vektorius, kurio resursai bus pasisavinti.
     Vector(Vector &&other) noexcept : data_(other.data_), size_(other.size_), capacity_(other.size_) // be noexcept neveiks perkėlimas, vyks kopijavimas tsg
     {
         // AR TSG DESTRUKTORIUM?
@@ -77,6 +97,10 @@ public:
         other.capacity_ = 0;
     }
 
+    /// @brief Destruktorius. Sunaikina visus elementus ir atlaisvina atmintį.
+    ///
+    /// Sunaikinimas vyksta dviem etapais: pirmiausia `std::destroy` iškviečia visų objektų
+    /// destruktorius, tada `operator delete` atlaisvina pačią atmintį.
     ~Vector()
     {
         std::destroy(data_, data_ + size_); // iškviečia visų masyvo data_ objektų destruktorius
@@ -89,6 +113,9 @@ public:
     // ===== priskyrimo operatoriai
 
     // kopijavimo priskyrimo operatorius
+    /// @brief Kopijavimo priskyrimo operatorius. Pakeičia esamo vektoriaus turinį kito vektoriaus kopija.
+    /// @param other Vektorius, kurio elementai bus nukopijuoti.
+    /// @return Nuoroda į šį (modifikuotą) vektorių.
     Vector &operator=(const Vector &other)
     {
         if (this == &other)
@@ -116,6 +143,11 @@ public:
     }
 
     // perkėlimo priskyrimo operatorius
+    /// @brief Perkėlimo priskyrimo operatorius. Pakeičia esamo vektoriaus turinį kito vektoriaus resursais.
+    ///
+    /// Senieji elementai yra sunaikinami, o senoji atmintis atlaisvinama.
+    /// @param other Vektorius, kurio resursai bus pasisavinti. Po operacijos jis tampa tuščias.
+    /// @return Nuoroda į šį vektorių.
     Vector &operator=(Vector &&other) noexcept // be noexcept neveiks perkėlimas, vyks kopijavimas tsg
     {
         if (this == &other)
@@ -137,6 +169,12 @@ public:
 
     // ===== elementų pasiekimo metodai
 
+    /// @brief Saugiai pasiekia elementą nurodytu indeksu atlikdamas ribų patikrinimą.
+    ///
+    /// Jei nurodytas indeksas yra už vektoriaus ribų, funkcija meta `std::out_of_range` išimtį.
+    /// @param i Norimo pasiekti elemento indeksas.
+    /// @return Nuoroda (reference) į nurodytą elementą.
+    /// @throw std::out_of_range Jei indeksas yra didesnis arba lygus vektoriaus dydžiui (`i >= size_`).
     reference at(size_type i) // size_type — neigiamas nebus
     {
         if (i >= size_)
@@ -146,6 +184,12 @@ public:
         return data_[i];
     }
 
+    /// @brief Saugiai pasiekia elementą nurodytu indeksu atlikdamas ribų patikrinimą.
+    ///
+    /// Jei nurodytas indeksas yra už vektoriaus ribų, funkcija meta `std::out_of_range` išimtį.
+    /// @param i Norimo pasiekti elemento indeksas.
+    /// @return Konstantinė nuoroda (reference) į nurodytą elementą.
+    /// @throw std::out_of_range Jei indeksas yra didesnis arba lygus vektoriaus dydžiui (`i >= size_`).
     const_reference at(size_type i) const // size_type — neigiamas nebus
     {
         if (i >= size_)
@@ -155,36 +199,62 @@ public:
         return data_[i];
     }
 
+    /// @brief Pasiekia elementą nurodytu indeksu be ribų patikrinimo.
+    ///
+    /// Šis metodas yra greitesnis nei `at()`, nes netikrina, ar indeksas yra tinkamas.
+    /// Mėginimas nurodyti i >= size() lems neapibrėžtą programos elgseną.
+    /// @param i Norimo pasiekti elemento indeksas.
+    /// @return Nuoroda (reference) į nurodytą elementą.
     reference operator[](size_type i)
     {
         return data_[i];
     }
 
+    /// @brief Pasiekia elementą nurodytu indeksu be ribų patikrinimo (tik skaityti).
+    ///
+    /// Šis metodas yra greitesnis nei `at()`, nes netikrina, ar indeksas tinkamas.
+    /// @param i Norimo pasiekti elemento indeksas.
+    /// @return Konstantinė nuoroda (reference) į nurodytą elementą.
+    /// @warning Jei indeksas yra už vektoriaus ribų, elgsena neapibrėžta.
     const_reference operator[](size_type i) const
     {
         return data_[i];
     }
 
+    /// @brief Grąžina nuorodą į pirmąjį vektoriaus elementą.
+    /// @return Nuoroda į pirmąjį elementą.
+    /// @warning Iškvietus šį metodą tuščiam vektoriui, elgsena neapibrėžta.
     reference front()
     {
         return data_[0];
     }
 
+    /// @brief Grąžina nuorodą į pirmąjį vektoriaus elementą (tik skaityti).
+    /// @return Konstantinė nuoroda į pirmąjį elementą.
+    /// @warning Iškvietus šį metodą tuščiam vektoriui, elgsena neapibrėžta.
     const_reference front() const
     {
         return data_[0];
     }
 
+    /// @brief Grąžina nuorodą į paskutinį vektoriaus elementą.
+    /// @return Nuoroda į paskutinį elementą.
+    /// @warning Iškvietus šį metodą tuščiam vektoriui, elgsena neapibrėžta.
     reference back()
     {
         return data_[size_ - 1];
     }
 
+    /// @brief Grąžina nuorodą į paskutinį vektoriaus elementą (tik skaityti).
+    /// @return Konstantinė nuoroda į paskutinį elementą.
+    /// @warning Iškvietus šį metodą tuščiam vektoriui, elgsena neapibrėžta.
     const_reference back() const
     {
         return data_[size_ - 1];
     }
 
+    /// @brief Grąžina tiesioginę rodyklę į vidinį elementų masyvą.
+    /// @return Rodyklė į pirmąjį masyvo elementą arba `nullptr`, jei atmintis neišskirta.
     T *data()
     {
         return data_;
@@ -192,61 +262,88 @@ public:
 
     // ===== iteratoriai
 
+    /// @brief Grąžina iteratorių į pirmąjį vektoriaus elementą.
+    /// @return Iteratorius, rodantis į pradžią.
     iterator begin()
     {
         return data_;
     }
 
+    /// @brief Grąžina konstantinį iteratorių į pirmąjį vektoriaus elementą.
+    /// @return Konstantinis iteratorius, rodantis į pradžią.
     const_iterator begin() const // kaipo perdengimas
     {
         return data_;
     }
 
+    /// @brief Grąžina konstantinį iteratorių į pirmąjį vektoriaus elementą.
+    ///
+    /// Naudojamas, kai norima užtikrinti, kad per iteratorių duomenys nebus keičiami,
+    /// net jei pats vektorius nėra konstantinis.
+    /// @return Konstantinis iteratorius, rodantis į pradžią.
     const_iterator cbegin() const
     {
         return data_;
     }
 
+    /// @brief Grąžina iteratorių į vietą už paskutinio vektoriaus elemento.
+    /// @return Iteratorius, rodantis į pabaigą (už paskutinio elemento).
     iterator end()
     {
         return data_ + size_;
     }
 
+    /// @brief Grąžina konstantinį iteratorių į vietą už paskutinio vektoriaus elemento.
+    /// @return Konstantinis iteratorius, rodantis į pabaigą (už paskutinio elemento).
     const_iterator end() const // kaipo perdengimas
     {
         return data_ + size_;
     }
 
+    /// @brief Grąžina konstantinį iteratorių į vietą už paskutinio vektoriaus elemento.
+    /// @return Konstantinis iteratorius, rodantis į pabaigą (už paskutinio elemento).
     const_iterator cend() const
     {
         return data_ + size_;
     }
 
+    /// @brief Grąžina atvirkštinį iteratorių į pirmąjį atvirkštinės sekos elementą.
+    /// @return Atvirkštinis iteratorius, rodantis į paskutinį elementą.
     reverse_iterator rbegin()
     {
         return std::reverse_iterator(data_ + size_);
     }
 
+    /// @brief Grąžina konstantinį atvirkštinį iteratorių į pirmąjį atvirkštinės sekos elementą.
+    /// @return Konstantinis atvirkštinis iteratorius, rodantis į paskutinį elementą.
     const_reverse_iterator rbegin() const
     {
         return std::reverse_iterator(data_ + size_);
     }
 
+    /// @brief Grąžina konstantinį atvirkštinį iteratorių į pirmąjį atvirkštinės sekos elementą.
+    /// @return Konstantinis atvirkštinis iteratorius, rodantis į paskutinį elementą.
     const_reverse_iterator crbegin() const
     {
         return std::reverse_iterator(data_ + size_);
     }
 
+    /// @brief Grąžina atvirkštinį iteratorių į vietą už paskutinio atvirkštinės sekos elemento.
+    /// @return Atvirkštinis iteratorius, rodantis į vietą prieš pirmąjį elementą.
     reverse_iterator rend()
     {
         return std::reverse_iterator(data_);
     }
 
+    /// @brief Grąžina konstantinį atvirkštinį iteratorių į vietą už paskutinio atvirkštinės sekos elemento.
+    /// @return Konstantinis atvirkštinis iteratorius, rodantis į vietą prieš pirmąjį elementą.
     const_reverse_iterator rend() const
     {
         return std::reverse_iterator(data_);
     }
 
+    /// @brief Grąžina konstantinį atvirkštinį iteratorių į vietą už paskutinio atvirkštinės sekos elemento.
+    /// @return Konstantinis atvirkštinis iteratorius, rodantis į vietą prieš pirmąjį elementą.
     const_reverse_iterator crend() const
     {
         return std::reverse_iterator(data_);

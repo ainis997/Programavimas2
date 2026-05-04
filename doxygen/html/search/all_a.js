@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['operator_3c_3c_0',['operator&lt;&lt;',['../class_studentas.html#a31bfec90626476eb319220e06ff26889',1,'Studentas::operator&lt;&lt;()'],['../studentas_8cpp.html#a31bfec90626476eb319220e06ff26889',1,'operator&lt;&lt;():&#160;studentas.cpp']]],
-  ['operator_3d_1',['operator=',['../class_studentas.html#a8bd0a78e7c4ba39c5459c8e0b298bc47',1,'Studentas::operator=(const Studentas &amp;kitas)'],['../class_studentas.html#a99c7be3db3405a0c8221bc38609d1e10',1,'Studentas::operator=(Studentas &amp;&amp;kitas)']]],
-  ['operator_3e_3e_2',['operator&gt;&gt;',['../class_studentas.html#af0a946209b0c8d9cf60c44924f7fa5d6',1,'Studentas::operator&gt;&gt;()'],['../studentas_8cpp.html#af0a946209b0c8d9cf60c44924f7fa5d6',1,'operator&gt;&gt;():&#160;studentas.cpp']]]
+  ['natur_5fskaiciaus_5fivestis_0',['natur_skaiciaus_ivestis',['../ivesties__pagalb__fjos_8cpp.html#a8704bd2e9e830cc6ea693500d772daf3',1,'natur_skaiciaus_ivestis(int &amp;sk, bool(*papild_salygu_netenkinimo_fja)(int), bool ar_ivestis_atsaukiama):&#160;ivesties_pagalb_fjos.cpp'],['../ivesties__pagalb__fjos_8h.html#a114f2190604b1e5bbc8df1a0aae1a3c7',1,'natur_skaiciaus_ivestis(int &amp;sk, bool(*papild_salygu_fja)(int)=nullptr, bool ar_ivestis_atsaukiama=false):&#160;ivesties_pagalb_fjos.cpp']]],
+  ['nust_5fegzo_5freza_1',['nust_egzo_reza',['../class_studentas.html#a31a594766e3cc47a4e6ebaab67f0b89c',1,'Studentas']]],
+  ['nust_5fgalutinio_5ftipa_2',['nust_galutinio_tipa',['../class_studentas.html#a9ff0e8dfc2f801fd74eee0ad5cbb2fdf',1,'Studentas']]],
+  ['nust_5fpavarde_3',['nust_pavarde',['../class_zmogus.html#a5c00e6f22ec5a6b383e2661447329b0f',1,'Zmogus']]],
+  ['nust_5fvarda_4',['nust_varda',['../class_zmogus.html#abdd681f6a41d736e1aa844a11c50ea24',1,'Zmogus']]]
 ];

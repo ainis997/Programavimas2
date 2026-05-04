@@ -1,4 +1,16 @@
 var searchData=
 [
-  ['uzpildyt_5fpazymius_5fiki_5fmin_0',['uzpildyt_pazymius_iki_min',['../class_studentas.html#af3e29618f811dfdaa481cddfe77efacf',1,'Studentas']]]
+  ['shrink_5fto_5ffit_0',['shrink_to_fit',['../class_vector.html#ad6454ce193263b8000d4c18cb0c3a0c8',1,'Vector']]],
+  ['size_1',['size',['../class_vector.html#a9e7e854146e2b56c2c7149eddbc0a1e8',1,'Vector']]],
+  ['size_5ftype_2',['size_type',['../class_vector.html#abafb4cad9801440d5379d777088cf3ef',1,'Vector']]],
+  ['skait_5ffailo_5fparuosimas_3',['skait_failo_paruosimas',['../ivesties__pagalb__fjos_8cpp.html#ad2e4a449234c42f19f2ff835f4fbcb39',1,'skait_failo_paruosimas(std::string SK_FAILO_NUORODA):&#160;ivesties_pagalb_fjos.cpp'],['../ivesties__pagalb__fjos_8h.html#ad2e4a449234c42f19f2ff835f4fbcb39',1,'skait_failo_paruosimas(std::string SK_FAILO_NUORODA):&#160;ivesties_pagalb_fjos.cpp']]],
+  ['skirstoma_5fisvestis_4',['skirstoma_isvestis',['../isvestis_8cpp.html#a240b542933d16b534d91a5d3f87fdb82',1,'skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe, Programos_laikai &amp;t):&#160;isvestis.cpp'],['../isvestis_8h.html#a240b542933d16b534d91a5d3f87fdb82',1,'skirstoma_isvestis(std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe, Programos_laikai &amp;t):&#160;isvestis.cpp']]],
+  ['spausd_5flaikus_5',['spausd_laikus',['../class_programos__laikai.html#a690cb43aceb235b4881f39dfc6f51e29',1,'Programos_laikai']]],
+  ['spausdinimas_6',['spausdinimas',['../isvestis_8cpp.html#ad78a15660733319b0a20ffd5b26bc2f1',1,'spausdinimas(std::string RAS_FAILO_PAV, std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe):&#160;isvestis.cpp'],['../isvestis_8h.html#ad78a15660733319b0a20ffd5b26bc2f1',1,'spausdinimas(std::string RAS_FAILO_PAV, std::string RAS_FAILO_NUORODA, Container(Studentas) &amp;grupe):&#160;isvestis.cpp']]],
+  ['stud_5frikiavimas_7',['stud_rikiavimas',['../isvesties__pagalb__fjos_8h.html#a08516b4dc8ca9068d40051dff1edf512',1,'isvesties_pagalb_fjos.h']]],
+  ['studentas_8',['Studentas',['../class_studentas.html',1,'Studentas'],['../class_studentas.html#ab459e995e8c9b24cdc9aec5b09a66539',1,'Studentas::Studentas()'],['../class_studentas.html#ad1aba34910872c18baace0509b03fe6a',1,'Studentas::Studentas(std::string vardas, std::string pavarde)'],['../class_studentas.html#a9c99fb8afa58ff7806759aa22e3c1a6f',1,'Studentas::Studentas(const Studentas &amp;kitas)'],['../class_studentas.html#a60a91a548557e25e09ad4b66dd7044e6',1,'Studentas::Studentas(Studentas &amp;&amp;kitas)']]],
+  ['studentas_2ecpp_9',['studentas.cpp',['../studentas_8cpp.html',1,'']]],
+  ['studentas_2eh_10',['studentas.h',['../studentas_8h.html',1,'']]],
+  ['studentu_5fskirstymas_11',['studentu_skirstymas',['../class_programos__laikai.html#a3c77955475baf633980ae4e26cae5be0',1,'Programos_laikai::studentu_skirstymas'],['../isvestis_8cpp.html#a95e7c4616b011079e9849f277f8383b0',1,'studentu_skirstymas(int strategija, Container(Studentas) &amp;grupe, Container(Studentas) &amp;blogi, Container(Studentas) &amp;geri):&#160;isvestis.cpp'],['../isvestis_8h.html#a95e7c4616b011079e9849f277f8383b0',1,'studentu_skirstymas(int strategija, Container(Studentas) &amp;grupe, Container(Studentas) &amp;blogi, Container(Studentas) &amp;geri):&#160;isvestis.cpp']]],
+  ['swap_12',['swap',['../class_vector.html#a04719915f34b27674e1eca2c42e48eb2',1,'Vector::swap()'],['../vector_8h.html#a3b597588a215a71ac78ba65437556992',1,'swap():&#160;vector.h']]]
 ];
