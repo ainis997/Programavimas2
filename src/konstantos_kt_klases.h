@@ -10,7 +10,7 @@
 #include <limits> // maksimaliai int reikšmei gauti
 
 // KONTEINERIO TIPAS, KURĮ NAUDOJA VISA PROGRAMA (VECTOR / DEQUE / LIST)
-#define Container(T) std::vector<T>
+#define Container(T) Vector<T>
 
 // kad būtų trumpiau
 const auto MAX_INT = std::numeric_limits<int>::max();

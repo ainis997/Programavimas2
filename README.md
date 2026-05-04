@@ -267,31 +267,85 @@ Rezultatas:
 - std::vector perskirstymų sk.: 27
 - Vector perskirstymų sk.: 27
 
-# Programos trukmės testavimai
+# Programos trukmės testavimai (std::vector vs Vector)
 
-...
+Programos trukmė išmatuota dviem programos versijoms: naudojančiai std::vector ir naudojančiai Vector (savasis std::vector įgyvendinimas). Testavimai atlikti kiekvienai versijai su 100 tūkst., 1 mln. ir 10 mln. studentų įrašų apdorojimu, kiekvieną bandymą kartojant 5 kartus. Visuose testavimuose studentų skirstymo strategija — 3.
 
 ## std::vector
 
 ##### 100 000 įrašų:
 
+![alt text](images/image-26.png)
+![alt text](images/image-30.png)
+![alt text](images/image-29.png)
+![alt text](images/image-28.png)
+![alt text](images/image-27.png)
+
 ##### 1 000 000 įrašų:
 
+![alt text](images/image-25.png)
+![alt text](images/image-24.png)
+![alt text](images/image-23.png)
+![alt text](images/image-22.png)
+![alt text](images/image-21.png)
+
 ##### 10 000 000 įrašų:
+
+![alt text](images/image-16.png)
+![alt text](images/image-17.png)
+![alt text](images/image-18.png)
+![alt text](images/image-19.png)
+![alt text](images/image-20.png)
 
 ## Vector
 
 ##### 100 000 įrašų:
 
+![alt text](images/image-15.png)
+![alt text](images/image-14.png)
+![alt text](images/image-13.png)
+![alt text](images/image-12.png)
+![alt text](images/image-11.png)
+
 ##### 1 000 000 įrašų:
+
+![alt text](images/image-10.png)
+![alt text](images/image-9.png)
+![alt text](images/image-8.png)
+![alt text](images/image-7.png)
+![alt text](images/image-6.png)
 
 ##### 10 000 000 įrašų:
 
-|
-|
-|
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
+![alt text](images/image-5.png)
 
-# Programos trukmės testavimai
+## Rezultatai
+
+#### std::vector:
+
+| Kiekis     | Nuskaitymas (vid.) | Rikiavimas (vid.) | Skirstymas (vid.) | Programa (vid.) |
+| ---------- | ------------------ | ----------------- | ----------------- | --------------- |
+| 100 000    | 0.32558s           | 0.02015s          | 0.02279s          | 0.49384s        |
+| 1 000 000  | 3.26087s           | 0.26798s          | 0.21911s          | 5.09135s        |
+| 10 000 000 | 33.32956s          | 3.28830s          | 2.14918s          | 52.67920s       |
+
+#### Vector:
+
+| Kiekis     | Nuskaitymas (vid.) | Rikiavimas (vid.) | Skirstymas (vid.) | Programa (vid.) |
+| ---------- | ------------------ | ----------------- | ----------------- | --------------- |
+| 100 000    | 0.30005s           | 0.02534s          | 0.01138s          | 0.46304s        |
+| 1 000 000  | 2.94906s           | 0.33318s          | 0.11011s          | 4.67513s        |
+| 10 000 000 | 29.92548s          | 4.08812s          | 1.08142s          | 49.10946s       |
+
+#### Išvada
+
+Bendrai Vector versija veikia greičiau nei std::vector versija. Tai lemia tiek greitesnis nuskaitymas, tiek žymiai greitesnis skirstymas. Visgi Vector rikiavimas yra šiek tiek lėtesnis nei std::vector, tačiau bendros programos trukmės rezultato tai pernelyg neįtakoja.
+
+# Programos trukmės testavimai (klasės vs struktūros)
 
 Programos trukmė išmatuota dviem programos versijoms: struktūrų ir klasių versijoms. Testavimai atlikti kiekvienai versijai su 3 skirtingais kompiliatoriaus optimizavimo lygmenimis (O1, O2, O3), su 100 tūkst. ir 1 mln. studentų įrašų apdorojimu, kiekvieną bandymą kartojant 5 kartus. Visuose testavimuose naudojamas konteineris — std::vector, studentų skirstymo strategija — 3.
 

@@ -21,7 +21,7 @@ void stud_rikiavimas(Container(T) & grupe, bool (*rikiavimo_taisykle)(T &, T &))
         grupe.sort(rikiavimo_taisykle);
     }
     // VECTOR / DEQUE
-    else if constexpr (std::is_same_v<Container(T), std::vector<T>> || std::is_same_v<Container(T), std::deque<T>>)
+    else if constexpr (std::is_same_v<Container(T), Vector<T>> || std::is_same_v<Container(T), std::vector<T>> || std::is_same_v<Container(T), std::deque<T>>)
     {
         std::sort(grupe.begin(), grupe.end(), rikiavimo_taisykle);
     }
