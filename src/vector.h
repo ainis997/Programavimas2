@@ -8,6 +8,8 @@
 #include <new>    // dėl placement new
 #include <memory> // dėl std::uninitialized_..., std::destroy
 
+// klasė šabloninė, tai lieka .h
+
 template <typename T>
 class Vector
 {

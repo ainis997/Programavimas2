@@ -1,5 +1,7 @@
 #pragma once
 
+#include "vector.h"
+
 #include <string>
 #include <vector>
 #include <deque>

@@ -160,6 +160,137 @@ Pradinės versijos programa, kuri:
 - apskaičiuoja galutinį balą (pagal vidurkį arba medianą);
 - pateikia visus reikalingus duomenis lentelėje.
 
+# std::vector vs Vector spartos testavimai
+
+...
+
+##### 10 tūkst. įterpimų:
+
+std::vector laikas su 10000 elementu: 0.000151
+Vector laikas su 10000 elementu: 9.04e-05
+
+std::vector laikas su 10000 elementu: 0.0001279
+Vector laikas su 10000 elementu: 8.88e-05
+
+std::vector laikas su 10000 elementu: 0.0001678
+Vector laikas su 10000 elementu: 0.0001074
+
+std::vector laikas su 10000 elementu: 0.0001559
+Vector laikas su 10000 elementu: 9.87e-05
+
+std::vector laikas su 10000 elementu: 0.000136
+Vector laikas su 10000 elementu: 8.47e-05
+
+##### 100 tūkst. įterpimų:
+
+std::vector laikas su 100000 elementu: 0.0010157
+Vector laikas su 100000 elementu: 0.0008471
+
+std::vector laikas su 100000 elementu: 0.0021863
+Vector laikas su 100000 elementu: 0.0017557
+
+std::vector laikas su 100000 elementu: 0.0014561
+Vector laikas su 100000 elementu: 0.0010383
+
+std::vector laikas su 100000 elementu: 0.001109
+Vector laikas su 100000 elementu: 0.0008951
+
+std::vector laikas su 100000 elementu: 0.0010903
+Vector laikas su 100000 elementu: 0.0013591
+
+##### 1 mln. įterpimų:
+
+std::vector laikas su 1000000 elementu: 0.0090452
+Vector laikas su 1000000 elementu: 0.0072943
+
+std::vector laikas su 1000000 elementu: 0.0082193
+Vector laikas su 1000000 elementu: 0.0072184
+
+std::vector laikas su 1000000 elementu: 0.0093086
+Vector laikas su 1000000 elementu: 0.0087092
+
+std::vector laikas su 1000000 elementu: 0.0082187
+Vector laikas su 1000000 elementu: 0.0075397
+
+std::vector laikas su 1000000 elementu: 0.0082514
+Vector laikas su 1000000 elementu: 0.0081633
+
+##### 10 mln. įterpimų:
+
+std::vector laikas su 10000000 elementu: 0.091775
+Vector laikas su 10000000 elementu: 0.0776703
+
+std::vector laikas su 10000000 elementu: 0.0908184
+Vector laikas su 10000000 elementu: 0.0761093
+
+std::vector laikas su 10000000 elementu: 0.090597
+Vector laikas su 10000000 elementu: 0.0773267
+
+std::vector laikas su 10000000 elementu: 0.100054
+Vector laikas su 10000000 elementu: 0.0769011
+
+std::vector laikas su 10000000 elementu: 0.0886303
+Vector laikas su 10000000 elementu: 0.0770143
+
+##### 100 mln. įterpimų:
+
+std::vector laikas su 100000000 elementu: 0.891555
+Vector laikas su 100000000 elementu: 0.793463
+
+std::vector laikas su 100000000 elementu: 0.867467
+Vector laikas su 100000000 elementu: 0.762474
+
+std::vector laikas su 100000000 elementu: 0.871052
+Vector laikas su 100000000 elementu: 0.761339
+
+std::vector laikas su 100000000 elementu: 0.866032
+Vector laikas su 100000000 elementu: 0.776693
+
+std::vector laikas su 100000000 elementu: 0.876186
+Vector laikas su 100000000 elementu: 0.782664
+
+##### Vidurkiai
+
+| Įterpimų kiekis | std::vector laikas (s) | Vector laikas (s) |
+| --------------- | ---------------------- | ----------------- |
+| 10 000          | 0.00014772             | 0.00009400        |
+| 100 000         | 0.00137148 s           | 0.00117906 s      |
+| 1 000 000       | 0.00860864 s           | 0.00778498 s      |
+| 10 000 000      | 0.09237494 s           | 0.07700434 s      |
+| 100 000 000     | 0.87445840 s           | 0.77532660 s      |
+
+#### Atminties perskirstymų sk.
+
+Palygintas atminties perskirstymų skaičius tarp std::vector ir Vector įterpiant 100 mln. elementų.
+Rezultatas:
+
+- std::vector perskirstymų sk.: 27
+- Vector perskirstymų sk.: 27
+
+# Programos trukmės testavimai
+
+...
+
+## std::vector
+
+##### 100 000 įrašų:
+
+##### 1 000 000 įrašų:
+
+##### 10 000 000 įrašų:
+
+## Vector
+
+##### 100 000 įrašų:
+
+##### 1 000 000 įrašų:
+
+##### 10 000 000 įrašų:
+
+|
+|
+|
+
 # Programos trukmės testavimai
 
 Programos trukmė išmatuota dviem programos versijoms: struktūrų ir klasių versijoms. Testavimai atlikti kiekvienai versijai su 3 skirtingais kompiliatoriaus optimizavimo lygmenimis (O1, O2, O3), su 100 tūkst. ir 1 mln. studentų įrašų apdorojimu, kiekvieną bandymą kartojant 5 kartus. Visuose testavimuose naudojamas konteineris — std::vector, studentų skirstymo strategija — 3.
