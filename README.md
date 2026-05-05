@@ -32,11 +32,9 @@ Duomenų apdorojimas ir išvedimas:
 
 # Paleidimo instrukcija
 
-- Atsisiųsti programos kodą (failai prisegti prie šio programos leidimo);
-- Atidaryti komandinę eilutę programos aplanke;
-- Įvesti komandą "make" (arba kitą jūsų turimo kūrimo įrankio komandą, pvz.: "mingw32-make", jei naudojate MinGW paketą), ją įvykdžius bus sukurtas programos paleidžiamasis failas;
-  - (šiam žingsniui įvykdyti kompiuteryje turi būti įdiegtas kuris nors programų sukūrimo įrankis, pvz., MinGW-w64, MSVC)
-- Įvesti "./bin/programa" arba "make run" (ar "mingw32-make run"), taip bus paleista programa (bus matomas programos pradinis meniu).
+- Atsisiųsti programos diegiklį (prisegtas prie programos leidimo);
+- Atidaryti diegiklį ir sekti diegimo instrukcijas, kad programa būtų įdiegta į kompiuterį;
+- Paleisti programą per diegiklio sukurtą nuorodą darbalaukyje arba pradiniame meniu.
 
 <sup>Pastaba: programos paleidimas pritaikytas Windows operacinei sistemai.</sup>
 
@@ -314,7 +312,7 @@ Pradinės versijos programa, kuri:
 
 # std::vector vs Vector spartos testavimai
 
-...
+Palygintas std::vector ir Vector klasių veikimas, matuojant įterpimo laiką ir atminties perskirstymų skaičių. Įterpimo spartos testavimai atlikti su 10 tūkst., 100 tūkst., 1 mln., 10 mln. ir 100 mln. įterpimų, kiekvieną bandymą kartojant 5 kartus. Atminties perskirstymų skaičius palygintas įterpiant 100 mln. elementų.
 
 ##### 10 tūkst. įterpimų:
 
