@@ -171,24 +171,43 @@ Vieši Metodai</h2></td></tr>
 <tr class="memitem:a2b2998e97102c3750b0b556431b5b6b6" id="r_a2b2998e97102c3750b0b556431b5b6b6"><td class="memItemLeft"><a class="el" href="#a830f097cd0cf82deebdaa63a04d5ade6">const_reverse_iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2b2998e97102c3750b0b556431b5b6b6">crend</a> () const</td></tr>
 <tr class="memdesc:a2b2998e97102c3750b0b556431b5b6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina konstantinį atvirkštinį iteratorių į vietą už paskutinio atvirkštinės sekos elemento.  <br /></td></tr>
 <tr class="memitem:ad688a8a0dfbd07ea63d838058a436f79" id="r_ad688a8a0dfbd07ea63d838058a436f79"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad688a8a0dfbd07ea63d838058a436f79">empty</a> () const</td></tr>
+<tr class="memdesc:ad688a8a0dfbd07ea63d838058a436f79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patikrina, ar vektorius yra tuščias.  <br /></td></tr>
 <tr class="memitem:a9e7e854146e2b56c2c7149eddbc0a1e8" id="r_a9e7e854146e2b56c2c7149eddbc0a1e8"><td class="memItemLeft"><a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8">size</a> () const</td></tr>
+<tr class="memdesc:a9e7e854146e2b56c2c7149eddbc0a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina vektoriuje esančių elementų skaičių.  <br /></td></tr>
 <tr class="memitem:a18ced2e01a4cd11e87c20d1442a19353" id="r_a18ced2e01a4cd11e87c20d1442a19353"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a18ced2e01a4cd11e87c20d1442a19353">reserve</a> (<a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a> new_cap)</td></tr>
+<tr class="memdesc:a18ced2e01a4cd11e87c20d1442a19353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padidina vektoriaus vidinę talpą (išskirtą atmintį), kad joje tilptų nurodytas elementų kiekis.  <br /></td></tr>
 <tr class="memitem:a320c4a64ac1344fd33d6ef11bfd09f30" id="r_a320c4a64ac1344fd33d6ef11bfd09f30"><td class="memItemLeft"><a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a320c4a64ac1344fd33d6ef11bfd09f30">capacity</a> () const</td></tr>
+<tr class="memdesc:a320c4a64ac1344fd33d6ef11bfd09f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grąžina vektoriaus talpą.  <br /></td></tr>
 <tr class="memitem:ad6454ce193263b8000d4c18cb0c3a0c8" id="r_ad6454ce193263b8000d4c18cb0c3a0c8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6454ce193263b8000d4c18cb0c3a0c8">shrink_to_fit</a> ()</td></tr>
+<tr class="memdesc:ad6454ce193263b8000d4c18cb0c3a0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sumažina išskirtos atminties talpą (<span class="tt"><a class="el" href="#a320c4a64ac1344fd33d6ef11bfd09f30" title="Grąžina vektoriaus talpą.">capacity</a></span>), kad ji sutaptų su esamu elementų kiekiu (<span class="tt"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size</a></span>).  <br /></td></tr>
 <tr class="memitem:a32ad98b135472b0ebc5d6cb3ae5d0085" id="r_a32ad98b135472b0ebc5d6cb3ae5d0085"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a32ad98b135472b0ebc5d6cb3ae5d0085">clear</a> ()</td></tr>
+<tr class="memdesc:a32ad98b135472b0ebc5d6cb3ae5d0085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ištrina visus elementus iš vektoriaus.  <br /></td></tr>
 <tr class="memitem:a4415960a83615855ec32f8169f641786" id="r_a4415960a83615855ec32f8169f641786"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4415960a83615855ec32f8169f641786">push_back</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:a4415960a83615855ec32f8169f641786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prideda elementą (kopijuojant) į vektoriaus pabaigą.  <br /></td></tr>
 <tr class="memitem:a7e9c3a4530e85fd3490d932846307683" id="r_a7e9c3a4530e85fd3490d932846307683"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7e9c3a4530e85fd3490d932846307683">push_back</a> (T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a7e9c3a4530e85fd3490d932846307683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prideda elementą (perkėliant) į vektoriaus pabaigą.  <br /></td></tr>
 <tr class="memitem:adcba035109febbe55cba2a25f8483ba6" id="r_adcba035109febbe55cba2a25f8483ba6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adcba035109febbe55cba2a25f8483ba6">pop_back</a> ()</td></tr>
+<tr class="memdesc:adcba035109febbe55cba2a25f8483ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ištrina paskutinį vektoriaus elementą.  <br /></td></tr>
 <tr class="memitem:a543330cea78641b32eb35d37e3642b51" id="r_a543330cea78641b32eb35d37e3642b51"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a543330cea78641b32eb35d37e3642b51">insert</a> (<a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> pos, const T &amp;value)</td></tr>
+<tr class="memdesc:a543330cea78641b32eb35d37e3642b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Įterpia elemento kopiją prieš nurodytą poziciją.  <br /></td></tr>
 <tr class="memitem:a3deda2957a8d4ec73fb9a6f1218d550a" id="r_a3deda2957a8d4ec73fb9a6f1218d550a"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3deda2957a8d4ec73fb9a6f1218d550a">insert</a> (<a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> pos, T &amp;&amp;value)</td></tr>
+<tr class="memdesc:a3deda2957a8d4ec73fb9a6f1218d550a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Įterpia elementą (perkeliant) prieš nurodytą poziciją.  <br /></td></tr>
 <tr class="memitem:a4ff158eb21cf52087614b3f2e3ae0467" id="r_a4ff158eb21cf52087614b3f2e3ae0467"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4ff158eb21cf52087614b3f2e3ae0467">insert</a> (<a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> pos, <a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a> count, const T &amp;value)</td></tr>
+<tr class="memdesc:a4ff158eb21cf52087614b3f2e3ae0467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Įterpia nurodytą kiekį elemento kopijų prieš nurodytą poziciją.  <br /></td></tr>
 <tr class="memitem:ad790d517be3f4ed3d05d078c80a6b720" id="r_ad790d517be3f4ed3d05d078c80a6b720"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad790d517be3f4ed3d05d078c80a6b720">erase</a> (<a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a> pos)</td></tr>
+<tr class="memdesc:ad790d517be3f4ed3d05d078c80a6b720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pašalina elementą nurodytoje pozicijoje.  <br /></td></tr>
 <tr class="memitem:ada08ce2d41733da63bdeac9901d48a74" id="r_ada08ce2d41733da63bdeac9901d48a74"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#ada08ce2d41733da63bdeac9901d48a74">erase</a> (<a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> pos)</td></tr>
+<tr class="memdesc:ada08ce2d41733da63bdeac9901d48a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pašalina elementą nurodytoje pozicijoje.  <br /></td></tr>
 <tr class="memitem:afd90059f9dff48f4417b51f6eae8e152" id="r_afd90059f9dff48f4417b51f6eae8e152"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#afd90059f9dff48f4417b51f6eae8e152">erase</a> (<a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a> first, <a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a> last)</td></tr>
+<tr class="memdesc:afd90059f9dff48f4417b51f6eae8e152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pašalina elementų rėžį [first, last).  <br /></td></tr>
 <tr class="memitem:a4c79ccc14e48bf7efed8d57233b1d3ff" id="r_a4c79ccc14e48bf7efed8d57233b1d3ff"><td class="memItemLeft"><a class="el" href="#ae799ef0cafb593f479d0f29252bcf260">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4c79ccc14e48bf7efed8d57233b1d3ff">erase</a> (<a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> first, <a class="el" href="#afeea140f3ae0a439d6cc037e1aebf283">const_iterator</a> last)</td></tr>
+<tr class="memdesc:a4c79ccc14e48bf7efed8d57233b1d3ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pašalina elementų rėžį [first, last).  <br /></td></tr>
 <tr class="memitem:aa33cb6ea7ef1dd4676db9d77a8c66e48" id="r_aa33cb6ea7ef1dd4676db9d77a8c66e48"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa33cb6ea7ef1dd4676db9d77a8c66e48">resize</a> (<a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a> count)</td></tr>
+<tr class="memdesc:aa33cb6ea7ef1dd4676db9d77a8c66e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus.  <br /></td></tr>
 <tr class="memitem:a14ed000f53997f240ecff3f588e28c37" id="r_a14ed000f53997f240ecff3f588e28c37"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a14ed000f53997f240ecff3f588e28c37">resize</a> (<a class="el" href="#abafb4cad9801440d5379d777088cf3ef">size_type</a> count, const T &amp;value)</td></tr>
+<tr class="memdesc:a14ed000f53997f240ecff3f588e28c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus.  <br /></td></tr>
 <tr class="memitem:a04719915f34b27674e1eca2c42e48eb2" id="r_a04719915f34b27674e1eca2c42e48eb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a04719915f34b27674e1eca2c42e48eb2">swap</a> (<a class="el" href="class_vector.html">Vector</a> &amp;other) noexcept</td></tr>
+<tr class="memdesc:a04719915f34b27674e1eca2c42e48eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sukeičia šio vektoriaus turinį (duomenis, dydį ir talpą) su kitu vektoriu.  <br /></td></tr>
 </table>
 <a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Tipo Aprašymo Dokumentacija</h2>
 <a id="afeea140f3ae0a439d6cc037e1aebf283" name="afeea140f3ae0a439d6cc037e1aebf283"></a>
@@ -840,6 +859,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Grąžina vektoriaus talpą. </p>
+<p>Vektoriaus talpa — elementų skaičius, kurį vektorius gali sutalpinti be papildomo atminties išskyrimo. Šis skaičius visada didesnis arba lygus <span class="tt"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size()</a></span>. </p><dl class="section return"><dt>Gražina</dt><dd>Esama vektoriaus atminties talpa. </dd></dl>
+
 </div>
 </div>
 <a id="afa15b0e58a9d29293941b3741a2ed1b5" name="afa15b0e58a9d29293941b3741a2ed1b5"></a>
@@ -926,6 +948,9 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ištrina visus elementus iš vektoriaus. </p>
+<p>Visiems vektoriuje esantiems objektams saugiai iškviečiami jų destruktoriai, tačiau vidinė atmintis (talpa / <span class="tt"><a class="el" href="#a320c4a64ac1344fd33d6ef11bfd09f30" title="Grąžina vektoriaus talpą.">capacity</a></span>) nėra atlaisvinama. Po šios operacijos <span class="tt"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size()</a></span> tampa <span class="tt">0</span>. </p>
 
 </div>
 </div>
@@ -1044,6 +1069,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Patikrina, ar vektorius yra tuščias. </p>
+<p>Tikrinimas atliekamas lyginant pradžios ir pabaigos iteratorius. </p><dl class="section return"><dt>Gražina</dt><dd><span class="tt">true</span>, jei <span class="tt"><a class="el" href="#a466e8c045ea10d62c28b689888e9fe5a" title="Grąžina iteratorių į pirmąjį vektoriaus elementą.">begin()</a> == <a class="el" href="#ae288fa619188bff101d5300b8aaf9a90" title="Grąžina iteratorių į vietą už paskutinio vektoriaus elemento.">end()</a></span> (t. y. vektoriuje nėra elementų: <span class="tt"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size()</a> == 0</span>), kitu atveju <span class="tt">false</span>. </dd></dl>
+
 </div>
 </div>
 <a id="ae288fa619188bff101d5300b8aaf9a90" name="ae288fa619188bff101d5300b8aaf9a90"></a>
@@ -1135,6 +1163,16 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Pašalina elementų rėžį [first, last). </p>
+<p>Elementai po nurodyto rėžio perkeliami į atsilaisvinusią vietą. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>Konstantinis iteratorius į rėžio pradžią (įskaitant). </td></tr>
+    <tr><td class="paramname">last</td><td>Konstantinis iteratorius į rėžio pabaigą (neįskaitant). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius į elementą, sekantį po paskutinio pašalinto elemento. </dd></dl>
+
 </div>
 </div>
 <a id="ada08ce2d41733da63bdeac9901d48a74" name="ada08ce2d41733da63bdeac9901d48a74"></a>
@@ -1161,6 +1199,15 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pašalina elementą nurodytoje pozicijoje. </p>
+<p>Visi elementai po nurodytos pozicijos perkeliami per vieną vietą atgal naudojant perkėlimo (move) priskyrimą. Visi iteratoriai ir nuorodos nuo ištrynimo vietos iki vektoriaus galo tampa negaliojantys. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Konstantinis iteratorius į elementą, kurį reikia ištrinti. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius į elementą, kuris sekė po ištrintojo (arba <span class="tt"><a class="el" href="#ae288fa619188bff101d5300b8aaf9a90" title="Grąžina iteratorių į vietą už paskutinio vektoriaus elemento.">end()</a></span>). </dd></dl>
 
 </div>
 </div>
@@ -1193,6 +1240,16 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Pašalina elementų rėžį [first, last). </p>
+<p>Elementai po nurodyto rėžio perkeliami į atsilaisvinusią vietą. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>Iteratorius į rėžio pradžią (įskaitant). </td></tr>
+    <tr><td class="paramname">last</td><td>Iteratorius į rėžio pabaigą (neįskaitant). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius į elementą, sekantį po paskutinio pašalinto elemento. </dd></dl>
+
 </div>
 </div>
 <a id="ad790d517be3f4ed3d05d078c80a6b720" name="ad790d517be3f4ed3d05d078c80a6b720"></a>
@@ -1219,6 +1276,15 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pašalina elementą nurodytoje pozicijoje. </p>
+<p>Visi elementai po nurodytos pozicijos perkeliami per vieną vietą atgal naudojant perkėlimo (move) priskyrimą. Visi iteratoriai ir nuorodos nuo ištrynimo vietos iki vektoriaus galo tampa negaliojantys. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Iteratorius į elementą, kurį reikia ištrinti. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius į elementą, kuris sekė po ištrintojo (arba <span class="tt"><a class="el" href="#ae288fa619188bff101d5300b8aaf9a90" title="Grąžina iteratorių į vietą už paskutinio vektoriaus elemento.">end()</a></span>). </dd></dl>
 
 </div>
 </div>
@@ -1313,6 +1379,16 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Įterpia elemento kopiją prieš nurodytą poziciją. </p>
+<p>Visi elementai nuo iteratoriaus <span class="tt">pos</span> iki pabaigos yra pastumiami per vieną poziciją tolyn. Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys. Kitu atveju tampa nebegaliojantys tik iteratoriai nuo <span class="tt">pos</span> iki pabaigos. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Iteratorius, prieš kurį bus įterpiamas elementas. </td></tr>
+    <tr><td class="paramname">value</td><td>Elementas, kuris bus nukopijuotas į vektorių. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius, rodantis į naujai įterptą elementą. </dd></dl>
+
 </div>
 </div>
 <a id="a4ff158eb21cf52087614b3f2e3ae0467" name="a4ff158eb21cf52087614b3f2e3ae0467"></a>
@@ -1349,6 +1425,17 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Įterpia nurodytą kiekį elemento kopijų prieš nurodytą poziciją. </p>
+<p>Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys. Kitu atveju tampa nebegaliojantys tik iteratoriai nuo <span class="tt">pos</span> iki pabaigos. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Iteratorius, prieš kurį bus įterpiami nauji elementai. </td></tr>
+    <tr><td class="paramname">count</td><td>Įterpiamų elementų skaičius. Jei jis <span class="tt">0</span>, funkcija nieko nedaro. </td></tr>
+    <tr><td class="paramname">value</td><td>Elemento reikšmė, kurios kopijos bus įterptos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius, nurodantis į pirmąjį naujai įterptą elementą (arba <span class="tt">pos</span>, jei <span class="tt">count == 0</span>). </dd></dl>
+
 </div>
 </div>
 <a id="a3deda2957a8d4ec73fb9a6f1218d550a" name="a3deda2957a8d4ec73fb9a6f1218d550a"></a>
@@ -1379,6 +1466,16 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Įterpia elementą (perkeliant) prieš nurodytą poziciją. </p>
+<p>Visi elementai nuo iteratoriaus <span class="tt">pos</span> iki pabaigos yra pastumiami per vieną poziciją tolyn. Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys. Kitu atveju tampa nebegaliojantys tik iteratoriai nuo <span class="tt">pos</span> iki pabaigos. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Iteratorius, prieš kurį bus įterpiamas elementas. </td></tr>
+    <tr><td class="paramname">value</td><td>Elementas, kuris bus perkeltas į vektorių. Po operacijos senasis perduotasis elementas liks galimoje, bet neapibrėžtoje būsenoje. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Iteratorius, rodantis į naujai įterptą elementą. </dd></dl>
 
 </div>
 </div>
@@ -1480,7 +1577,7 @@ template&lt;typename T&gt; </div>
 </div><div class="memdoc">
 
 <p>Pasiekia elementą nurodytu indeksu be ribų patikrinimo. </p>
-<p>Šis metodas yra greitesnis nei <span class="tt"><a class="el" href="#aa0b50ec54fbf0c8b98ba3255b1405258" title="Saugiai pasiekia elementą nurodytu indeksu atlikdamas ribų patikrinimą.">at()</a></span>, nes netikrina, ar indeksas yra tinkamas. Mėginimas nurodyti i &gt;= <a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8">size()</a> lems neapibrėžtą programos elgseną. </p><dl class="params"><dt>Parametrai</dt><dd>
+<p>Šis metodas yra greitesnis nei <span class="tt"><a class="el" href="#aa0b50ec54fbf0c8b98ba3255b1405258" title="Saugiai pasiekia elementą nurodytu indeksu atlikdamas ribų patikrinimą.">at()</a></span>, nes netikrina, ar indeksas yra tinkamas. Mėginimas nurodyti i &gt;= <a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size()</a> lems neapibrėžtą programos elgseną. </p><dl class="params"><dt>Parametrai</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>Norimo pasiekti elemento indeksas. </td></tr>
   </table>
@@ -1552,6 +1649,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Ištrina paskutinį vektoriaus elementą. </p>
+<p>Sunaikina paskutinį objektą iškviesdamas jo destruktorių, bet neatlaisvina vidinės atminties (<span class="tt">capacity_</span> nepakinta). Jei vektorius jau yra tuščias, funkcija nieko nedaro. Po operacijos iteratoriai, rodyklės ir nuorodos į pašalintąjį elementą ir pabaigos iteratorių (<span class="tt"><a class="el" href="#ae288fa619188bff101d5300b8aaf9a90" title="Grąžina iteratorių į vietą už paskutinio vektoriaus elemento.">end()</a></span>) tampa nebegaliojantys. </p>
+
 </div>
 </div>
 <a id="a4415960a83615855ec32f8169f641786" name="a4415960a83615855ec32f8169f641786"></a>
@@ -1579,6 +1679,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Prideda elementą (kopijuojant) į vektoriaus pabaigą. </p>
+<p>Jei dabartinis dydis (<span class="tt">size_</span>) pasiekia talpą (<span class="tt">capacity_</span>), prieš pridedant elementą automatiškai išskiriama nauja atmintis (paprastai dvigubai didesnė). Tokiu atveju visi esami iteratoriai, rodyklės į vektoriaus elementus tampa nebegaliojantys. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Pridedamo elemento reikšmė (nukopijuosima). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a7e9c3a4530e85fd3490d932846307683" name="a7e9c3a4530e85fd3490d932846307683"></a>
@@ -1605,6 +1713,14 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Prideda elementą (perkėliant) į vektoriaus pabaigą. </p>
+<p>Jei dabartinis dydis (<span class="tt">size_</span>) pasiekia talpą (<span class="tt">capacity_</span>), prieš pridedant elementą automatiškai išskiriama nauja atmintis (paprastai dvigubai didesnė). Tokiu atveju visi esami iteratoriai, rodyklės ir nuorodos į vektoriaus elementus tampa nebegaliojantys. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Pridedamo elemento reikšmė (perkelsima). Po perkėlimo senasis elementas liks galimoje, bet neapibrėžtoje būsenoje. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1753,6 +1869,14 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Padidina vektoriaus vidinę talpą (išskirtą atmintį), kad joje tilptų nurodytas elementų kiekis. </p>
+<p>Jei nurodyta talpa (<span class="tt">new_cap</span>) yra mažesnė arba lygi dabartinei talpai (<span class="tt">capacity_</span>), funkcija nieko nedaro. Jei reikia didinti talpą, išskiriama nauja atmintis, senieji objektai perkeliami į naują vietą, o senoji atmintis atlaisvinama. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">new_cap</td><td>Norimas rezervuoti atminties dydis (elementų skaičiumi). </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa33cb6ea7ef1dd4676db9d77a8c66e48" name="aa33cb6ea7ef1dd4676db9d77a8c66e48"></a>
@@ -1779,6 +1903,14 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus. </p>
+<p>Jei naujas dydis mažesnis už esamą, elementai vektoriaus gale sunaikinami. Jei naujas dydis didesnis, vektorius papildomas reikšmėmis pagal "value-initialization" (pvz., skaičiai tampa 0). Jei reikia, padidinama talpa. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Naujas norimas vektoriaus dydis. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1811,6 +1943,15 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus. </p>
+<p>Jei naujas dydis mažesnis už esamą, elementai vektoriaus gale sunaikinami. Jei naujas dydis didesnis, vektorius papildomas nurodytomis reikšmėmis <span class="tt">value</span>. Jei reikia, padidinama talpa. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>Naujas norimas vektoriaus dydis. </td></tr>
+    <tr><td class="paramname">value</td><td>Reikšmė, kuria bus užpildyti naujai sukurti elementai. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad6454ce193263b8000d4c18cb0c3a0c8" name="ad6454ce193263b8000d4c18cb0c3a0c8"></a>
@@ -1837,6 +1978,9 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sumažina išskirtos atminties talpą (<span class="tt"><a class="el" href="#a320c4a64ac1344fd33d6ef11bfd09f30" title="Grąžina vektoriaus talpą.">capacity</a></span>), kad ji sutaptų su esamu elementų kiekiu (<span class="tt"><a class="el" href="#a9e7e854146e2b56c2c7149eddbc0a1e8" title="Grąžina vektoriuje esančių elementų skaičių.">size</a></span>). </p>
+<p>Funkcija naudinga siekiant optimizuoti atminties naudojimą. </p>
 
 </div>
 </div>
@@ -1865,6 +2009,9 @@ template&lt;typename T&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Grąžina vektoriuje esančių elementų skaičių. </p>
+<dl class="section return"><dt>Gražina</dt><dd>Elementų kiekis vektoriuje. </dd></dl>
+
 </div>
 </div>
 <a id="a04719915f34b27674e1eca2c42e48eb2" name="a04719915f34b27674e1eca2c42e48eb2"></a>
@@ -1891,6 +2038,14 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sukeičia šio vektoriaus turinį (duomenis, dydį ir talpą) su kitu vektoriu. </p>
+<p>Operacijoje tik sukeičiamos vidinės rodyklės ir kintamieji, neatliekant elementų kopijavimo ar perkėlimo. </p><dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Kitas vektorius, su kuriuo bus atliekamas sukeitimas. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

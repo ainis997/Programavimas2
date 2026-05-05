@@ -109,14 +109,19 @@ Klasės</h2></td></tr>
 Funkcijos</h2></td></tr>
 <tr class="memitem:a4a042dd1c2e48b3e3e4f9a48c3e00a33" id="r_a4a042dd1c2e48b3e3e4f9a48c3e00a33"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a4a042dd1c2e48b3e3e4f9a48c3e00a33 template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4a042dd1c2e48b3e3e4f9a48c3e00a33">operator==</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;lhs, const <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:a4a042dd1c2e48b3e3e4f9a48c3e00a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patikrina, ar du vektoriai yra lygūs.  <br /></td></tr>
 <tr class="memitem:af33b362313e0a866431e3d419769e45c" id="r_af33b362313e0a866431e3d419769e45c"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:af33b362313e0a866431e3d419769e45c template"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af33b362313e0a866431e3d419769e45c">operator!=</a> (const <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;lhs, const <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;rhs)</td></tr>
+<tr class="memdesc:af33b362313e0a866431e3d419769e45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Patikrina, ar du vektoriai yra nelygūs.  <br /></td></tr>
 <tr class="memitem:a3b597588a215a71ac78ba65437556992" id="r_a3b597588a215a71ac78ba65437556992"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
 <tr class="memitem:a3b597588a215a71ac78ba65437556992 template"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3b597588a215a71ac78ba65437556992">swap</a> (<a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;lhs, <a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:a3b597588a215a71ac78ba65437556992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcija dviejų vektorių turiniui sukeisti.  <br /></td></tr>
 <tr class="memitem:ab79796adee7dfc1c4ae86dffa714887a" id="r_ab79796adee7dfc1c4ae86dffa714887a"><td class="memTemplParams" colspan="2">template&lt;typename T, typename U&gt; </td></tr>
 <tr class="memitem:ab79796adee7dfc1c4ae86dffa714887a template"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="#ab79796adee7dfc1c4ae86dffa714887a">erase</a> (<a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;vector, const U &amp;value)</td></tr>
+<tr class="memdesc:ab79796adee7dfc1c4ae86dffa714887a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei. Funkcija perkelia visus paliekamus elementus į vektoriaus priekį ir tuomet ištrina likusius elementus gale.  <br /></td></tr>
 <tr class="memitem:a72fc313e8002f5d4765b865733b5e8fe" id="r_a72fc313e8002f5d4765b865733b5e8fe"><td class="memTemplParams" colspan="2">template&lt;typename T, typename Pred&gt; </td></tr>
 <tr class="memitem:a72fc313e8002f5d4765b865733b5e8fe template"><td class="memItemLeft">constexpr size_t&#160;</td><td class="memItemRight"><a class="el" href="#a72fc313e8002f5d4765b865733b5e8fe">erase_if</a> (<a class="el" href="class_vector.html">Vector</a>&lt; T &gt; &amp;vector, Pred pred)</td></tr>
+<tr class="memdesc:a72fc313e8002f5d4765b865733b5e8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ištrina iš vektoriaus visus elementus, atitinkančius nurodytą sąlygą (predikatą).  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Funkcijos Dokumentacija</h2>
 <a id="ab79796adee7dfc1c4ae86dffa714887a" name="ab79796adee7dfc1c4ae86dffa714887a"></a>
@@ -147,6 +152,23 @@ template&lt;typename T, typename U&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei. Funkcija perkelia visus paliekamus elementus į vektoriaus priekį ir tuomet ištrina likusius elementus gale. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Vektoriaus elementų tipas. </td></tr>
+    <tr><td class="paramname">U</td><td>Ieškomos reikšmės tipas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vektorius, iš kurio šalinami elementai. </td></tr>
+    <tr><td class="paramname">value</td><td>Reikšmė, kurios visus atitikmenis reikia ištrinti. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Bendras ištrintų elementų skaičius. </dd></dl>
 
 </div>
 </div>
@@ -179,6 +201,23 @@ template&lt;typename T, typename Pred&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Ištrina iš vektoriaus visus elementus, atitinkančius nurodytą sąlygą (predikatą). </p>
+<p>Veikimo principas toks pat kaip <span class="tt"><a class="el" href="#ab79796adee7dfc1c4ae86dffa714887a" title="Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei. Funkcija perkelia visus paliekamus ...">erase</a></span> funkcijos, tačiau šalinami tie elementai, kuriems predikato funkcija grąžina <span class="tt">true</span>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Vektoriaus elementų tipas. </td></tr>
+    <tr><td class="paramname">Pred</td><td>Predikato tipas (pvz., lambda ar paprasta funkcija). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector</td><td>Vektorius, iš kurio šalinami elementai. </td></tr>
+    <tr><td class="paramname">pred</td><td>Sąlygos funkcija. Vieną argumentą priimanti funkcija, grąžinanti <span class="tt">bool</span>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd>Bendras ištrintų elementų skaičius. </dd></dl>
+
 </div>
 </div>
 <a id="af33b362313e0a866431e3d419769e45c" name="af33b362313e0a866431e3d419769e45c"></a>
@@ -202,6 +241,22 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Patikrina, ar du vektoriai yra nelygūs. </p>
+<p>Operatorius atvirkščias operatoriui <span class="tt">operator==</span>. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Vektoriuose saugomų elementų tipas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Kairysis vektorius. </td></tr>
+    <tr><td class="paramname">rhs</td><td>Dešinysis vektorius. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd><span class="tt">true</span>, jei vektoriai skiriasi dydžiu arba bent vienu elementu, kitu atveju <span class="tt">false</span>. </dd></dl>
+
 </div>
 </div>
 <a id="a4a042dd1c2e48b3e3e4f9a48c3e00a33" name="a4a042dd1c2e48b3e3e4f9a48c3e00a33"></a>
@@ -224,6 +279,22 @@ template&lt;typename T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Patikrina, ar du vektoriai yra lygūs. </p>
+<p>Vektoriai laikomi lygiais, jei jų dydžiai (<span class="tt">size()</span>) sutampa ir visi atitinkamose pozicijose esantys elementai yra lygūs. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Vektoriuose saugomų elementų tipas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Kairysis vektorius. </td></tr>
+    <tr><td class="paramname">rhs</td><td>Dešinysis vektorius. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Gražina</dt><dd><span class="tt">true</span>, jei vektoriai visiškai sutampa, kitu atveju <span class="tt">false</span>. </dd></dl>
 
 </div>
 </div>
@@ -255,6 +326,21 @@ template&lt;typename T&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Funkcija dviejų vektorių turiniui sukeisti. </p>
+<p>Funkcija viduje taiko <a class="el" href="class_vector.html">Vector</a> klasės <span class="tt"><a class="el" href="#a3b597588a215a71ac78ba65437556992" title="Funkcija dviejų vektorių turiniui sukeisti.">swap</a>(<a class="el" href="class_vector.html">Vector</a> &amp;)</span> metodą. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Vektorių elementų tipas. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parametrai</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lhs</td><td>Pirmasis vektorius. </td></tr>
+    <tr><td class="paramname">rhs</td><td>Antrasis vektorius. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

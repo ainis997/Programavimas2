@@ -351,16 +351,27 @@ public:
 
     // ===== talpa
 
+    /// @brief Patikrina, ar vektorius yra tuščias.
+    ///
+    /// Tikrinimas atliekamas lyginant pradžios ir pabaigos iteratorius.
+    /// @return `true`, jei `begin() == end()` (t. y. vektoriuje nėra elementų: `size() == 0`), kitu atveju `false`.
     bool empty() const
     {
         return begin() == end();
     }
 
+    /// @brief Grąžina vektoriuje esančių elementų skaičių.
+    /// @return Elementų kiekis vektoriuje.
     size_type size() const
     {
         return size_;
     }
 
+    /// @brief Padidina vektoriaus vidinę talpą (išskirtą atmintį), kad joje tilptų nurodytas elementų kiekis.
+    ///
+    /// Jei nurodyta talpa (`new_cap`) yra mažesnė arba lygi dabartinei talpai (`capacity_`), funkcija nieko nedaro.
+    /// Jei reikia didinti talpą, išskiriama nauja atmintis, senieji objektai perkeliami į naują vietą, o senoji atmintis atlaisvinama.
+    /// @param new_cap Norimas rezervuoti atminties dydis (elementų skaičiumi).
     void reserve(size_type new_cap)
     {
         if (new_cap <= capacity_)
@@ -376,11 +387,19 @@ public:
         capacity_ = new_cap;
     }
 
+    /// @brief Grąžina vektoriaus talpą.
+    ///
+    /// Vektoriaus talpa — elementų skaičius, kurį vektorius gali sutalpinti be papildomo atminties išskyrimo.
+    /// Šis skaičius visada didesnis arba lygus `size()`.
+    /// @return Esama vektoriaus atminties talpa.
     size_type capacity() const
     {
         return capacity_;
     }
 
+    /// @brief Sumažina išskirtos atminties talpą (`capacity`), kad ji sutaptų su esamu elementų kiekiu (`size`).
+    ///
+    /// Funkcija naudinga siekiant optimizuoti atminties naudojimą.
     void shrink_to_fit()
     {
         if (capacity_ == size_)
@@ -398,12 +417,23 @@ public:
 
     // ===== keitimo/modifikavimo metodai
 
+    /// @brief Ištrina visus elementus iš vektoriaus.
+    ///
+    /// Visiems vektoriuje esantiems objektams saugiai iškviečiami jų destruktoriai,
+    /// tačiau vidinė atmintis (talpa / `capacity`) nėra atlaisvinama.
+    /// Po šios operacijos `size()` tampa `0`.
     void clear()
     {
         std::destroy(begin(), end());
         size_ = 0;
     }
 
+    /// @brief Prideda elementą (kopijuojant) į vektoriaus pabaigą.
+    ///
+    /// Jei dabartinis dydis (`size_`) pasiekia talpą (`capacity_`), prieš pridedant elementą
+    /// automatiškai išskiriama nauja atmintis (paprastai dvigubai didesnė). Tokiu atveju
+    /// visi esami iteratoriai, rodyklės į vektoriaus elementus tampa nebegaliojantys.
+    /// @param value Pridedamo elemento reikšmė (nukopijuosima).
     void push_back(const T &value)
     {
         if (size_ == capacity_)
@@ -418,6 +448,12 @@ public:
         size_++;
     }
 
+    /// @brief Prideda elementą (perkėliant) į vektoriaus pabaigą.
+    ///
+    /// Jei dabartinis dydis (`size_`) pasiekia talpą (`capacity_`), prieš pridedant elementą
+    /// automatiškai išskiriama nauja atmintis (paprastai dvigubai didesnė). Tokiu atveju
+    /// visi esami iteratoriai, rodyklės ir nuorodos į vektoriaus elementus tampa nebegaliojantys.
+    /// @param value Pridedamo elemento reikšmė (perkelsima). Po perkėlimo senasis elementas liks galimoje, bet neapibrėžtoje būsenoje.
     void push_back(T &&value)
     {
         if (size_ == capacity_)
@@ -432,6 +468,11 @@ public:
         size_++;
     }
 
+    /// @brief Ištrina paskutinį vektoriaus elementą.
+    ///
+    /// Sunaikina paskutinį objektą iškviesdamas jo destruktorių, bet neatlaisvina vidinės atminties (`capacity_` nepakinta).
+    /// Jei vektorius jau yra tuščias, funkcija nieko nedaro.
+    /// Po operacijos iteratoriai, rodyklės ir nuorodos į pašalintąjį elementą ir pabaigos iteratorių (`end()`) tampa nebegaliojantys.
     void pop_back()
     {
         if (size_ > 0)
@@ -441,6 +482,14 @@ public:
         }
     }
 
+    /// @brief Įterpia elemento kopiją prieš nurodytą poziciją.
+    ///
+    /// Visi elementai nuo iteratoriaus `pos` iki pabaigos yra pastumiami per vieną poziciją tolyn.
+    /// Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys.
+    /// Kitu atveju tampa nebegaliojantys tik iteratoriai nuo `pos` iki pabaigos.
+    /// @param pos Iteratorius, prieš kurį bus įterpiamas elementas.
+    /// @param value Elementas, kuris bus nukopijuotas į vektorių.
+    /// @return Iteratorius, rodantis į naujai įterptą elementą.
     iterator insert(const_iterator pos, const T &value) // value — const, tai negalėsim std::move(value)
     {
         size_type idx = pos - begin();
@@ -467,6 +516,14 @@ public:
 
         return begin() + idx;
     }
+    /// @brief Įterpia elementą (perkeliant) prieš nurodytą poziciją.
+    ///
+    /// Visi elementai nuo iteratoriaus `pos` iki pabaigos yra pastumiami per vieną poziciją tolyn.
+    /// Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys.
+    /// Kitu atveju tampa nebegaliojantys tik iteratoriai nuo `pos` iki pabaigos.
+    /// @param pos Iteratorius, prieš kurį bus įterpiamas elementas.
+    /// @param value Elementas, kuris bus perkeltas į vektorių. Po operacijos senasis perduotasis elementas liks galimoje, bet neapibrėžtoje būsenoje.
+    /// @return Iteratorius, rodantis į naujai įterptą elementą.
     iterator insert(const_iterator pos, T &&value)
     {
         size_type idx = pos - begin();
@@ -493,6 +550,14 @@ public:
 
         return begin() + idx;
     }
+    /// @brief Įterpia nurodytą kiekį elemento kopijų prieš nurodytą poziciją.
+    ///
+    /// Jei įvyksta atminties perskirstymas, visi iteratoriai ir nuorodos tampa nebegaliojantys.
+    /// Kitu atveju tampa nebegaliojantys tik iteratoriai nuo `pos` iki pabaigos.
+    /// @param pos Iteratorius, prieš kurį bus įterpiami nauji elementai.
+    /// @param count Įterpiamų elementų skaičius. Jei jis `0`, funkcija nieko nedaro.
+    /// @param value Elemento reikšmė, kurios kopijos bus įterptos.
+    /// @return Iteratorius, nurodantis į pirmąjį naujai įterptą elementą (arba `pos`, jei `count == 0`).
     iterator insert(const_iterator pos, size_type count, const T &value)
     {
         size_type idx = pos - begin();
@@ -547,6 +612,12 @@ public:
         return begin() + idx;
     }
 
+    /// @brief Pašalina elementą nurodytoje pozicijoje.
+    ///
+    /// Visi elementai po nurodytos pozicijos perkeliami per vieną vietą atgal naudojant perkėlimo (move) priskyrimą.
+    /// Visi iteratoriai ir nuorodos nuo ištrynimo vietos iki vektoriaus galo tampa negaliojantys.
+    /// @param pos Iteratorius į elementą, kurį reikia ištrinti.
+    /// @return Iteratorius į elementą, kuris sekė po ištrintojo (arba `end()`).
     iterator erase(iterator pos)
     {
         size_type idx = pos - begin();
@@ -559,6 +630,12 @@ public:
         return begin() + idx; // == pos
     }
 
+    /// @brief Pašalina elementą nurodytoje pozicijoje.
+    ///
+    /// Visi elementai po nurodytos pozicijos perkeliami per vieną vietą atgal naudojant perkėlimo (move) priskyrimą.
+    /// Visi iteratoriai ir nuorodos nuo ištrynimo vietos iki vektoriaus galo tampa negaliojantys.
+    /// @param pos Konstantinis iteratorius į elementą, kurį reikia ištrinti.
+    /// @return Iteratorius į elementą, kuris sekė po ištrintojo (arba `end()`).
     iterator erase(const_iterator pos)
     {
         size_type idx = pos - begin();
@@ -571,6 +648,12 @@ public:
         return begin() + idx; // == pos
     }
 
+    /// @brief Pašalina elementų rėžį [first, last).
+    ///
+    /// Elementai po nurodyto rėžio perkeliami į atsilaisvinusią vietą.
+    /// @param first Iteratorius į rėžio pradžią (įskaitant).
+    /// @param last Iteratorius į rėžio pabaigą (neįskaitant).
+    /// @return Iteratorius į elementą, sekantį po paskutinio pašalinto elemento.
     iterator erase(iterator first, iterator last)
     {
         size_type first_idx = first - begin();
@@ -590,6 +673,12 @@ public:
         return begin() + first_idx;
     }
 
+    /// @brief Pašalina elementų rėžį [first, last).
+    ///
+    /// Elementai po nurodyto rėžio perkeliami į atsilaisvinusią vietą.
+    /// @param first Konstantinis iteratorius į rėžio pradžią (įskaitant).
+    /// @param last Konstantinis iteratorius į rėžio pabaigą (neįskaitant).
+    /// @return Iteratorius į elementą, sekantį po paskutinio pašalinto elemento.
     iterator erase(const_iterator first, const_iterator last)
     {
         size_type first_idx = first - begin();
@@ -609,6 +698,12 @@ public:
         return begin() + first_idx;
     }
 
+    /// @brief Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus.
+    ///
+    /// Jei naujas dydis mažesnis už esamą, elementai vektoriaus gale sunaikinami.
+    /// Jei naujas dydis didesnis, vektorius papildomas reikšmėmis pagal "value-initialization" (pvz., skaičiai tampa 0).
+    /// Jei reikia, padidinama talpa.
+    /// @param count Naujas norimas vektoriaus dydis.
     void resize(size_type count)
     {
         if (count == size_)
@@ -633,6 +728,13 @@ public:
         size_ = count;
     }
 
+    /// @brief Pakeičia vektoriaus dydį iki nurodyto elementų skaičiaus.
+    ///
+    /// Jei naujas dydis mažesnis už esamą, elementai vektoriaus gale sunaikinami.
+    /// Jei naujas dydis didesnis, vektorius papildomas nurodytomis reikšmėmis `value`.
+    /// Jei reikia, padidinama talpa.
+    /// @param count Naujas norimas vektoriaus dydis.
+    /// @param value Reikšmė, kuria bus užpildyti naujai sukurti elementai.
     void resize(size_type count, const T &value)
     {
         if (count == size_)
@@ -657,6 +759,10 @@ public:
         size_ = count;
     }
 
+    /// @brief Sukeičia šio vektoriaus turinį (duomenis, dydį ir talpą) su kitu vektoriu.
+    ///
+    /// Operacijoje tik sukeičiamos vidinės rodyklės ir kintamieji, neatliekant elementų kopijavimo ar perkėlimo.
+    /// @param other Kitas vektorius, su kuriuo bus atliekamas sukeitimas.
     void swap(Vector &other) noexcept
     {
         std::swap(data_, other.data_);
@@ -667,6 +773,13 @@ public:
     // ===== lyginimo operatoriai
 };
 
+/// @brief Patikrina, ar du vektoriai yra lygūs.
+///
+/// Vektoriai laikomi lygiais, jei jų dydžiai (`size()`) sutampa ir visi atitinkamose pozicijose esantys elementai yra lygūs.
+/// @tparam T Vektoriuose saugomų elementų tipas.
+/// @param lhs Kairysis vektorius.
+/// @param rhs Dešinysis vektorius.
+/// @return `true`, jei vektoriai visiškai sutampa, kitu atveju `false`.
 template <typename T>
 bool operator==(const Vector<T> &lhs, const Vector<T> &rhs)
 {
@@ -680,18 +793,38 @@ bool operator==(const Vector<T> &lhs, const Vector<T> &rhs)
     return true;
 }
 
+/// @brief Patikrina, ar du vektoriai yra nelygūs.
+///
+/// Operatorius atvirkščias operatoriui `operator==`.
+/// @tparam T Vektoriuose saugomų elementų tipas.
+/// @param lhs Kairysis vektorius.
+/// @param rhs Dešinysis vektorius.
+/// @return `true`, jei vektoriai skiriasi dydžiu arba bent vienu elementu, kitu atveju `false`.
 template <typename T>
 bool operator!=(const Vector<T> &lhs, const Vector<T> &rhs)
 {
     return !(lhs == rhs);
 }
 
+/// @brief Funkcija dviejų vektorių turiniui sukeisti.
+///
+/// Funkcija viduje taiko Vector klasės `swap(Vector &)` metodą.
+/// @tparam T Vektorių elementų tipas.
+/// @param lhs Pirmasis vektorius.
+/// @param rhs Antrasis vektorius.
 template <typename T>
 void swap(Vector<T> &lhs, Vector<T> &rhs) noexcept
 {
     lhs.swap(rhs);
 }
 
+/// @brief Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei.
+/// Funkcija perkelia visus paliekamus elementus į vektoriaus priekį ir tuomet ištrina likusius elementus gale.
+/// @tparam T Vektoriaus elementų tipas.
+/// @tparam U Ieškomos reikšmės tipas.
+/// @param vector Vektorius, iš kurio šalinami elementai.
+/// @param value Reikšmė, kurios visus atitikmenis reikia ištrinti.
+/// @return Bendras ištrintų elementų skaičius.
 template <typename T, typename U>
 constexpr size_t erase(Vector<T> &vector, const U &value)
 {
@@ -701,6 +834,14 @@ constexpr size_t erase(Vector<T> &vector, const U &value)
     return removed_elems_num;
 }
 
+/// @brief Ištrina iš vektoriaus visus elementus, atitinkančius nurodytą sąlygą (predikatą).
+///
+/// Veikimo principas toks pat kaip `erase` funkcijos, tačiau šalinami tie elementai, kuriems predikato funkcija grąžina `true`.
+/// @tparam T Vektoriaus elementų tipas.
+/// @tparam Pred Predikato tipas (pvz., lambda ar paprasta funkcija).
+/// @param vector Vektorius, iš kurio šalinami elementai.
+/// @param pred Sąlygos funkcija. Vieną argumentą priimanti funkcija, grąžinanti `bool`.
+/// @return Bendras ištrintų elementų skaičius.
 template <typename T, typename Pred>
 constexpr size_t erase_if(Vector<T> &vector, Pred pred)
 {

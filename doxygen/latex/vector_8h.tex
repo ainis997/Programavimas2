@@ -16,15 +16,15 @@ class \doxymbox{\hyperlink{class_vector}{Vector$<$ T $>$}}
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{vector_8h_a4a042dd1c2e48b3e3e4f9a48c3e00a33}{operator==}} (const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&lhs, const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs)
-\item 
+\begin{DoxyCompactList}\small\item\em Patikrina, ar du vektoriai yra lygūs. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\bool \doxymbox{\hyperlink{vector_8h_af33b362313e0a866431e3d419769e45c}{operator!=}} (const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&lhs, const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs)
-\item 
+\begin{DoxyCompactList}\small\item\em Patikrina, ar du vektoriai yra nelygūs. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T$>$ }\\void \doxymbox{\hyperlink{vector_8h_a3b597588a215a71ac78ba65437556992}{swap}} (\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&lhs, \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&rhs) noexcept
-\item 
+\begin{DoxyCompactList}\small\item\em Funkcija dviejų vektorių turiniui sukeisti. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename U$>$ }\\constexpr size\+\_\+t \doxymbox{\hyperlink{vector_8h_ab79796adee7dfc1c4ae86dffa714887a}{erase}} (\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&vector, const U \&value)
-\item 
+\begin{DoxyCompactList}\small\item\em Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei. Funkcija perkelia visus paliekamus elementus į vektoriaus priekį ir tuomet ištrina likusius elementus gale. \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T, typename Pred$>$ }\\constexpr size\+\_\+t \doxymbox{\hyperlink{vector_8h_a72fc313e8002f5d4765b865733b5e8fe}{erase\+\_\+if}} (\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&vector, Pred pred)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Ištrina iš vektoriaus visus elementus, atitinkančius nurodytą sąlygą (predikatą). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
@@ -37,6 +37,27 @@ class \doxymbox{\hyperlink{class_vector}{Vector$<$ T $>$}}
 template$<$typename T, typename U$>$ \\
 size\+\_\+t erase (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{vector}{, }\item[{const U \&}]{value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
 
+
+
+Ištrina iš vektoriaus visus elementus, lygius nurodytai reikšmei. Funkcija perkelia visus paliekamus elementus į vektoriaus priekį ir tuomet ištrina likusius elementus gale. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vektoriaus elementų tipas. \\
+\hline
+{\em U} & Ieškomos reikšmės tipas. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em vector} & Vektorius, iš kurio šalinami elementai. \\
+\hline
+{\em value} & Reikšmė, kurios visus atitikmenis reikia ištrinti. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Bendras ištrintų elementų skaičius. 
+\end{DoxyReturn}
 \Hypertarget{vector_8h_a72fc313e8002f5d4765b865733b5e8fe}\index{vector.h@{vector.h}!erase\_if@{erase\_if}}
 \index{erase\_if@{erase\_if}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{erase\_if()}{erase\_if()}}
@@ -44,6 +65,27 @@ size\+\_\+t erase (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vec
 template$<$typename T, typename Pred$>$ \\
 size\+\_\+t erase\+\_\+if (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{vector}{, }\item[{Pred}]{pred}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
 
+
+
+Ištrina iš vektoriaus visus elementus, atitinkančius nurodytą sąlygą (predikatą). 
+
+Veikimo principas toks pat kaip {\ttfamily \doxylink{vector_8h_ab79796adee7dfc1c4ae86dffa714887a}{erase}} funkcijos, tačiau šalinami tie elementai, kuriems predikato funkcija grąžina {\ttfamily true}. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vektoriaus elementų tipas. \\
+\hline
+{\em Pred} & Predikato tipas (pvz., lambda ar paprasta funkcija). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em vector} & Vektorius, iš kurio šalinami elementai. \\
+\hline
+{\em pred} & Sąlygos funkcija. Vieną argumentą priimanti funkcija, grąžinanti {\ttfamily bool}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+Bendras ištrintų elementų skaičius. 
+\end{DoxyReturn}
 \Hypertarget{vector_8h_af33b362313e0a866431e3d419769e45c}\index{vector.h@{vector.h}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
@@ -51,6 +93,25 @@ size\+\_\+t erase\+\_\+if (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{c
 template$<$typename T$>$ \\
 bool operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{lhs}{, }\item[{const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})}
 
+
+
+Patikrina, ar du vektoriai yra nelygūs. 
+
+Operatorius atvirkščias operatoriui {\ttfamily operator==}. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vektoriuose saugomų elementų tipas. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em lhs} & Kairysis vektorius. \\
+\hline
+{\em rhs} & Dešinysis vektorius. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+{\ttfamily true}, jei vektoriai skiriasi dydžiu arba bent vienu elementu, kitu atveju {\ttfamily false}. 
+\end{DoxyReturn}
 \Hypertarget{vector_8h_a4a042dd1c2e48b3e3e4f9a48c3e00a33}\index{vector.h@{vector.h}!operator==@{operator==}}
 \index{operator==@{operator==}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
@@ -58,6 +119,25 @@ bool operator!= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class
 template$<$typename T$>$ \\
 bool operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{lhs}{, }\item[{const \doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})}
 
+
+
+Patikrina, ar du vektoriai yra lygūs. 
+
+Vektoriai laikomi lygiais, jei jų dydžiai ({\ttfamily size()}) sutampa ir visi atitinkamose pozicijose esantys elementai yra lygūs. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vektoriuose saugomų elementų tipas. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em lhs} & Kairysis vektorius. \\
+\hline
+{\em rhs} & Dešinysis vektorius. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Gražina}
+{\ttfamily true}, jei vektoriai visiškai sutampa, kitu atveju {\ttfamily false}. 
+\end{DoxyReturn}
 \Hypertarget{vector_8h_a3b597588a215a71ac78ba65437556992}\index{vector.h@{vector.h}!swap@{swap}}
 \index{swap@{swap}!vector.h@{vector.h}}
 \doxysubsubsection{\texorpdfstring{swap()}{swap()}}
@@ -65,3 +145,19 @@ bool operator== (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class
 template$<$typename T$>$ \\
 void swap (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{lhs}{, }\item[{\doxymbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{rhs}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
+
+
+Funkcija dviejų vektorių turiniui sukeisti. 
+
+Funkcija viduje taiko \doxylink{class_vector}{Vector} klasės {\ttfamily \doxylink{vector_8h_a3b597588a215a71ac78ba65437556992}{swap}(\doxylink{class_vector}{Vector} \&)} metodą. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Vektorių elementų tipas. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parametrai}
+{\em lhs} & Pirmasis vektorius. \\
+\hline
+{\em rhs} & Antrasis vektorius. \\
+\hline
+\end{DoxyParams}
