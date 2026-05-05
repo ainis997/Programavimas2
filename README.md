@@ -193,6 +193,19 @@ int main()
 
 # Programos leidimai
 
+## v3.0
+
+### Diegiklis
+
+- Sukurtas programos diegiklis, leidžiantis lengvai įdiegti programą į kompiuterį.
+- Diegiklis pritaikytas Windows operacinei sistemai.
+
+### Vector klasė
+
+- Sukurta savarankiška Vector klasė, imituojanti std::vector funkcionalumą.
+- Atlikti testavimai, lyginantys Vector klasės ir std::vector veikimą. Rezultatai įtraukti į projekto README.md failą.
+- Vector klasė pilnai ištestuota.
+
 ## v2.0
 
 ### Dokumentacija
