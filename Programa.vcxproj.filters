@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\isvesties_pagalb_fjos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\isvestis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ivesties_pagalb_fjos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ivestis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\klaidu_valdymas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\kt_klasiu_metodai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pagr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\studentas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testavimas\std_vector_vs_Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testavimas\testavimas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="testavimas\testavimas_vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\isvesties_pagalb_fjos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\isvestis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ivesties_pagalb_fjos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ivestis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\klaidu_valdymas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\konstantos_kt_klases.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\studentas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zmogus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testavimas\catch.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doxygen\html\annotated.html" />
+    <None Include="doxygen\html\classes.html" />
+    <None Include="doxygen\html\class_programos__laikai-members.html" />
+    <None Include="doxygen\html\class_programos__laikai.html" />
+    <None Include="doxygen\html\class_studentas-members.html" />
+    <None Include="doxygen\html\class_studentas.html" />
+    <None Include="doxygen\html\class_vector-members.html" />
+    <None Include="doxygen\html\class_vector.html" />
+    <None Include="doxygen\html\class_zmogus-members.html" />
+    <None Include="doxygen\html\class_zmogus.html" />
+    <None Include="doxygen\html\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <None Include="doxygen\html\doxygen_crawl.html" />
+    <None Include="doxygen\html\files.html" />
+    <None Include="doxygen\html\functions.html" />
+    <None Include="doxygen\html\functions_func.html" />
+    <None Include="doxygen\html\functions_rela.html" />
+    <None Include="doxygen\html\functions_type.html" />
+    <None Include="doxygen\html\functions_vars.html" />
+    <None Include="doxygen\html\globals.html" />
+    <None Include="doxygen\html\globals_defs.html" />
+    <None Include="doxygen\html\globals_func.html" />
+    <None Include="doxygen\html\globals_vars.html" />
+    <None Include="doxygen\html\hierarchy.html" />
+    <None Include="doxygen\html\index.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8cpp.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8h.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8h_source.html" />
+    <None Include="doxygen\html\isvestis_8cpp.html" />
+    <None Include="doxygen\html\isvestis_8h.html" />
+    <None Include="doxygen\html\isvestis_8h_source.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8cpp.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8h.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8h_source.html" />
+    <None Include="doxygen\html\ivestis_8cpp.html" />
+    <None Include="doxygen\html\ivestis_8h.html" />
+    <None Include="doxygen\html\ivestis_8h_source.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8cpp.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8h.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8h_source.html" />
+    <None Include="doxygen\html\konstantos__kt__klases_8h.html" />
+    <None Include="doxygen\html\konstantos__kt__klases_8h_source.html" />
+    <None Include="doxygen\html\kt__klasiu__metodai_8cpp.html" />
+    <None Include="doxygen\html\pagr_8cpp.html" />
+    <None Include="doxygen\html\studentas_8cpp.html" />
+    <None Include="doxygen\html\studentas_8h.html" />
+    <None Include="doxygen\html\studentas_8h_source.html" />
+    <None Include="doxygen\html\vector_8h.html" />
+    <None Include="doxygen\html\vector_8h_source.html" />
+    <None Include="doxygen\html\zmogus_8h.html" />
+    <None Include="doxygen\html\zmogus_8h_source.html" />
+  </ItemGroup>
+</Project>

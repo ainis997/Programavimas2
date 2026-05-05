@@ -1,10 +1,16 @@
 .vscode
+.vs
 
 bin/
 obj/
+x64/
+Debug/
+Release/
 
 *.exe
 
 *.txt
 
 *.o
+
+*.user

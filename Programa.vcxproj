@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <ProjectGuid>{6F1F90E9-6A06-D472-171D-1C67F8003627}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\isvesties_pagalb_fjos.cpp" />
+    <ClCompile Include="src\isvestis.cpp" />
+    <ClCompile Include="src\ivesties_pagalb_fjos.cpp" />
+    <ClCompile Include="src\ivestis.cpp" />
+    <ClCompile Include="src\klaidu_valdymas.cpp" />
+    <ClCompile Include="src\kt_klasiu_metodai.cpp" />
+    <ClCompile Include="src\pagr.cpp" />
+    <ClCompile Include="src\studentas.cpp" />
+    <ClCompile Include="testavimas\std_vector_vs_Vector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="testavimas\testavimas.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="testavimas\testavimas_vector.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\isvesties_pagalb_fjos.h" />
+    <ClInclude Include="src\isvestis.h" />
+    <ClInclude Include="src\ivesties_pagalb_fjos.h" />
+    <ClInclude Include="src\ivestis.h" />
+    <ClInclude Include="src\klaidu_valdymas.h" />
+    <ClInclude Include="src\konstantos_kt_klases.h" />
+    <ClInclude Include="src\studentas.h" />
+    <ClInclude Include="src\vector.h" />
+    <ClInclude Include="src\zmogus.h" />
+    <ClInclude Include="testavimas\catch.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doxygen\html\annotated.html" />
+    <None Include="doxygen\html\classes.html" />
+    <None Include="doxygen\html\class_programos__laikai-members.html" />
+    <None Include="doxygen\html\class_programos__laikai.html" />
+    <None Include="doxygen\html\class_studentas-members.html" />
+    <None Include="doxygen\html\class_studentas.html" />
+    <None Include="doxygen\html\class_vector-members.html" />
+    <None Include="doxygen\html\class_vector.html" />
+    <None Include="doxygen\html\class_zmogus-members.html" />
+    <None Include="doxygen\html\class_zmogus.html" />
+    <None Include="doxygen\html\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <None Include="doxygen\html\doxygen_crawl.html" />
+    <None Include="doxygen\html\files.html" />
+    <None Include="doxygen\html\functions.html" />
+    <None Include="doxygen\html\functions_func.html" />
+    <None Include="doxygen\html\functions_rela.html" />
+    <None Include="doxygen\html\functions_type.html" />
+    <None Include="doxygen\html\functions_vars.html" />
+    <None Include="doxygen\html\globals.html" />
+    <None Include="doxygen\html\globals_defs.html" />
+    <None Include="doxygen\html\globals_func.html" />
+    <None Include="doxygen\html\globals_vars.html" />
+    <None Include="doxygen\html\hierarchy.html" />
+    <None Include="doxygen\html\index.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8cpp.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8h.html" />
+    <None Include="doxygen\html\isvesties__pagalb__fjos_8h_source.html" />
+    <None Include="doxygen\html\isvestis_8cpp.html" />
+    <None Include="doxygen\html\isvestis_8h.html" />
+    <None Include="doxygen\html\isvestis_8h_source.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8cpp.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8h.html" />
+    <None Include="doxygen\html\ivesties__pagalb__fjos_8h_source.html" />
+    <None Include="doxygen\html\ivestis_8cpp.html" />
+    <None Include="doxygen\html\ivestis_8h.html" />
+    <None Include="doxygen\html\ivestis_8h_source.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8cpp.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8h.html" />
+    <None Include="doxygen\html\klaidu__valdymas_8h_source.html" />
+    <None Include="doxygen\html\konstantos__kt__klases_8h.html" />
+    <None Include="doxygen\html\konstantos__kt__klases_8h_source.html" />
+    <None Include="doxygen\html\kt__klasiu__metodai_8cpp.html" />
+    <None Include="doxygen\html\pagr_8cpp.html" />
+    <None Include="doxygen\html\studentas_8cpp.html" />
+    <None Include="doxygen\html\studentas_8h.html" />
+    <None Include="doxygen\html\studentas_8h_source.html" />
+    <None Include="doxygen\html\vector_8h.html" />
+    <None Include="doxygen\html\vector_8h_source.html" />
+    <None Include="doxygen\html\zmogus_8h.html" />
+    <None Include="doxygen\html\zmogus_8h_source.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

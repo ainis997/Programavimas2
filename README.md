@@ -52,6 +52,145 @@ Programoje naudojamoje studento klasėje jos naudotojų patogumui perdengti kai 
 
 Taip pat klasėje papildomai perdengti ir konstruktorių metodai, pridėti kopijavimo ir perkėlimo konstruktoriai.
 
+### Sukurtos savos Vector klasės pavyzdžiai
+
+##### 1. push_back
+
+push_back metodas skirtas pridėti naują elementą į Vector klasės objektą. Šis metodas priima vieną argumentą — pridėtiną elementą, ir prideda jį į Vector pabaigą.
+
+```
+#include <iostream>
+#include "Vector.h"
+
+int main() 
+{
+    Vector<int> numbers;
+    
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    std::cout << "numbers[0]: " << numbers[0] << "\n";
+    // numbers[0]: 10
+    std::cout << "numbers[1]: " << numbers[1] << "\n";
+    // numbers[1]: 20
+    std::cout << "numbers[2]: " << numbers[2] << "\n";
+    // numbers[2]: 30
+
+    return 0;
+}
+```
+
+##### 2. size
+
+size metodas grąžina Vector klasės objekto elementų skaičių. Šis metodas neturi jokių argumentų ir grąžina sveikąjį skaičių, kuris nurodo, kiek elementų yra Vector objekte.
+
+```
+#include <iostream>
+#include "Vector.h"
+
+int main() 
+{
+    Vector<int> numbers;
+    
+    numbers.push_back(10);
+    numbers.push_back(20);
+    numbers.push_back(30);
+
+    std::cout << "Vektoriaus dydis: " << numbers.size() << "\n";
+    // Vektoriaus dydis: 3
+
+    return 0;
+}
+```
+
+##### 3. at
+
+at metodas skirtas gauti elementą iš Vector klasės objekto pagal nurodytą indeksą. Šis metodas priima vieną argumentą — indeksą, ir grąžina elementą, esantį toje pozicijoje Vector objekte. Jeigu indeksas yra už Vector ribų, at metodas išmes klaidą.
+
+```
+#include <iostream>
+#include "Vector.h"
+
+int main() 
+{
+    Vector<std::string> strings = {"abc", "def", "ghi"};
+
+    std::cout << words.at(1) << "\n";
+    // def
+
+    try
+    {
+        words.at(10); // tyčia bandoma pasiekti neegzistuojantį elementą
+    }
+    catch (const std::out_of_range& e) 
+    {
+        std::cout << "Klaida: " << e.what() << "\n"; 
+        // Klaida: Vector::at() : Index 10 is out of range...
+    }
+
+    return 0;
+}
+```
+
+##### 4. insert (vieno elemento įterpimas)
+
+insert metodas skirtas įterpti naują elementą į Vector klasės objektą nurodytoje pozicijoje. Šis metodas priima du argumentus — iteratorių, prieš kurį norima įterpti elementą, ir patį elementą, kurį norima įterpti.
+
+```
+#include <iostream>
+#include "Vector.h"
+
+int main() 
+{
+    Vector<char> letters = {'A', 'C', 'D'};
+
+    // įterpiame 'B' į antrąją poziciją
+    letters.insert(letters.begin() + 1, 'B');
+
+    std::cout << "Raidės: ";
+    for (char c : letters) 
+    {
+        std::cout << c << " ";
+    }
+    // Raidės: A B C D 
+
+    return 0;
+}
+```
+
+##### 5. operator==
+
+operator== metodas skirtas palyginti du Vector klasės objektus ir nustatyti, ar jie yra lygūs (t.y. turi tuos pačius elementus tose pačiose pozicijose). Šis operatorius priima du argumentus — du Vector objektus, ir grąžina true, jei abu Vector objektai turi tą patį elementų skaičių ir atitinkamus elementus, arba false, jei jie skiriasi.
+
+```
+#include <iostream>
+#include "Vector.h"
+
+int main() 
+{
+    Vector<int> v1 = {1, 2, 3};
+    Vector<int> v2 = {1, 2, 3};
+    Vector<int> v3 = {1, 2, 4};
+
+    if (v1 == v2) 
+    {
+        std::cout << "v1 ir v2 yra lygūs.\n";
+    }
+    if (v1 != v3)
+    {
+        std::cout << "v1 ir v3 skiriasi.\n";
+    }
+    
+    // Išvestis:
+    // v1 ir v2 yra lygūs.
+    // v1 ir v3 skiriasi.
+
+    return 0;
+}
+```
+
+
 # Programos leidimai
 
 ## v2.0
