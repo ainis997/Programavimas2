@@ -57,174 +57,307 @@
 \indexentry{operator$<$$<$@{operator$<$$<$}!Studentas@{Studentas}|hyperpage}{19}
 \indexentry{Studentas@{Studentas}!operator$>$$>$@{operator$>$$>$}|hyperpage}{19}
 \indexentry{operator$>$$>$@{operator$>$$>$}!Studentas@{Studentas}|hyperpage}{19}
-\indexentry{Zmogus@{Zmogus}|hyperpage}{20}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{20}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{20}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{20}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{20}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{21}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{21}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{21}
-\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{21}
-\indexentry{Zmogus@{Zmogus}!````~Zmogus@{\texorpdfstring{$\sim$}{\string~}Zmogus}|hyperpage}{21}
-\indexentry{````~Zmogus@{\texorpdfstring{$\sim$}{\string~}Zmogus}!Zmogus@{Zmogus}|hyperpage}{21}
-\indexentry{Zmogus@{Zmogus}!ivest\_varda\_pavarde@{ivest\_varda\_pavarde}|hyperpage}{22}
-\indexentry{ivest\_varda\_pavarde@{ivest\_varda\_pavarde}!Zmogus@{Zmogus}|hyperpage}{22}
-\indexentry{Zmogus@{Zmogus}!nust\_pavarde@{nust\_pavarde}|hyperpage}{22}
-\indexentry{nust\_pavarde@{nust\_pavarde}!Zmogus@{Zmogus}|hyperpage}{22}
-\indexentry{Zmogus@{Zmogus}!nust\_varda@{nust\_varda}|hyperpage}{22}
-\indexentry{nust\_varda@{nust\_varda}!Zmogus@{Zmogus}|hyperpage}{22}
-\indexentry{Zmogus@{Zmogus}!pavarde@{pavarde}|hyperpage}{22}
-\indexentry{pavarde@{pavarde}!Zmogus@{Zmogus}|hyperpage}{22}
-\indexentry{Zmogus@{Zmogus}!vardas@{vardas}|hyperpage}{22}
-\indexentry{vardas@{vardas}!Zmogus@{Zmogus}|hyperpage}{22}
-\indexentry{Zmogus@{Zmogus}!pavarde\_@{pavarde\_}|hyperpage}{23}
-\indexentry{pavarde\_@{pavarde\_}!Zmogus@{Zmogus}|hyperpage}{23}
-\indexentry{Zmogus@{Zmogus}!vardas\_@{vardas\_}|hyperpage}{23}
-\indexentry{vardas\_@{vardas\_}!Zmogus@{Zmogus}|hyperpage}{23}
-\indexentry{src/isvesties\_pagalb\_fjos.cpp@{src/isvesties\_pagalb\_fjos.cpp}|hyperpage}{25}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_mediana\_did@{pagal\_mediana\_did}|hyperpage}{25}
-\indexentry{pagal\_mediana\_did@{pagal\_mediana\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{25}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_mediana\_maz@{pagal\_mediana\_maz}|hyperpage}{25}
-\indexentry{pagal\_mediana\_maz@{pagal\_mediana\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{25}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_pavarde\_did@{pagal\_pavarde\_did}|hyperpage}{26}
-\indexentry{pagal\_pavarde\_did@{pagal\_pavarde\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_pavarde\_maz@{pagal\_pavarde\_maz}|hyperpage}{26}
-\indexentry{pagal\_pavarde\_maz@{pagal\_pavarde\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_varda\_did@{pagal\_varda\_did}|hyperpage}{26}
-\indexentry{pagal\_varda\_did@{pagal\_varda\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_varda\_maz@{pagal\_varda\_maz}|hyperpage}{26}
-\indexentry{pagal\_varda\_maz@{pagal\_varda\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_vidurki\_did@{pagal\_vidurki\_did}|hyperpage}{26}
-\indexentry{pagal\_vidurki\_did@{pagal\_vidurki\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_vidurki\_maz@{pagal\_vidurki\_maz}|hyperpage}{26}
-\indexentry{pagal\_vidurki\_maz@{pagal\_vidurki\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!ras\_failo\_paruosimas@{ras\_failo\_paruosimas}|hyperpage}{26}
-\indexentry{ras\_failo\_paruosimas@{ras\_failo\_paruosimas}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{26}
-\indexentry{src/isvesties\_pagalb\_fjos.h@{src/isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_mediana\_did@{pagal\_mediana\_did}|hyperpage}{27}
-\indexentry{pagal\_mediana\_did@{pagal\_mediana\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_mediana\_maz@{pagal\_mediana\_maz}|hyperpage}{27}
-\indexentry{pagal\_mediana\_maz@{pagal\_mediana\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_pavarde\_did@{pagal\_pavarde\_did}|hyperpage}{27}
-\indexentry{pagal\_pavarde\_did@{pagal\_pavarde\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_pavarde\_maz@{pagal\_pavarde\_maz}|hyperpage}{27}
-\indexentry{pagal\_pavarde\_maz@{pagal\_pavarde\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_varda\_did@{pagal\_varda\_did}|hyperpage}{27}
-\indexentry{pagal\_varda\_did@{pagal\_varda\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{27}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_varda\_maz@{pagal\_varda\_maz}|hyperpage}{28}
-\indexentry{pagal\_varda\_maz@{pagal\_varda\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_vidurki\_did@{pagal\_vidurki\_did}|hyperpage}{28}
-\indexentry{pagal\_vidurki\_did@{pagal\_vidurki\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_vidurki\_maz@{pagal\_vidurki\_maz}|hyperpage}{28}
-\indexentry{pagal\_vidurki\_maz@{pagal\_vidurki\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!ras\_failo\_paruosimas@{ras\_failo\_paruosimas}|hyperpage}{28}
-\indexentry{ras\_failo\_paruosimas@{ras\_failo\_paruosimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!rikiavimas@{rikiavimas}|hyperpage}{28}
-\indexentry{rikiavimas@{rikiavimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!stud\_rikiavimas@{stud\_rikiavimas}|hyperpage}{28}
-\indexentry{stud\_rikiavimas@{stud\_rikiavimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{28}
-\indexentry{src/isvesties\_pagalb\_fjos.h@{src/isvesties\_pagalb\_fjos.h}|hyperpage}{29}
-\indexentry{src/isvestis.cpp@{src/isvestis.cpp}|hyperpage}{29}
-\indexentry{isvestis.cpp@{isvestis.cpp}!isvestis@{isvestis}|hyperpage}{30}
-\indexentry{isvestis@{isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{30}
-\indexentry{isvestis.cpp@{isvestis.cpp}!skirstoma\_isvestis@{skirstoma\_isvestis}|hyperpage}{30}
-\indexentry{skirstoma\_isvestis@{skirstoma\_isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{30}
-\indexentry{isvestis.cpp@{isvestis.cpp}!spausdinimas@{spausdinimas}|hyperpage}{30}
-\indexentry{spausdinimas@{spausdinimas}!isvestis.cpp@{isvestis.cpp}|hyperpage}{30}
-\indexentry{isvestis.cpp@{isvestis.cpp}!studentu\_skirstymas@{studentu\_skirstymas}|hyperpage}{30}
-\indexentry{studentu\_skirstymas@{studentu\_skirstymas}!isvestis.cpp@{isvestis.cpp}|hyperpage}{30}
-\indexentry{isvestis.cpp@{isvestis.cpp}!visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}|hyperpage}{30}
-\indexentry{visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{30}
-\indexentry{src/isvestis.h@{src/isvestis.h}|hyperpage}{31}
-\indexentry{isvestis.h@{isvestis.h}!isvestis@{isvestis}|hyperpage}{31}
-\indexentry{isvestis@{isvestis}!isvestis.h@{isvestis.h}|hyperpage}{31}
-\indexentry{isvestis.h@{isvestis.h}!skirstoma\_isvestis@{skirstoma\_isvestis}|hyperpage}{31}
-\indexentry{skirstoma\_isvestis@{skirstoma\_isvestis}!isvestis.h@{isvestis.h}|hyperpage}{31}
-\indexentry{isvestis.h@{isvestis.h}!spausdinimas@{spausdinimas}|hyperpage}{31}
-\indexentry{spausdinimas@{spausdinimas}!isvestis.h@{isvestis.h}|hyperpage}{31}
-\indexentry{isvestis.h@{isvestis.h}!studentu\_skirstymas@{studentu\_skirstymas}|hyperpage}{32}
-\indexentry{studentu\_skirstymas@{studentu\_skirstymas}!isvestis.h@{isvestis.h}|hyperpage}{32}
-\indexentry{isvestis.h@{isvestis.h}!visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}|hyperpage}{32}
-\indexentry{visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}!isvestis.h@{isvestis.h}|hyperpage}{32}
-\indexentry{src/isvestis.h@{src/isvestis.h}|hyperpage}{32}
-\indexentry{src/ivesties\_pagalb\_fjos.cpp@{src/ivesties\_pagalb\_fjos.cpp}|hyperpage}{32}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}|hyperpage}{33}
-\indexentry{ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}|hyperpage}{33}
-\indexentry{ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}|hyperpage}{33}
-\indexentry{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}|hyperpage}{33}
-\indexentry{ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}|hyperpage}{33}
-\indexentry{natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!skait\_failo\_paruosimas@{skait\_failo\_paruosimas}|hyperpage}{33}
-\indexentry{skait\_failo\_paruosimas@{skait\_failo\_paruosimas}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}|hyperpage}{33}
-\indexentry{vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{33}
-\indexentry{src/ivesties\_pagalb\_fjos.h@{src/ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}|hyperpage}{34}
-\indexentry{ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}|hyperpage}{34}
-\indexentry{ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}|hyperpage}{34}
-\indexentry{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}|hyperpage}{34}
-\indexentry{ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}|hyperpage}{34}
-\indexentry{natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!skait\_failo\_paruosimas@{skait\_failo\_paruosimas}|hyperpage}{34}
-\indexentry{skait\_failo\_paruosimas@{skait\_failo\_paruosimas}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{34}
-\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}|hyperpage}{35}
-\indexentry{vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{35}
-\indexentry{src/ivesties\_pagalb\_fjos.h@{src/ivesties\_pagalb\_fjos.h}|hyperpage}{35}
-\indexentry{src/ivestis.cpp@{src/ivestis.cpp}|hyperpage}{35}
-\indexentry{ivestis.cpp@{ivestis.cpp}!failo\_ivestis@{failo\_ivestis}|hyperpage}{36}
-\indexentry{failo\_ivestis@{failo\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{36}
-\indexentry{ivestis.cpp@{ivestis.cpp}!generuota\_ivestis@{generuota\_ivestis}|hyperpage}{36}
-\indexentry{generuota\_ivestis@{generuota\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{36}
-\indexentry{ivestis.cpp@{ivestis.cpp}!misri\_ivestis@{misri\_ivestis}|hyperpage}{36}
-\indexentry{misri\_ivestis@{misri\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{36}
-\indexentry{ivestis.cpp@{ivestis.cpp}!rank\_ivestis@{rank\_ivestis}|hyperpage}{36}
-\indexentry{rank\_ivestis@{rank\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{36}
-\indexentry{ivestis.cpp@{ivestis.cpp}!visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}|hyperpage}{36}
-\indexentry{visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{36}
-\indexentry{src/ivestis.h@{src/ivestis.h}|hyperpage}{36}
-\indexentry{ivestis.h@{ivestis.h}!failo\_ivestis@{failo\_ivestis}|hyperpage}{37}
-\indexentry{failo\_ivestis@{failo\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{37}
-\indexentry{ivestis.h@{ivestis.h}!generuota\_ivestis@{generuota\_ivestis}|hyperpage}{37}
-\indexentry{generuota\_ivestis@{generuota\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{37}
-\indexentry{ivestis.h@{ivestis.h}!misri\_ivestis@{misri\_ivestis}|hyperpage}{37}
-\indexentry{misri\_ivestis@{misri\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{37}
-\indexentry{ivestis.h@{ivestis.h}!rank\_ivestis@{rank\_ivestis}|hyperpage}{37}
-\indexentry{rank\_ivestis@{rank\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{37}
-\indexentry{ivestis.h@{ivestis.h}!visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}|hyperpage}{37}
-\indexentry{visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{37}
-\indexentry{src/ivestis.h@{src/ivestis.h}|hyperpage}{37}
-\indexentry{src/klaidu\_valdymas.cpp@{src/klaidu\_valdymas.cpp}|hyperpage}{38}
-\indexentry{klaidu\_valdymas.cpp@{klaidu\_valdymas.cpp}!ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}|hyperpage}{38}
-\indexentry{ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}!klaidu\_valdymas.cpp@{klaidu\_valdymas.cpp}|hyperpage}{38}
-\indexentry{src/klaidu\_valdymas.h@{src/klaidu\_valdymas.h}|hyperpage}{38}
-\indexentry{klaidu\_valdymas.h@{klaidu\_valdymas.h}!ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}|hyperpage}{38}
-\indexentry{ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}!klaidu\_valdymas.h@{klaidu\_valdymas.h}|hyperpage}{38}
-\indexentry{src/klaidu\_valdymas.h@{src/klaidu\_valdymas.h}|hyperpage}{38}
-\indexentry{src/konstantos\_kt\_klases.h@{src/konstantos\_kt\_klases.h}|hyperpage}{38}
-\indexentry{konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}!Container@{Container}|hyperpage}{39}
-\indexentry{Container@{Container}!konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}|hyperpage}{39}
-\indexentry{konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}!MAX\_INT@{MAX\_INT}|hyperpage}{39}
-\indexentry{MAX\_INT@{MAX\_INT}!konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}|hyperpage}{39}
-\indexentry{src/konstantos\_kt\_klases.h@{src/konstantos\_kt\_klases.h}|hyperpage}{39}
-\indexentry{src/kt\_klasiu\_metodai.cpp@{src/kt\_klasiu\_metodai.cpp}|hyperpage}{40}
-\indexentry{src/pagr.cpp@{src/pagr.cpp}|hyperpage}{40}
-\indexentry{pagr.cpp@{pagr.cpp}!main@{main}|hyperpage}{40}
-\indexentry{main@{main}!pagr.cpp@{pagr.cpp}|hyperpage}{40}
-\indexentry{src/studentas.cpp@{src/studentas.cpp}|hyperpage}{40}
-\indexentry{studentas.cpp@{studentas.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{41}
-\indexentry{operator$<$$<$@{operator$<$$<$}!studentas.cpp@{studentas.cpp}|hyperpage}{41}
-\indexentry{studentas.cpp@{studentas.cpp}!operator$>$$>$@{operator$>$$>$}|hyperpage}{41}
-\indexentry{operator$>$$>$@{operator$>$$>$}!studentas.cpp@{studentas.cpp}|hyperpage}{41}
-\indexentry{src/studentas.h@{src/studentas.h}|hyperpage}{41}
-\indexentry{src/studentas.h@{src/studentas.h}|hyperpage}{42}
-\indexentry{src/zmogus.h@{src/zmogus.h}|hyperpage}{43}
-\indexentry{src/zmogus.h@{src/zmogus.h}|hyperpage}{43}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{20}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!const\_iterator@{const\_iterator}|hyperpage}{22}
+\indexentry{const\_iterator@{const\_iterator}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!const\_pointer@{const\_pointer}|hyperpage}{22}
+\indexentry{const\_pointer@{const\_pointer}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!const\_reference@{const\_reference}|hyperpage}{22}
+\indexentry{const\_reference@{const\_reference}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!const\_reverse\_iterator@{const\_reverse\_iterator}|hyperpage}{22}
+\indexentry{const\_reverse\_iterator@{const\_reverse\_iterator}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!difference\_type@{difference\_type}|hyperpage}{22}
+\indexentry{difference\_type@{difference\_type}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!iterator@{iterator}|hyperpage}{22}
+\indexentry{iterator@{iterator}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{22}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!pointer@{pointer}|hyperpage}{23}
+\indexentry{pointer@{pointer}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!reference@{reference}|hyperpage}{23}
+\indexentry{reference@{reference}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!reverse\_iterator@{reverse\_iterator}|hyperpage}{23}
+\indexentry{reverse\_iterator@{reverse\_iterator}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!size\_type@{size\_type}|hyperpage}{23}
+\indexentry{size\_type@{size\_type}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!value\_type@{value\_type}|hyperpage}{23}
+\indexentry{value\_type@{value\_type}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{23}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{23}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{23}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{24}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{24}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{24}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{24}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{24}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{24}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}|hyperpage}{25}
+\indexentry{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{25}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!````~Vector@{\texorpdfstring{$\sim$}{\string~}Vector}|hyperpage}{25}
+\indexentry{````~Vector@{\texorpdfstring{$\sim$}{\string~}Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{25}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!at@{at}|hyperpage}{25}
+\indexentry{at@{at}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{25}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!at@{at}|hyperpage}{26}
+\indexentry{at@{at}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{26}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!back@{back}|hyperpage}{26}
+\indexentry{back@{back}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{26}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!back@{back}|hyperpage}{26}
+\indexentry{back@{back}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{26}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!begin@{begin}|hyperpage}{27}
+\indexentry{begin@{begin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{27}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!begin@{begin}|hyperpage}{27}
+\indexentry{begin@{begin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{27}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!capacity@{capacity}|hyperpage}{27}
+\indexentry{capacity@{capacity}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{27}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!cbegin@{cbegin}|hyperpage}{27}
+\indexentry{cbegin@{cbegin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{27}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!cend@{cend}|hyperpage}{28}
+\indexentry{cend@{cend}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{28}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!clear@{clear}|hyperpage}{28}
+\indexentry{clear@{clear}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{28}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!crbegin@{crbegin}|hyperpage}{28}
+\indexentry{crbegin@{crbegin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{28}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!crend@{crend}|hyperpage}{28}
+\indexentry{crend@{crend}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{28}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!data@{data}|hyperpage}{29}
+\indexentry{data@{data}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{29}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!empty@{empty}|hyperpage}{29}
+\indexentry{empty@{empty}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{29}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!end@{end}|hyperpage}{29}
+\indexentry{end@{end}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{29}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!end@{end}|hyperpage}{29}
+\indexentry{end@{end}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{29}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!erase@{erase}|hyperpage}{30}
+\indexentry{erase@{erase}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{30}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!erase@{erase}|hyperpage}{30}
+\indexentry{erase@{erase}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{30}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!erase@{erase}|hyperpage}{30}
+\indexentry{erase@{erase}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{30}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!erase@{erase}|hyperpage}{31}
+\indexentry{erase@{erase}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{31}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!front@{front}|hyperpage}{31}
+\indexentry{front@{front}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{31}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!front@{front}|hyperpage}{31}
+\indexentry{front@{front}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{31}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!insert@{insert}|hyperpage}{32}
+\indexentry{insert@{insert}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{32}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!insert@{insert}|hyperpage}{32}
+\indexentry{insert@{insert}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{32}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!insert@{insert}|hyperpage}{33}
+\indexentry{insert@{insert}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{33}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!operator=@{operator=}|hyperpage}{33}
+\indexentry{operator=@{operator=}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{33}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!operator=@{operator=}|hyperpage}{33}
+\indexentry{operator=@{operator=}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{33}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!operator\+[]\+@{operator[]}|hyperpage}{34}
+\indexentry{operator\+[]\+@{operator[]}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{34}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!operator\+[]\+@{operator[]}|hyperpage}{34}
+\indexentry{operator\+[]\+@{operator[]}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{34}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!pop\_back@{pop\_back}|hyperpage}{35}
+\indexentry{pop\_back@{pop\_back}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{35}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!push\_back@{push\_back}|hyperpage}{35}
+\indexentry{push\_back@{push\_back}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{35}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!push\_back@{push\_back}|hyperpage}{35}
+\indexentry{push\_back@{push\_back}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{35}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!rbegin@{rbegin}|hyperpage}{36}
+\indexentry{rbegin@{rbegin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{36}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!rbegin@{rbegin}|hyperpage}{36}
+\indexentry{rbegin@{rbegin}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{36}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!rend@{rend}|hyperpage}{36}
+\indexentry{rend@{rend}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{36}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!rend@{rend}|hyperpage}{36}
+\indexentry{rend@{rend}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{36}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!reserve@{reserve}|hyperpage}{37}
+\indexentry{reserve@{reserve}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{37}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!resize@{resize}|hyperpage}{37}
+\indexentry{resize@{resize}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{37}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!resize@{resize}|hyperpage}{37}
+\indexentry{resize@{resize}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{37}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!shrink\_to\_fit@{shrink\_to\_fit}|hyperpage}{38}
+\indexentry{shrink\_to\_fit@{shrink\_to\_fit}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{38}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!size@{size}|hyperpage}{38}
+\indexentry{size@{size}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{38}
+\indexentry{Vector$<$ T $>$@{Vector$<$ T $>$}!swap@{swap}|hyperpage}{38}
+\indexentry{swap@{swap}!Vector$<$ T $>$@{Vector$<$ T $>$}|hyperpage}{38}
+\indexentry{Zmogus@{Zmogus}|hyperpage}{39}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!Zmogus@{Zmogus}|hyperpage}{40}
+\indexentry{Zmogus@{Zmogus}!````~Zmogus@{\texorpdfstring{$\sim$}{\string~}Zmogus}|hyperpage}{41}
+\indexentry{````~Zmogus@{\texorpdfstring{$\sim$}{\string~}Zmogus}!Zmogus@{Zmogus}|hyperpage}{41}
+\indexentry{Zmogus@{Zmogus}!ivest\_varda\_pavarde@{ivest\_varda\_pavarde}|hyperpage}{41}
+\indexentry{ivest\_varda\_pavarde@{ivest\_varda\_pavarde}!Zmogus@{Zmogus}|hyperpage}{41}
+\indexentry{Zmogus@{Zmogus}!nust\_pavarde@{nust\_pavarde}|hyperpage}{41}
+\indexentry{nust\_pavarde@{nust\_pavarde}!Zmogus@{Zmogus}|hyperpage}{41}
+\indexentry{Zmogus@{Zmogus}!nust\_varda@{nust\_varda}|hyperpage}{42}
+\indexentry{nust\_varda@{nust\_varda}!Zmogus@{Zmogus}|hyperpage}{42}
+\indexentry{Zmogus@{Zmogus}!pavarde@{pavarde}|hyperpage}{42}
+\indexentry{pavarde@{pavarde}!Zmogus@{Zmogus}|hyperpage}{42}
+\indexentry{Zmogus@{Zmogus}!vardas@{vardas}|hyperpage}{42}
+\indexentry{vardas@{vardas}!Zmogus@{Zmogus}|hyperpage}{42}
+\indexentry{Zmogus@{Zmogus}!pavarde\_@{pavarde\_}|hyperpage}{42}
+\indexentry{pavarde\_@{pavarde\_}!Zmogus@{Zmogus}|hyperpage}{42}
+\indexentry{Zmogus@{Zmogus}!vardas\_@{vardas\_}|hyperpage}{42}
+\indexentry{vardas\_@{vardas\_}!Zmogus@{Zmogus}|hyperpage}{42}
+\indexentry{src/isvesties\_pagalb\_fjos.cpp@{src/isvesties\_pagalb\_fjos.cpp}|hyperpage}{43}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_mediana\_did@{pagal\_mediana\_did}|hyperpage}{43}
+\indexentry{pagal\_mediana\_did@{pagal\_mediana\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{43}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_mediana\_maz@{pagal\_mediana\_maz}|hyperpage}{43}
+\indexentry{pagal\_mediana\_maz@{pagal\_mediana\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{43}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_pavarde\_did@{pagal\_pavarde\_did}|hyperpage}{44}
+\indexentry{pagal\_pavarde\_did@{pagal\_pavarde\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_pavarde\_maz@{pagal\_pavarde\_maz}|hyperpage}{44}
+\indexentry{pagal\_pavarde\_maz@{pagal\_pavarde\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_varda\_did@{pagal\_varda\_did}|hyperpage}{44}
+\indexentry{pagal\_varda\_did@{pagal\_varda\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_varda\_maz@{pagal\_varda\_maz}|hyperpage}{44}
+\indexentry{pagal\_varda\_maz@{pagal\_varda\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_vidurki\_did@{pagal\_vidurki\_did}|hyperpage}{44}
+\indexentry{pagal\_vidurki\_did@{pagal\_vidurki\_did}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!pagal\_vidurki\_maz@{pagal\_vidurki\_maz}|hyperpage}{44}
+\indexentry{pagal\_vidurki\_maz@{pagal\_vidurki\_maz}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}!ras\_failo\_paruosimas@{ras\_failo\_paruosimas}|hyperpage}{44}
+\indexentry{ras\_failo\_paruosimas@{ras\_failo\_paruosimas}!isvesties\_pagalb\_fjos.cpp@{isvesties\_pagalb\_fjos.cpp}|hyperpage}{44}
+\indexentry{src/isvesties\_pagalb\_fjos.h@{src/isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_mediana\_did@{pagal\_mediana\_did}|hyperpage}{45}
+\indexentry{pagal\_mediana\_did@{pagal\_mediana\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_mediana\_maz@{pagal\_mediana\_maz}|hyperpage}{45}
+\indexentry{pagal\_mediana\_maz@{pagal\_mediana\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_pavarde\_did@{pagal\_pavarde\_did}|hyperpage}{45}
+\indexentry{pagal\_pavarde\_did@{pagal\_pavarde\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_pavarde\_maz@{pagal\_pavarde\_maz}|hyperpage}{45}
+\indexentry{pagal\_pavarde\_maz@{pagal\_pavarde\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_varda\_did@{pagal\_varda\_did}|hyperpage}{45}
+\indexentry{pagal\_varda\_did@{pagal\_varda\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{45}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_varda\_maz@{pagal\_varda\_maz}|hyperpage}{46}
+\indexentry{pagal\_varda\_maz@{pagal\_varda\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_vidurki\_did@{pagal\_vidurki\_did}|hyperpage}{46}
+\indexentry{pagal\_vidurki\_did@{pagal\_vidurki\_did}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!pagal\_vidurki\_maz@{pagal\_vidurki\_maz}|hyperpage}{46}
+\indexentry{pagal\_vidurki\_maz@{pagal\_vidurki\_maz}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!ras\_failo\_paruosimas@{ras\_failo\_paruosimas}|hyperpage}{46}
+\indexentry{ras\_failo\_paruosimas@{ras\_failo\_paruosimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!rikiavimas@{rikiavimas}|hyperpage}{46}
+\indexentry{rikiavimas@{rikiavimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}!stud\_rikiavimas@{stud\_rikiavimas}|hyperpage}{46}
+\indexentry{stud\_rikiavimas@{stud\_rikiavimas}!isvesties\_pagalb\_fjos.h@{isvesties\_pagalb\_fjos.h}|hyperpage}{46}
+\indexentry{src/isvesties\_pagalb\_fjos.h@{src/isvesties\_pagalb\_fjos.h}|hyperpage}{47}
+\indexentry{src/isvestis.cpp@{src/isvestis.cpp}|hyperpage}{47}
+\indexentry{isvestis.cpp@{isvestis.cpp}!isvestis@{isvestis}|hyperpage}{48}
+\indexentry{isvestis@{isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{48}
+\indexentry{isvestis.cpp@{isvestis.cpp}!skirstoma\_isvestis@{skirstoma\_isvestis}|hyperpage}{48}
+\indexentry{skirstoma\_isvestis@{skirstoma\_isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{48}
+\indexentry{isvestis.cpp@{isvestis.cpp}!spausdinimas@{spausdinimas}|hyperpage}{48}
+\indexentry{spausdinimas@{spausdinimas}!isvestis.cpp@{isvestis.cpp}|hyperpage}{48}
+\indexentry{isvestis.cpp@{isvestis.cpp}!studentu\_skirstymas@{studentu\_skirstymas}|hyperpage}{48}
+\indexentry{studentu\_skirstymas@{studentu\_skirstymas}!isvestis.cpp@{isvestis.cpp}|hyperpage}{48}
+\indexentry{isvestis.cpp@{isvestis.cpp}!visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}|hyperpage}{48}
+\indexentry{visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}!isvestis.cpp@{isvestis.cpp}|hyperpage}{48}
+\indexentry{src/isvestis.h@{src/isvestis.h}|hyperpage}{49}
+\indexentry{isvestis.h@{isvestis.h}!isvestis@{isvestis}|hyperpage}{49}
+\indexentry{isvestis@{isvestis}!isvestis.h@{isvestis.h}|hyperpage}{49}
+\indexentry{isvestis.h@{isvestis.h}!skirstoma\_isvestis@{skirstoma\_isvestis}|hyperpage}{49}
+\indexentry{skirstoma\_isvestis@{skirstoma\_isvestis}!isvestis.h@{isvestis.h}|hyperpage}{49}
+\indexentry{isvestis.h@{isvestis.h}!spausdinimas@{spausdinimas}|hyperpage}{49}
+\indexentry{spausdinimas@{spausdinimas}!isvestis.h@{isvestis.h}|hyperpage}{49}
+\indexentry{isvestis.h@{isvestis.h}!studentu\_skirstymas@{studentu\_skirstymas}|hyperpage}{50}
+\indexentry{studentu\_skirstymas@{studentu\_skirstymas}!isvestis.h@{isvestis.h}|hyperpage}{50}
+\indexentry{isvestis.h@{isvestis.h}!visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}|hyperpage}{50}
+\indexentry{visu\_stud\_duomenu\_generavimo\_isvestis@{visu\_stud\_duomenu\_generavimo\_isvestis}!isvestis.h@{isvestis.h}|hyperpage}{50}
+\indexentry{src/isvestis.h@{src/isvestis.h}|hyperpage}{50}
+\indexentry{src/ivesties\_pagalb\_fjos.cpp@{src/ivesties\_pagalb\_fjos.cpp}|hyperpage}{50}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}|hyperpage}{51}
+\indexentry{ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}|hyperpage}{51}
+\indexentry{ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}|hyperpage}{51}
+\indexentry{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}|hyperpage}{51}
+\indexentry{ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}|hyperpage}{51}
+\indexentry{natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!skait\_failo\_paruosimas@{skait\_failo\_paruosimas}|hyperpage}{51}
+\indexentry{skait\_failo\_paruosimas@{skait\_failo\_paruosimas}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{51}
+\indexentry{ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}!vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}|hyperpage}{52}
+\indexentry{vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}!ivesties\_pagalb\_fjos.cpp@{ivesties\_pagalb\_fjos.cpp}|hyperpage}{52}
+\indexentry{src/ivesties\_pagalb\_fjos.h@{src/ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}|hyperpage}{52}
+\indexentry{ar\_sk\_ne\_tarp\_0\_ir\_10@{ar\_sk\_ne\_tarp\_0\_ir\_10}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}|hyperpage}{52}
+\indexentry{ar\_sk\_nedidesnis\_uz\_0@{ar\_sk\_nedidesnis\_uz\_0}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}|hyperpage}{52}
+\indexentry{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil@{ar\_sk\_nedidesnis\_uz\_0\_arba\_didesnis\_uz\_10mil}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}|hyperpage}{52}
+\indexentry{ar\_sk\_nera\_1\_2\_3\_4\_5\_6@{ar\_sk\_nera\_1\_2\_3\_4\_5\_6}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}|hyperpage}{52}
+\indexentry{natur\_skaiciaus\_ivestis@{natur\_skaiciaus\_ivestis}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{52}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!skait\_failo\_paruosimas@{skait\_failo\_paruosimas}|hyperpage}{53}
+\indexentry{skait\_failo\_paruosimas@{skait\_failo\_paruosimas}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{53}
+\indexentry{ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}!vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}|hyperpage}{53}
+\indexentry{vardo\_pavardes\_ivestis@{vardo\_pavardes\_ivestis}!ivesties\_pagalb\_fjos.h@{ivesties\_pagalb\_fjos.h}|hyperpage}{53}
+\indexentry{src/ivesties\_pagalb\_fjos.h@{src/ivesties\_pagalb\_fjos.h}|hyperpage}{53}
+\indexentry{src/ivestis.cpp@{src/ivestis.cpp}|hyperpage}{53}
+\indexentry{ivestis.cpp@{ivestis.cpp}!failo\_ivestis@{failo\_ivestis}|hyperpage}{54}
+\indexentry{failo\_ivestis@{failo\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{54}
+\indexentry{ivestis.cpp@{ivestis.cpp}!generuota\_ivestis@{generuota\_ivestis}|hyperpage}{54}
+\indexentry{generuota\_ivestis@{generuota\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{54}
+\indexentry{ivestis.cpp@{ivestis.cpp}!misri\_ivestis@{misri\_ivestis}|hyperpage}{54}
+\indexentry{misri\_ivestis@{misri\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{54}
+\indexentry{ivestis.cpp@{ivestis.cpp}!rank\_ivestis@{rank\_ivestis}|hyperpage}{54}
+\indexentry{rank\_ivestis@{rank\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{54}
+\indexentry{ivestis.cpp@{ivestis.cpp}!visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}|hyperpage}{54}
+\indexentry{visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}!ivestis.cpp@{ivestis.cpp}|hyperpage}{54}
+\indexentry{src/ivestis.h@{src/ivestis.h}|hyperpage}{55}
+\indexentry{ivestis.h@{ivestis.h}!failo\_ivestis@{failo\_ivestis}|hyperpage}{55}
+\indexentry{failo\_ivestis@{failo\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{55}
+\indexentry{ivestis.h@{ivestis.h}!generuota\_ivestis@{generuota\_ivestis}|hyperpage}{55}
+\indexentry{generuota\_ivestis@{generuota\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{55}
+\indexentry{ivestis.h@{ivestis.h}!misri\_ivestis@{misri\_ivestis}|hyperpage}{55}
+\indexentry{misri\_ivestis@{misri\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{55}
+\indexentry{ivestis.h@{ivestis.h}!rank\_ivestis@{rank\_ivestis}|hyperpage}{55}
+\indexentry{rank\_ivestis@{rank\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{55}
+\indexentry{ivestis.h@{ivestis.h}!visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}|hyperpage}{55}
+\indexentry{visu\_stud\_duomenu\_generavimo\_ivestis@{visu\_stud\_duomenu\_generavimo\_ivestis}!ivestis.h@{ivestis.h}|hyperpage}{55}
+\indexentry{src/ivestis.h@{src/ivestis.h}|hyperpage}{56}
+\indexentry{src/klaidu\_valdymas.cpp@{src/klaidu\_valdymas.cpp}|hyperpage}{56}
+\indexentry{klaidu\_valdymas.cpp@{klaidu\_valdymas.cpp}!ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}|hyperpage}{56}
+\indexentry{ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}!klaidu\_valdymas.cpp@{klaidu\_valdymas.cpp}|hyperpage}{56}
+\indexentry{src/klaidu\_valdymas.h@{src/klaidu\_valdymas.h}|hyperpage}{56}
+\indexentry{klaidu\_valdymas.h@{klaidu\_valdymas.h}!ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}|hyperpage}{56}
+\indexentry{ivesties\_klaidos\_valdymas@{ivesties\_klaidos\_valdymas}!klaidu\_valdymas.h@{klaidu\_valdymas.h}|hyperpage}{56}
+\indexentry{src/klaidu\_valdymas.h@{src/klaidu\_valdymas.h}|hyperpage}{57}
+\indexentry{src/konstantos\_kt\_klases.h@{src/konstantos\_kt\_klases.h}|hyperpage}{57}
+\indexentry{konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}!Container@{Container}|hyperpage}{57}
+\indexentry{Container@{Container}!konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}|hyperpage}{57}
+\indexentry{konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}!MAX\_INT@{MAX\_INT}|hyperpage}{57}
+\indexentry{MAX\_INT@{MAX\_INT}!konstantos\_kt\_klases.h@{konstantos\_kt\_klases.h}|hyperpage}{57}
+\indexentry{src/konstantos\_kt\_klases.h@{src/konstantos\_kt\_klases.h}|hyperpage}{58}
+\indexentry{src/kt\_klasiu\_metodai.cpp@{src/kt\_klasiu\_metodai.cpp}|hyperpage}{58}
+\indexentry{src/pagr.cpp@{src/pagr.cpp}|hyperpage}{58}
+\indexentry{pagr.cpp@{pagr.cpp}!main@{main}|hyperpage}{59}
+\indexentry{main@{main}!pagr.cpp@{pagr.cpp}|hyperpage}{59}
+\indexentry{src/studentas.cpp@{src/studentas.cpp}|hyperpage}{59}
+\indexentry{studentas.cpp@{studentas.cpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{59}
+\indexentry{operator$<$$<$@{operator$<$$<$}!studentas.cpp@{studentas.cpp}|hyperpage}{59}
+\indexentry{studentas.cpp@{studentas.cpp}!operator$>$$>$@{operator$>$$>$}|hyperpage}{59}
+\indexentry{operator$>$$>$@{operator$>$$>$}!studentas.cpp@{studentas.cpp}|hyperpage}{59}
+\indexentry{src/studentas.h@{src/studentas.h}|hyperpage}{60}
+\indexentry{src/studentas.h@{src/studentas.h}|hyperpage}{60}
+\indexentry{src/vector.h@{src/vector.h}|hyperpage}{61}
+\indexentry{vector.h@{vector.h}!erase@{erase}|hyperpage}{62}
+\indexentry{erase@{erase}!vector.h@{vector.h}|hyperpage}{62}
+\indexentry{vector.h@{vector.h}!erase\_if@{erase\_if}|hyperpage}{63}
+\indexentry{erase\_if@{erase\_if}!vector.h@{vector.h}|hyperpage}{63}
+\indexentry{vector.h@{vector.h}!operator"!=@{operator"!=}|hyperpage}{63}
+\indexentry{operator"!=@{operator"!=}!vector.h@{vector.h}|hyperpage}{63}
+\indexentry{vector.h@{vector.h}!operator==@{operator==}|hyperpage}{64}
+\indexentry{operator==@{operator==}!vector.h@{vector.h}|hyperpage}{64}
+\indexentry{vector.h@{vector.h}!swap@{swap}|hyperpage}{64}
+\indexentry{swap@{swap}!vector.h@{vector.h}|hyperpage}{64}
+\indexentry{src/vector.h@{src/vector.h}|hyperpage}{65}
+\indexentry{src/zmogus.h@{src/zmogus.h}|hyperpage}{72}
+\indexentry{src/zmogus.h@{src/zmogus.h}|hyperpage}{73}

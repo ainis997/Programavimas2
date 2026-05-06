@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.27)  27 APR 2026 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.27)  6 MAY 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,7 +1137,16 @@ LaTeX Warning: Label `doc-constructors' multiply defined.
 LaTeX Warning: Label `doc-func-members' multiply defined.
 
 
+LaTeX Warning: Label `doc-constructors' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
+
+
 LaTeX Warning: Label `doc-variable-members' multiply defined.
+
+
+LaTeX Warning: Label `doc-func-members' multiply defined.
 
 
 LaTeX Warning: Label `doc-func-members' multiply defined.
@@ -1318,7 +1327,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 224.
 
-[1] [2] [3] [4]
+[1] [2] [3] [4] [5] [6]
 Package hyperref Info: Option `pageanchor' set `true' on input line 227.
 
 skyrius 1.
@@ -1376,17 +1385,17 @@ Overfull \hbox (37.3601pt too wide) in paragraph at lines 61--62
 
 [11]) (class_studentas.tex
 Package epstopdf Info: Source file: <class_studentas.eps>
-(epstopdf)                    date: 2026-04-27 13:47:01
+(epstopdf)                    date: 2026-05-05 13:39:50
 (epstopdf)                    size: 3772 bytes
 (epstopdf)             Output file: <class_studentas-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-04-27 13:48:22
+(epstopdf)                    date: 2026-05-06 12:59:18
 (epstopdf)                    size: 5428 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=class_studentas-eps-
 converted-to.pdf class_studentas.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
  <./class_studentas-eps-converted-to.pdf>
-<class_studentas-eps-converted-to.pdf, id=1043, 501.875pt x 536.0025pt>
+<class_studentas-eps-converted-to.pdf, id=1422, 501.875pt x 536.0025pt>
 File: class_studentas-eps-converted-to.pdf Graphic file (type pdf)
 <use class_studentas-eps-converted-to.pdf>
 Package pdftex.def Info: class_studentas-eps-converted-to.pdf  used on input li
@@ -1442,112 +1451,305 @@ Underfull \hbox (badness 10000) detected at line 445
 [][][]
  []
 
-) (class_zmogus.tex
+) (class_vector.tex [19] [20]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 104.
+ [21] [22] [23] [24] [25]
+Underfull \hbox (badness 10000) detected at line 345
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 369
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 388
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 391
+[][][]
+ []
+
+[26]
+Underfull \hbox (badness 10000) detected at line 405
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 408
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 422
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 436
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 450
+[][][]
+ []
+
+[27]
+Underfull \hbox (badness 10000) detected at line 464
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 478
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 503
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 517
+[][][]
+ []
+
+[28]
+Underfull \hbox (badness 10000) detected at line 531
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 545
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 559
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 573
+[][][]
+ []
+
+[29]
+Underfull \hbox (badness 10000) detected at line 594
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 613
+[][][]
+ []
+
+[30]
+Underfull \hbox (badness 10000) detected at line 634
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 653
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 667
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 670
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 684
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 687
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 708
+[][][]
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 731
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 752
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 771
+[][][]
+ []
+
+[33]
+Underfull \hbox (badness 10000) detected at line 790
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 809
+[][][]
+ []
+
+[34]
+Underfull \hbox (badness 10000) detected at line 828
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 831
+[][][]
+ []
+
+[35]
+Underfull \hbox (badness 10000) detected at line 888
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 902
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 916
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 930
+[][][]
+ []
+
+[36] [37]
+Underfull \hbox (badness 10000) detected at line 1005
+[][][]
+ []
+
+[38]) (class_zmogus.tex
 Package epstopdf Info: Source file: <class_zmogus.eps>
-(epstopdf)                    date: 2026-04-27 13:47:01
+(epstopdf)                    date: 2026-05-05 13:39:50
 (epstopdf)                    size: 3772 bytes
 (epstopdf)             Output file: <class_zmogus-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-04-27 13:48:24
+(epstopdf)                    date: 2026-05-06 12:59:22
 (epstopdf)                    size: 5428 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=class_zmogus-eps-con
 verted-to.pdf class_zmogus.eps>
 (epstopdf)             \includegraphics on input line 10.
 Package epstopdf Info: Output file is already uptodate.
  <./class_zmogus-eps-converted-to.pdf>
-<class_zmogus-eps-converted-to.pdf, id=1288, 501.875pt x 536.0025pt>
+<class_zmogus-eps-converted-to.pdf, id=2373, 501.875pt x 536.0025pt>
 File: class_zmogus-eps-converted-to.pdf Graphic file (type pdf)
 <use class_zmogus-eps-converted-to.pdf>
 Package pdftex.def Info: class_zmogus-eps-converted-to.pdf  used on input line 
 10.
 (pdftex.def)             Requested size: 53.2766pt x 56.9055pt.
- [19] [20] [21]
+ [39] [40]
 Underfull \hbox (badness 10000) detected at line 147
 [][][]
  []
 
-[22]) [23] [24
-
-]
+[41]) [42]
 skyrius 7.
 (isvesties__pagalb__fjos_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-[25]) (isvesties__pagalb__fjos_8h.tex
+[43
+
+]) (isvesties__pagalb__fjos_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
 
-[26] [27]) (isvesties__pagalb__fjos_8h_source.tex [28]) (isvestis_8cpp.tex
+[44] [45]) (isvesties__pagalb__fjos_8h_source.tex [46]) (isvestis_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--17
 
  []
 
-[29]
+[47]
 Underfull \hbox (badness 2591) in paragraph at lines 28--29
 []\T1/phv/m/n/10 void [] (int stra-te-gi-ja, []([]) &gru-pe, []([]) &blo-gi,
  []
 
-) (isvestis_8h.tex
+) (isvestis_8h.tex [48]
 Underfull \hbox (badness 10000) in paragraph at lines 3--9
 
  []
 
-[30]
+
 Underfull \hbox (badness 2591) in paragraph at lines 18--20
 []\T1/phv/m/n/10 void [] (int stra-te-gi-ja, []([]) &gru-pe, []([]) &blo-gi,
  []
 
-[31]) (isvestis_8h_source.tex) (ivesties__pagalb__fjos_8cpp.tex
+[49]) (isvestis_8h_source.tex) (ivesties__pagalb__fjos_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
  []
 
-[32]) (ivesties__pagalb__fjos_8h.tex [33] [34])
+[50] [51]) (ivesties__pagalb__fjos_8h.tex [52])
 (ivesties__pagalb__fjos_8h_source.tex) (ivestis_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--22
 
  []
 
-[35]) (ivestis_8h.tex
+[53]) (ivestis_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-[36]) (ivestis_8h_source.tex) (klaidu__valdymas_8cpp.tex
+[54]) (ivestis_8h_source.tex [55]) (klaidu__valdymas_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[37]) (klaidu__valdymas_8h.tex) (klaidu__valdymas_8h_source.tex)
+) (klaidu__valdymas_8h.tex) (klaidu__valdymas_8h_source.tex)
 (konstantos__kt__klases_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--9
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
-[38]) (konstantos__kt__klases_8h_source.tex) (kt__klasiu__metodai_8cpp.tex)
-(pagr_8cpp.tex
+[56]) (konstantos__kt__klases_8h_source.tex [57]) (kt__klasiu__metodai_8cpp.tex
+) (pagr_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
  []
 
-[39]
+
 Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
  []
 
-) (studentas_8cpp.tex
+[58]) (studentas_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[40]
+
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
 
-
+[59]
 Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
@@ -1557,29 +1759,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--13
 
  []
 
-) (studentas_8h_source.tex [41] [42]) (zmogus_8h.tex
+) (studentas_8h_source.tex [60]) (vector_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
+
+ []
+
+[61] [62]
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+[63]
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 138
+[][][]
+ []
+
+[64]) (vector_8h_source.tex [65] [66] [67] [68] [69] [70] [71]) (zmogus_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
  []
 
-) (zmogus_8h_source.tex [43]) [44] (refman.ind
+) (zmogus_8h_source.tex [72]) [73] [74
+
+] (refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-[]| \T1/phv/m/n/10 ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil,
- []
-
-[45
-
+ [75
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 []| \T1/phv/m/n/10 ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil,
  []
 
-[46] [47]) (refman.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--172
+[]| \T1/phv/m/n/10 ar_sk_nedidesnis_uz_0_arba_didesnis_uz_10mil,
+ []
+
+[76] [77] [78]) (refman.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1589,34 +1817,35 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: D58ECF37FBF2FEAF748C51A3D3B37E31;35043.
+(rerunfilecheck)             Checksum: CE09B6469A9C78506B85214536CC8624;48778.
  ) 
 Here is how much of TeX's memory you used:
- 23209 strings out of 467870
- 417854 string characters out of 5417871
- 871686 words of memory out of 5000000
- 51236 multiletter control sequences out of 15000+600000
- 686270 words of font info for 112 fonts, out of 8000000 for 9000
+ 23636 strings out of 467870
+ 429592 string characters out of 5417871
+ 903778 words of memory out of 5000000
+ 51438 multiletter control sequences out of 15000+600000
+ 688771 words of font info for 121 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,16n,117p,1505b,1136s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,16n,124p,1505b,1136s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmmi10.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmmi7.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi8.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Legion/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Legion/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Legion/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Legion/A
-ppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Legio
-n/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><C:/Users/L
-egion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Use
-rs/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8ac.pfb><C
-:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pf
-b><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro
-8a.pfb>
-Output written on refman.pdf (53 pages, 552700 bytes).
+msfonts/cm/cmmi12.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Legion/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Legion/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Legion/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/L
+egion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/User
+s/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/U
+sers/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb><
+C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.p
+fb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb
+8ac.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic
+/uhvr8a.pfb><C:/Users/Legion/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helv
+etic/uhvro8a.pfb>
+Output written on refman.pdf (86 pages, 837334 bytes).
 PDF statistics:
- 2860 PDF objects out of 2984 (max. 8388607)
- 413 named destinations out of 1000 (max. 500000)
- 1315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4636 PDF objects out of 5155 (max. 8388607)
+ 628 named destinations out of 1000 (max. 500000)
+ 1891 words of extra memory for PDF output out of 10000 (max. 10000000)
 
